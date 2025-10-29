@@ -62,6 +62,7 @@ module lojban where
 
     data Jufra : Set
       where
+      cnima'o-co'e : Cnima'oCo'e → Jufra
       jufra : Bridi → Jufra
 
     T : Set
