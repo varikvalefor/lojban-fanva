@@ -54,8 +54,12 @@ module lojban where
       Cnima'oCo'e : Set
       Cnima'oCo'e = {!!}
 
+      Cmevla : Set
+      Cmevla = {!!}
+
       data Selbri : Set
         where
+        selbriCmevla : Cmevla → Selbri
         selbriUI : Selbri → Cnima'oCo'e → Selbri
 
       record Bridi : Set
