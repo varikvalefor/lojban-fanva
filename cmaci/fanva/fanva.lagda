@@ -57,8 +57,12 @@ module lojban where
       Cmevla : Set
       Cmevla = {!!}
 
+      Gismu : Set
+      Gismu = {!!}
+
       data Selbri : Set
         where
+        selbriGismu : Gismu → Selbri
         selbriCmevla : Cmevla → Selbri
         selbriUI : Selbri → Cnima'oCo'e → Selbri
 
