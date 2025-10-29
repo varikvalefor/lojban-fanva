@@ -18,8 +18,11 @@ record Fanva (t₁ t₂ : TB) : Set₁
   field
     fanva : TB.T t₁ → TB.T t₂
 
-lojban : TB
-lojban = {!!}
+module lojban where
+  lojban : TB
+  lojban = {!!}
+
+open lojban using (lojban)
 
 glibau : TB
 glibau = {!!}
