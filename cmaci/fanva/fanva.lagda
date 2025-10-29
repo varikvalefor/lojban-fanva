@@ -20,7 +20,11 @@ record Fanva (t₁ t₂ : TB) : Set₁
 
 module lojban where
   lojban : TB
-  lojban = {!!}
+  lojban = record {
+    T = {!!};
+    R = {!!};
+    S = {!!}
+    }
 
 open lojban using (lojban)
 
