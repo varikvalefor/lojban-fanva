@@ -1,4 +1,16 @@
 \begin{code}
+open import Data.Sum
+  using (
+    _⊎_
+  )
+open import Function
+  using (
+    _$_
+  )
+open import Data.List
+  using (
+    List
+  )
 open import Truthbrary.Record.SR
   using (
     Show;
@@ -19,9 +31,19 @@ record Fanva (t₁ t₂ : TB) : Set₁
     fanva : TB.T t₁ → TB.T t₂
 
 module lojban where
+  module T where
+    INI'O : Set
+    INI'O = {!!}
+
+    Jufra : Set
+    Jufra = {!!}
+
+    T : Set
+    T = List $ INI'O ⊎ Jufra
+
   lojban : TB
   lojban = record {
-    T = {!!};
+    T = T.T;
     R = {!!};
     S = {!!}
     }
