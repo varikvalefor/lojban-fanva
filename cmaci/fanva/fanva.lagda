@@ -47,8 +47,12 @@ module lojban where
     Sumti : Set
     Sumti = {!!}
 
-    Selbri : Set
-    Selbri = {!!}
+    Cnima'oCo'e : Set
+    Cnima'oCo'e = {!!}
+
+    data Selbri : Set
+      where
+      selbriUI : Selbri → Cnima'oCo'e → Selbri
 
     record Bridi : Set
       where
