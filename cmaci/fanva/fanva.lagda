@@ -44,8 +44,20 @@ module lojban where
     INI'O : Set
     INI'O = I ⊎ NIhO
 
+    Sumti : Set
+    Sumti = {!!}
+
+    Selbri : Set
+    Selbri = {!!}
+
+    record Bridi : Set
+      where
+      field
+        selbri : Selbri
+        terbri : List $ Sumti
+
     Jufra : Set
-    Jufra = {!!}
+    Jufra = Bridi ⊎ {!!}
 
     T : Set
     T = List $ INI'O ⊎ Jufra
