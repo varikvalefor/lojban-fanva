@@ -32,38 +32,42 @@ record Fanva (t₁ t₂ : TB) : Set₁
 
 module lojban where
   module T where
-    
-    data NIhO : Set
-      where
-        ValsiNi'o : NIhO
+    mutual
+      data NIhO : Set
+        where
+          ValsiNi'o : NIhO
 
-    data I : Set
-      where
-        ValsiI : I
+      data I : Set
+        where
+          ValsiI : I
 
-    INI'O : Set
-    INI'O = I ⊎ NIhO
+      INI'O : Set
+      INI'O = I ⊎ NIhO
 
-    Sumti : Set
-    Sumti = {!!}
+      LE : Set
+      LE = {!!}
 
-    Cnima'oCo'e : Set
-    Cnima'oCo'e = {!!}
+      data Sumti : Set
+        where
+        LeSelbri : LE → Selbri → Sumti
 
-    data Selbri : Set
-      where
-      selbriUI : Selbri → Cnima'oCo'e → Selbri
+      Cnima'oCo'e : Set
+      Cnima'oCo'e = {!!}
 
-    record Bridi : Set
-      where
-      field
-        selbri : Selbri
-        terbri : List $ Sumti
+      data Selbri : Set
+        where
+        selbriUI : Selbri → Cnima'oCo'e → Selbri
 
-    data Jufra : Set
-      where
-      cnima'o-co'e : Cnima'oCo'e → Jufra
-      jufra : Bridi → Jufra
+      record Bridi : Set
+        where
+        field
+          selbri : Selbri
+          terbri : List $ Sumti
+
+      data Jufra : Set
+        where
+        cnima'o-co'e : Cnima'oCo'e → Jufra
+        jufra : Bridi → Jufra
 
     T : Set
     T = List $ INI'O ⊎ Jufra
