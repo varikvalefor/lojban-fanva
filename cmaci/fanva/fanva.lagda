@@ -12,4 +12,9 @@ record TB : Set₁
     T : Set
     R : Read T
     S : Show T
+
+record Fanva (t₁ t₂ : TB) : Set₁
+  where
+  field
+    fanva : TB.T t₁ → TB.T t₂
 \end{code}
