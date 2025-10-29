@@ -32,8 +32,17 @@ record Fanva (t₁ t₂ : TB) : Set₁
 
 module lojban where
   module T where
+    
+    data NIhO : Set
+      where
+        ValsiNi'o : NIhO
+
+    data I : Set
+      where
+        ValsiI : I
+
     INI'O : Set
-    INI'O = {!!}
+    INI'O = I ⊎ NIhO
 
     Jufra : Set
     Jufra = {!!}
