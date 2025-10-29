@@ -56,8 +56,9 @@ module lojban where
         selbri : Selbri
         terbri : List $ Sumti
 
-    Jufra : Set
-    Jufra = Bridi ⊎ {!!}
+    data Jufra : Set
+      where
+      jufra : Bridi → Jufra
 
     T : Set
     T = List $ INI'O ⊎ Jufra
