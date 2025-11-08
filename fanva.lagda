@@ -177,6 +177,16 @@ module lojban where
 
     Cnima'oCo'e : Set
     Cnima'oCo'e = Cnima'o.Cnima'oCo'e
+
+    module Selbrix
+      where
+      record SelbriTerm (Selma'o : Set) : Set₁
+        where
+        field
+          Term : Selma'o → Set
+
+      Term : {A : Set} → ⦃ SelbriTerm A ⦄ → A → Set
+      Term ⦃ T ⦄ = SelbriTerm.Term T
     
     data NIhO
       where
@@ -269,9 +279,18 @@ module lojban where
     record Bridi
       where
       inductive
+
+      ⌽1↓⌽ : ∀ {a} → {A : Set a} → List A → List A
+      ⌽1↓⌽ = 𝕃.reverse ∘ 𝕃.drop 1 ∘ 𝕃.reverse
+
+      instance
+        cniTerm⊎ : Selbrix.SelbriTerm $ Sumti ⊎ BAI Σ.× Sumti
+        cniTerm⊎ = {!!}
+
       field
         selbri : Selbri
         terbri : List $ Sumti ⊎ (BAI Σ.× Sumti)
+        term : All Selbrix.Term $ ⌽1↓⌽ terbri
 
     module Jufra
       where
