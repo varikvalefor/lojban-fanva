@@ -285,7 +285,9 @@ module lojban where
 
       instance
         cniTerm⊎ : Selbrix.SelbriTerm $ Sumti ⊎ BAI Σ.× Sumti
-        cniTerm⊎ = {!!}
+        cniTerm⊎ = record {
+          Term = {!!}
+          }
 
       field
         selbri : Selbri
