@@ -303,7 +303,6 @@ module lojban where
 
       data Jufra'
         where
-        Cnima'oC : Cnima'oCo'e → Jufra'
         BridiC : Bridi → Jufra'
         UIC : Cnima'o.Cni Jufra' → Jufra'
 
