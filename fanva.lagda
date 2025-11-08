@@ -160,6 +160,8 @@ module lojban where
     NA : Set
     Na : Set
 
+    Nai : Set
+
     Sumti : Set
     Cmevla : Set
     Gismu : Set
@@ -280,6 +282,8 @@ module lojban where
     NA = Na.NA'
     Na = Na.Na'
 
+    Nai = {!!}
+
     module Jek
       where
 
@@ -291,11 +295,8 @@ module lojban where
       Term : {A : Set} → ⦃ JekTerm A ⦄ → A → Set
       Term ⦃ T ⦄ = JekTerm.Term T
 
-      data Jek' : Set
-
-      data Jek'
-        where
-        NaC : Na → Jek' → Jek'
+      Jek' : Set
+      Jek' = Maybe Na Σ.× {!!} Σ.× Maybe Nai
 
     Jek = Jek.Jek'
 
