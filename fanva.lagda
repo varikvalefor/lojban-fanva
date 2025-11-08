@@ -308,8 +308,8 @@ module lojban where
       where
       inductive
 
-      ⌽1↓⌽ : ∀ {a} → {A : Set a} → List A → List A
-      ⌽1↓⌽ = 𝕃.reverse ∘ 𝕃.drop 1 ∘ 𝕃.reverse
+      ¯1↓ : ∀ {a} → {A : Set a} → List A → List A
+      ¯1↓ = 𝕃.reverse ∘ 𝕃.drop 1 ∘ 𝕃.reverse
 
       instance
         cniTerm⊎ : Bri.BriTerm $ Sumti ⊎ BAI Σ.× Sumti
@@ -320,7 +320,7 @@ module lojban where
       field
         selbri : Selbri
         terbri : List $ Sumti ⊎ (BAI Σ.× Sumti)
-        term : All Bri.Term $ ⌽1↓⌽ terbri
+        term : All Bri.Term $ ¯1↓ terbri
 
     module Jufra
       where
