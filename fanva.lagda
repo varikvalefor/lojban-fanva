@@ -142,6 +142,8 @@ module lojban where
 
     BAI  : Set
 
+    KOhA : Set
+
     Sumti : Set
     Cmevla : Set
     Gismu : Set
@@ -199,6 +201,8 @@ module lojban where
 
     BAI = {!!}
 
+    KOhA = {!!}
+
     module Sumti
       where
       data Sumti' : Set
@@ -208,6 +212,7 @@ module lojban where
 
       data Sumti'
         where
+        KOhAC : KOhA → Sumti'
         LeSelbriC : LE → Selbri → Sumti'
 
       instance
