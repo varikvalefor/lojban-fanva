@@ -149,6 +149,8 @@ module lojban where
 
     KOhA : Set
 
+    POI : Set
+
     Sumti : Set
     Cmevla : Set
     Gismu : Set
@@ -239,20 +241,29 @@ module lojban where
 
     KOhA = {!!}
 
+    POI = {!!}
+
     module Sumti
       where
       data Sumti' : Set
 
       instance
         cniTerm : Cnima'o.CniTerm Sumti'
+        briTerm : Bri.BriTerm Sumti'
 
       data Sumti'
         where
         KOhAC : KOhA → Sumti'
         LeSelbriC : LE → Selbri → Sumti'
+        POIC : (x : Sumti')
+             → Bri.Term x
+             → POI
+             → Jufra
+             → Sumti'
 
       instance
         cniTerm = {!!}
+        briTerm = {!!}
 
     Sumti = Sumti.Sumti'
 
