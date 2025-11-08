@@ -60,54 +60,64 @@ record Fanva (t₁ t₂ : TB) : Set₁
 
 module lojban where
   module T where
-    mutual
-      data NIhO : Set
-        where
-          ValsiNi'o : NIhO
+    data NIhO : Set
+    data I : Set
 
-      data I : Set
-        where
-          ValsiI : I
+    INI'O : Set
 
-      INI'O : Set
-      INI'O = I ⊎ NIhO
+    LE : Set
 
-      LE : Set
-      LE = {!!}
+    BAI  : Set
 
-      BAI : Set
-      BAI = {!!}
+    data Sumti : Set
+    Cnima'oCo'e : Set
+    Cmevla : Set
+    Gismu : Set
+    data Selbri : Set
+    record Bridi : Set
+    data Jufra : Set
+    
+    data NIhO
+      where
+        ValsiNi'o : NIhO
 
-      data Sumti : Set
-        where
-        LeSelbri : LE → Selbri → Sumti
+    data I
+      where
+        ValsiI : I
 
-      Cnima'oCo'e : Set
-      Cnima'oCo'e = {!!}
+    INI'O = I ⊎ NIhO
 
-      Cmevla : Set
-      Cmevla = {!!}
+    LE = {!!}
 
-      Gismu : Set
-      Gismu = {!!}
+    BAI = {!!}
 
-      data Selbri : Set
-        where
-        selbriGismu : Gismu → Selbri
-        selbriCmevla : Cmevla → Selbri
-        selbriUI : Selbri → Cnima'oCo'e → Selbri
+    data Sumti
+      where
+      LeSelbri : LE → Selbri → Sumti
 
-      record Bridi : Set
-        where
-        field
-          selbri : Selbri
-          terbri : List $ Sumti
-          bais : List $ BAI Σ.× Sumti
+    Cnima'oCo'e = {!!}
 
-      data Jufra : Set
-        where
-        cnima'o-co'e : Cnima'oCo'e → Jufra
-        jufra : Bridi → Jufra
+    Cmevla = {!!}
+
+    Gismu = {!!}
+
+    data Selbri
+      where
+      selbriGismu : Gismu → Selbri
+      selbriCmevla : Cmevla → Selbri
+      selbriUI : Selbri → Cnima'oCo'e → Selbri
+
+    record Bridi
+      where
+      field
+        selbri : Selbri
+        terbri : List $ Sumti
+        bais : List $ BAI Σ.× Sumti
+
+    data Jufra
+      where
+      cnima'o-co'e : Cnima'oCo'e → Jufra
+      jufra : Bridi → Jufra
 
     record T : Set
       where
