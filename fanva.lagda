@@ -187,6 +187,7 @@ module lojban where
       data I'
         where
         IC : Lerfu.i → I'
+        UIC : Cnima'o.Cni I' → I'
 
       instance
         cniTerm = {!!}
