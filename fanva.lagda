@@ -311,12 +311,15 @@ module lojban where
       ¯1↓ : ∀ {a} → {A : Set a} → List A → List A
       ¯1↓ = 𝕃.reverse ∘ 𝕃.drop 1 ∘ 𝕃.reverse
 
+      private
+        T = Bri.BriTerm.Term (Sumti.briTerm)
+
       instance
         cniTerm⊎ : Bri.BriTerm $ Sumti ⊎ BAI Σ.× Sumti
         cniTerm⊎ = record {
           Term = λ {
-            (inj₁ s) → Bri.BriTerm.Term (Sumti.briTerm) s;
-            (inj₂ (b Σ., s)) → Bri.BriTerm.Term (Sumti.briTerm) s
+            (inj₁ s) → T s;
+            (inj₂ (b Σ., s)) → T s
             }
           }
 
