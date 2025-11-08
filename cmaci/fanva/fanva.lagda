@@ -100,7 +100,7 @@ module lojban where
 
     BAI  : Set
 
-    data Sumti : Set
+    Sumti : Set
     Cmevla : Set
     Gismu : Set
     Selbri : Set
@@ -143,9 +143,21 @@ module lojban where
 
     BAI = {!!}
 
-    data Sumti
+    module Sumti
       where
-      LeSelbri : LE → Selbri → Sumti
+      data Sumti' : Set
+
+      instance
+        cniTerm : Cnima'o.CniTerm Sumti'
+
+      data Sumti'
+        where
+        LeSelbri : LE → Selbri → Sumti'
+
+      instance
+        cniTerm = {!!}
+
+    Sumti = Sumti.Sumti'
 
     Cmevla = {!!}
 
