@@ -134,7 +134,7 @@ module lojban where
       z = {!!}
 
     data NIhO : Set
-    data I : Set
+    I : Set
 
     INI'O : Set
 
@@ -177,9 +177,21 @@ module lojban where
       where
         ValsiNi'o : NIhO
 
-    data I
+    module I
       where
-        ValsiI : I
+      data I' : Set
+
+      instance
+        cniTerm : Cnima'o.CniTerm I'
+
+      data I'
+        where
+        ValsiI : I'
+
+      instance
+        cniTerm = {!!}
+
+    I = I.I'
 
     INI'O = I ⊎ NIhO
 
