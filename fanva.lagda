@@ -181,7 +181,21 @@ module lojban where
 
     INI'O = I ⊎ NIhO
 
-    LE = {!!}
+    module LE
+      where
+      data LE' : Set
+
+      instance
+        cniTerm : Cnima'o.CniTerm LE'
+
+      data LE'
+        where
+        UIC : Cnima'o.Cni LE' → LE'
+
+      instance
+        cniTerm = {!!}
+
+    LE = LE.LE'
 
     BAI = {!!}
 
