@@ -216,6 +216,7 @@ module lojban where
 
       data LE'
         where
+        leC : Lerfu.l Σ.× Lerfu.e → LE'
         UIC : Cnima'o.Cni LE' → LE'
 
       instance
