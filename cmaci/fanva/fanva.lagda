@@ -105,9 +105,9 @@ module lojban where
       where
       data Selbri' : Set
         where
-        selbriGismu : Gismu → Selbri'
-        selbriCmevla : Cmevla → Selbri'
-        selbriUI : Selbri' → Cnima'oCo'e → Selbri'
+        GismuC : Gismu → Selbri'
+        CmevlaC : Cmevla → Selbri'
+        UIC : Selbri' → Cnima'oCo'e → Selbri'
 
     Selbri = Selbri.Selbri'
 
