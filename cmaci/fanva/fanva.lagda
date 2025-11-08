@@ -184,7 +184,7 @@ module lojban where
 
       data Jufra'
         where
-        cnima'o-co'e : Cnima'oCo'e → Jufra'
+        Cnima'oC : Cnima'oCo'e → Jufra'
         BridiC : Bridi → Jufra'
         UIC : Cnima'o.Cni Jufra' → Jufra'
 
