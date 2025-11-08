@@ -241,7 +241,22 @@ module lojban where
 
     KOhA = {!!}
 
-    POI = {!!}
+    module POI
+      where
+      record PoiTerm (Selma'o : Set) : Set₁
+        where
+        field
+          Term : Selma'o → Set
+        
+      Term : {A : Set} → ⦃ PoiTerm A ⦄ → A → Set
+      Term ⦃ T ⦄ = PoiTerm.Term T
+
+      data POI' : Set
+
+      data POI'
+        where
+
+    POI = POI.POI'
 
     module Sumti
       where
@@ -250,13 +265,14 @@ module lojban where
       instance
         cniTerm : Cnima'o.CniTerm Sumti'
         briTerm : Bri.BriTerm Sumti'
+        poiTerm : POI.PoiTerm Sumti'
 
       data Sumti'
         where
         KOhAC : KOhA → Sumti'
         LeSelbriC : LE → Selbri → Sumti'
         POIC : (x : Sumti')
-             → Bri.Term x
+             → POI.Term x
              → POI
              → Jufra
              → Sumti'
@@ -264,6 +280,7 @@ module lojban where
       instance
         cniTerm = {!!}
         briTerm = {!!}
+        poiTerm = {!!}
 
     Sumti = Sumti.Sumti'
 
