@@ -208,7 +208,7 @@ module lojban where
 
       data Sumti'
         where
-        LeSelbri : LE → Selbri → Sumti'
+        LeSelbriC : LE → Selbri → Sumti'
 
       instance
         cniTerm = {!!}
