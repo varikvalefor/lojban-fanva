@@ -29,6 +29,11 @@ open import Data.Unit
   using (
     ⊤
   )
+open import Data.Maybe
+  as ⁇
+  using (
+    Maybe
+  )
 open import Data.Product
   as Σ
   using (
@@ -140,6 +145,7 @@ module lojban where
 
     data NIhO : Set
     I : Set
+    FAhO : Set
 
     INI'O : Set
 
@@ -217,6 +223,8 @@ module lojban where
           Term (UIC u) = {!!}
 
     I = I.I'
+
+    FAhO = {!!}
 
     INI'O = I ⊎ NIhO
 
@@ -382,6 +390,7 @@ module lojban where
 
       field
         liste : List $ INI'O ⊎ Jufra
+        famo : Maybe FAhO
         -- | .i ctaipe lo su'u bitmu lo jufra
         bitmu : (i₁ i₂ : 𝔽.Fin _)
               → 𝔽.toℕ i₁ ≡ ℕ.suc (𝔽.toℕ i₂)
