@@ -105,7 +105,7 @@ module lojban where
     Gismu : Set
     Selbri : Set
     record Bridi : Set
-    data Jufra : Set
+    Jufra : Set
 
     module Cnima'o where
       Cnima'oCo'e : Set
@@ -169,15 +169,29 @@ module lojban where
 
     record Bridi
       where
+      inductive
       field
         selbri : Selbri
         terbri : List $ Sumti
         bais : List $ BAI Σ.× Sumti
 
-    data Jufra
+    module Jufra
       where
-      cnima'o-co'e : Cnima'oCo'e → Jufra
-      jufra : Bridi → Jufra
+      data Jufra' : Set
+
+      instance
+        cniTerm : Cnima'o.CniTerm Jufra'
+
+      data Jufra'
+        where
+        cnima'o-co'e : Cnima'oCo'e → Jufra'
+        jufra : Bridi → Jufra'
+        UIC : Cnima'o.Cni Jufra' → Jufra'
+
+      instance
+        cniTerm = {!!}
+
+    Jufra = Jufra.Jufra'
 
     record T : Set
       where
