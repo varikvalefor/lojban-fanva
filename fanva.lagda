@@ -271,8 +271,7 @@ module lojban where
       inductive
       field
         selbri : Selbri
-        terbri : List $ Sumti
-        bais : List $ BAI Σ.× Sumti
+        terbri : List $ Sumti ⊎ (BAI Σ.× Sumti)
 
     module Jufra
       where
