@@ -286,7 +286,7 @@ module lojban where
       instance
         cniTerm⊎ : Selbrix.SelbriTerm $ Sumti ⊎ BAI Σ.× Sumti
         cniTerm⊎ = record {
-          Term = {!!}
+          Term = λ {(inj₁ s) → {!!}; (inj₂ (b Σ., s)) → {!!}}
           }
 
       field
