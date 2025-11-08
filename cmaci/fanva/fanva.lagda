@@ -60,6 +60,37 @@ record Fanva (t₁ t₂ : TB) : Set₁
 
 module lojban where
   module T where
+    module Lerfu where
+      -- | ni'o le cmene be le ctaipe
+      -- cu na jai frili
+      -- .i la'e di'u xajmi la .varik.
+      y : Set
+      y = {!!}
+
+      a : Set
+      a = {!!}
+
+      e : Set
+      e = {!!}
+
+      i : Set
+      i = {!!}
+
+      o : Set
+      o = {!!}
+
+      u : Set
+      u = {!!}
+
+      b : Set
+      b = {!!}
+
+      c : Set
+      c = {!!}
+
+      d : Set
+      d = {!!}
+
     data NIhO : Set
     data I : Set
 
