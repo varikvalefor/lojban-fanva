@@ -191,8 +191,12 @@ module lojban where
 
       instance
         cniTerm = record {
-          Term = {!!}
+          Term = Term
           }
+          where
+          Term : I' → Set
+          Term (IC i) = {!!}
+          Term (UIC u) = {!!}
 
     I = I.I'
 
