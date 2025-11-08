@@ -312,7 +312,7 @@ module lojban where
       ¯1↓ = 𝕃.reverse ∘ 𝕃.drop 1 ∘ 𝕃.reverse
 
       private
-        T = Bri.BriTerm.Term (Sumti.briTerm)
+        T = Bri.BriTerm.Term $ Sumti.briTerm
 
       instance
         cniTerm⊎ : Bri.BriTerm $ Sumti ⊎ BAI Σ.× Sumti
