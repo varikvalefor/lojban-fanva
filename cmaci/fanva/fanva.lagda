@@ -101,12 +101,33 @@ module lojban where
     BAI  : Set
 
     data Sumti : Set
-    Cnima'oCo'e : Set
     Cmevla : Set
     Gismu : Set
     Selbri : Set
     record Bridi : Set
     data Jufra : Set
+
+    module Cnima'o where
+      Cnima'oCo'e : Set
+      Cnima'oCo'e = {!!}
+
+      record CniTerm (Selma'o : Set) : Set₁
+        where
+        field
+          Term : Selma'o → Set
+
+      Term : {A : Set} → ⦃ CniTerm A ⦄ → A → Set
+      Term ⦃ T ⦄ = CniTerm.Term T
+
+      data Cni (Selma'o : Set) ⦃ _ : CniTerm Selma'o ⦄ : Set
+        where
+        CniX : (x : Selma'o)
+             → Term x
+             → Cnima'oCo'e
+             → Cni Selma'o
+
+    Cnima'oCo'e : Set
+    Cnima'oCo'e = Cnima'o.Cnima'oCo'e
     
     data NIhO
       where
@@ -126,8 +147,6 @@ module lojban where
       where
       LeSelbri : LE → Selbri → Sumti
 
-    Cnima'oCo'e = {!!}
-
     Cmevla = {!!}
 
     Gismu = {!!}
@@ -135,10 +154,16 @@ module lojban where
     module Selbri
       where
       data Selbri' : Set
+      
+      instance cniTerm : Cnima'o.CniTerm Selbri'
+      
+      data Selbri'
         where
         GismuC : Gismu → Selbri'
         CmevlaC : Cmevla → Selbri'
-        UIC : Selbri' → Cnima'oCo'e → Selbri'
+        UIC : Cnima'o.Cni Selbri' → Selbri'
+
+      instance cniTerm = {!!}
 
     Selbri = Selbri.Selbri'
 
