@@ -190,7 +190,9 @@ module lojban where
         UIC : Cnima'o.Cni I' → I'
 
       instance
-        cniTerm = {!!}
+        cniTerm = record {
+          Term = {!!}
+          }
 
     I = I.I'
 
