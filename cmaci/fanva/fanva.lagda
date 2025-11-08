@@ -91,6 +91,48 @@ module lojban where
       d : Set
       d = {!!}
 
+      f : Set
+      f = {!!}
+
+      g : Set
+      g = {!!}
+
+      j : Set
+      j = {!!}
+
+      k : Set
+      k = {!!}
+
+      l : Set
+      l = {!!}
+
+      m : Set
+      m = {!!}
+
+      n : Set
+      n = {!!}
+
+      p : Set
+      p = {!!}
+
+      r : Set
+      r = {!!}
+
+      s : Set
+      s = {!!}
+
+      t : Set
+      t = {!!}
+
+      v : Set
+      v = {!!}
+
+      x : Set
+      x = {!!}
+
+      z : Set
+      z = {!!}
+
     data NIhO : Set
     data I : Set
 
