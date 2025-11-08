@@ -24,6 +24,11 @@ open import Data.List
   using (
     List
   )
+open import Data.Unit
+  as ⊤
+  using (
+    ⊤
+  )
 open import Data.Product
   as Σ
   using (
@@ -195,7 +200,7 @@ module lojban where
           }
           where
           Term : I' → Set
-          Term (IC i) = {!!}
+          Term (IC i) = ⊤
           Term (UIC u) = {!!}
 
     I = I.I'
