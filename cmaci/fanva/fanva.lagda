@@ -73,7 +73,7 @@ module lojban where
     Cnima'oCo'e : Set
     Cmevla : Set
     Gismu : Set
-    data Selbri : Set
+    Selbri : Set
     record Bridi : Set
     data Jufra : Set
     
@@ -101,11 +101,15 @@ module lojban where
 
     Gismu = {!!}
 
-    data Selbri
+    module Selbri
       where
-      selbriGismu : Gismu → Selbri
-      selbriCmevla : Cmevla → Selbri
-      selbriUI : Selbri → Cnima'oCo'e → Selbri
+      data Selbri' : Set
+        where
+        selbriGismu : Gismu → Selbri'
+        selbriCmevla : Cmevla → Selbri'
+        selbriUI : Selbri' → Cnima'oCo'e → Selbri'
+
+    Selbri = Selbri.Selbri'
 
     record Bridi
       where
