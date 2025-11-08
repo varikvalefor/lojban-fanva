@@ -157,6 +157,9 @@ module lojban where
 
     POI : Set
 
+    NA : Set
+    Na : Set
+
     Sumti : Set
     Cmevla : Set
     Gismu : Set
@@ -267,6 +270,16 @@ module lojban where
 
     POI = POI.POI'
 
+    module Na where
+      NA' : Set
+      Na' : Set
+
+      NA' = {!!}
+      Na' = {!!}
+
+    NA = Na.NA'
+    Na = Na.Na'
+
     module Jek
       where
 
@@ -282,6 +295,7 @@ module lojban where
 
       data Jek'
         where
+        NaC : Na → Jek' → Jek'
 
     Jek = Jek.Jek'
 
