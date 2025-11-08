@@ -156,6 +156,7 @@ module lojban where
     Gismu : Set
     Selbri : Set
     record Bridi : Set
+    Jek : Set
     Jufra : Set
 
     module Cnima'o where
@@ -258,6 +259,24 @@ module lojban where
 
     POI = POI.POI'
 
+    module Jek
+      where
+
+      record JekTerm (Selma'o : Set) : Set₁
+        where
+        field
+          Term : Selma'o → Set
+
+      Term : {A : Set} → ⦃ JekTerm A ⦄ → A → Set
+      Term ⦃ T ⦄ = JekTerm.Term T
+
+      data Jek' : Set
+
+      data Jek'
+        where
+
+    Jek = Jek.Jek'
+
     module Sumti
       where
       data Sumti' : Set
@@ -266,6 +285,7 @@ module lojban where
         cniTerm : Cnima'o.CniTerm Sumti'
         briTerm : Bri.BriTerm Sumti'
         poiTerm : POI.PoiTerm Sumti'
+        jekTerm : Jek.JekTerm Sumti'
 
       data Sumti'
         where
@@ -276,11 +296,17 @@ module lojban where
              → POI
              → Jufra
              → Sumti'
+        JekC : (x : Sumti')
+             → Jek.Term x
+             → Jek
+             → Sumti'
+             → Sumti'
 
       instance
         cniTerm = {!!}
         briTerm = {!!}
         poiTerm = {!!}
+        jekTerm = {!!}
 
     Sumti = Sumti.Sumti'
 
