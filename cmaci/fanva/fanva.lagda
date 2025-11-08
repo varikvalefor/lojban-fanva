@@ -1,21 +1,49 @@
 \begin{code}
+open import Data.Nat
+  as ℕ
+  using (
+    ℕ
+  )
+open import Data.Fin
+  as 𝔽
+  using (
+  )
 open import Data.Sum
   using (
+    inj₂;
+    inj₁;
     _⊎_
   )
 open import Function
   using (
+    _∘_;
     _$_
   )
 open import Data.List
+  as 𝕃
   using (
     List
+  )
+open import Data.Product
+  as Σ
+  using (
+    Σ
   )
 open import Truthbrary.Record.SR
   using (
     Show;
     Read;
     SR
+  )
+open import Data.List.Relation.Unary.All
+  as LUA
+  using (
+    All
+  )
+open import Relation.Binary.PropositionalEquality
+  as _≡_
+  using (
+    _≡_
   )
 
 record TB : Set₁
@@ -47,6 +75,9 @@ module lojban where
       LE : Set
       LE = {!!}
 
+      BAI : Set
+      BAI = {!!}
+
       data Sumti : Set
         where
         LeSelbri : LE → Selbri → Sumti
@@ -71,14 +102,33 @@ module lojban where
         field
           selbri : Selbri
           terbri : List $ Sumti
+          bais : List $ BAI Σ.× Sumti
 
       data Jufra : Set
         where
         cnima'o-co'e : Cnima'oCo'e → Jufra
         jufra : Bridi → Jufra
 
-    T : Set
-    T = List $ INI'O ⊎ Jufra
+    record T : Set
+      where
+      Is-inj₁ : ∀ {a b} → {A : Set a} → {B : Set b}
+              → A ⊎ B
+              → Set _
+      Is-inj₁ x = Σ _ $ (x ≡_) ∘ inj₁
+
+      Is-inj₂ : ∀ {a b} → {A : Set a} → {B : Set b}
+              → A ⊎ B
+              → Set _
+      Is-inj₂ x = Σ _ $ (x ≡_) ∘ inj₂
+
+      field
+        liste : List $ INI'O ⊎ Jufra
+        -- | .i ctaipe lo su'u bitmu lo jufra
+        bitmu : (i₁ i₂ : 𝔽.Fin _)
+              → 𝔽.toℕ i₁ ≡ ℕ.suc (𝔽.toℕ i₂)
+              → Is-inj₂ (𝕃.lookup liste i₁)
+              → Is-inj₁ (𝕃.lookup liste i₂)
+              
 
   lojban : TB
   lojban = record {
