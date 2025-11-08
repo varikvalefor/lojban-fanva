@@ -316,7 +316,8 @@ module lojban where
         cniTerm⊎ = record {
           Term = λ {
             (inj₁ s) → Bri.BriTerm.Term (Sumti.briTerm) s;
-            (inj₂ (b Σ., s)) → Bri.BriTerm.Term (Sumti.briTerm) s}
+            (inj₂ (b Σ., s)) → Bri.BriTerm.Term (Sumti.briTerm) s
+            }
           }
 
       field
