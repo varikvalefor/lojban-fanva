@@ -42,6 +42,7 @@ open import Data.Maybe
 open import Data.Product
   as Σ
   using (
+    _×_;
     Σ
   )
 open import Truthbrary.Record.SR
@@ -261,8 +262,8 @@ module lojban where
 
       data LE'
         where
-        leC : Lerfu.l Σ.× Lerfu.e → LE'
-        loC : Lerfu.l Σ.× Lerfu.o → LE'
+        leC : Lerfu.l × Lerfu.e → LE'
+        loC : Lerfu.l × Lerfu.o → LE'
         UIC : Cnima'o.Cni LE' → LE'
 
       instance
@@ -309,7 +310,7 @@ module lojban where
       module JE
         where
         JE : Set
-        JE = Lerfu.j Σ.× Lerfu.karsna
+        JE = Lerfu.j × Lerfu.karsna
 
         instance
           cniTerm : Cnima'o.CniTerm JE
@@ -326,7 +327,7 @@ module lojban where
       Term ⦃ T ⦄ = JekTerm.Term T
 
       Jek' : Set
-      Jek' = Maybe Na Σ.× Cnima'o.Cni JE
+      Jek' = Maybe Na × Cnima'o.Cni JE
 
     Jek = Jek.Jek'
 
@@ -365,7 +366,7 @@ module lojban where
 
     Cmevla = {!!}
 
-    Gismu = (Z Σ.× Z Σ.× K Σ.× Z Σ.× K) ⊎ (Z Σ.× K Σ.× Z Σ.× Z Σ.× K)
+    Gismu = (Z × Z × K × Z × K) ⊎ (Z × K × Z × Z × K)
       where
       Z = Lerfu.zunsna
       K = Lerfu.karsna
@@ -397,14 +398,14 @@ module lojban where
         T = Bri.BriTerm.Term $ Sumti.briTerm
 
       instance
-        cniTerm⊎ : Bri.BriTerm $ Sumti ⊎ BAI Σ.× Sumti
+        cniTerm⊎ : Bri.BriTerm $ Sumti ⊎ BAI × Sumti
         cniTerm⊎ = record {
           Term = λ {(inj₁ s) → T s; (inj₂ (b Σ., s)) → T s}
           }
 
       field
         selbri : Selbri
-        terbri : List $ Sumti ⊎ (BAI Σ.× Sumti)
+        terbri : List $ Sumti ⊎ (BAI × Sumti)
         term : All Bri.Term $ ¯1↓ terbri
 
     module Jufra
