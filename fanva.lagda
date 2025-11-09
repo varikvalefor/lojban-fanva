@@ -110,7 +110,7 @@ module lojban where
       d = tLerfu 'd'
 
       f : Set
-      f = {!!}
+      f = tLerfu 'f'
 
       g : Set
       g = {!!}
