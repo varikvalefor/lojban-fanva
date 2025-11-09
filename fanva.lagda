@@ -140,7 +140,7 @@ module lojban where
       s = tLerfu 's'
 
       t : Set
-      t = {!!}
+      t = tLerfu 't'
 
       v : Set
       v = {!!}
