@@ -43,6 +43,7 @@ open import Data.Product
   as Σ
   using (
     _×_;
+    _,_;
     Σ
   )
 open import Truthbrary.Record.SR
@@ -400,7 +401,7 @@ module lojban where
       instance
         cniTerm⊎ : Bri.BriTerm $ Sumti ⊎ BAI × Sumti
         cniTerm⊎ = record {
-          Term = λ {(inj₁ s) → T s; (inj₂ (b Σ., s)) → T s}
+          Term = λ {(inj₁ s) → T s; (inj₂ (b , s)) → T s}
           }
 
       field
