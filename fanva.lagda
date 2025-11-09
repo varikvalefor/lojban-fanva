@@ -358,7 +358,9 @@ module lojban where
              → Sumti'
 
       instance
-        cniTerm = {!!}
+        cniTerm = record {
+          Term = {!!}
+          }
         briTerm = {!!}
         poiTerm = {!!}
         jekTerm = {!!}
