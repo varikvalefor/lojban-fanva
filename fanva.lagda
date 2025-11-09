@@ -95,7 +95,7 @@ module lojban where
       i = tLerfu 'i'
 
       o : Set
-      o = {!!}
+      o = tLerfu 'o'
 
       u : Set
       u = {!!}
