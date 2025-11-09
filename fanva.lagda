@@ -128,7 +128,7 @@ module lojban where
       m = tLerfu 'm'
 
       n : Set
-      m = tLerfu 'n'
+      n = tLerfu 'n'
 
       p : Set
       p = tLerfu 'p'
@@ -150,6 +150,9 @@ module lojban where
 
       z : Set
       z = tLerfu 'z'
+
+      y'y : Set
+      y'y = tLerfu '\''
 
       karsna : Set
       karsna = a ⊎ e ⊎ i ⊎ o ⊎ u
