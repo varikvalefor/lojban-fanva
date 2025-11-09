@@ -365,7 +365,10 @@ module lojban where
 
     Cmevla = {!!}
 
-    Gismu = {!!}
+    Gismu = (Z Σ.× Z Σ.× K Σ.× Z Σ.× K) ⊎ (Z Σ.× K Σ.× Z Σ.× Z Σ.× K)
+      where
+      Z = Lerfu.zunsna
+      K = Lerfu.karsna
 
     module Selbri
       where
