@@ -292,13 +292,8 @@ module lojban where
 
       module JE
         where
-        data JE : Set
-          where
-          JaC : Lerfu.j Σ.× Lerfu.a → JE
-          JeC : Lerfu.j Σ.× Lerfu.e → JE
-          JiC : Lerfu.j Σ.× Lerfu.i → JE
-          JoC : Lerfu.j Σ.× Lerfu.i → JE
-          JuC : Lerfu.j Σ.× Lerfu.i → JE
+        JE : Set
+        JE = Lerfu.j Σ.× Lerfu.karsna
 
         instance
           cniTerm : Cnima'o.CniTerm JE
