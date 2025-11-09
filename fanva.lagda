@@ -359,8 +359,11 @@ module lojban where
 
       instance
         cniTerm = record {
-          Term = {!!}
+          Term = T
           }
+          where
+          T : Sumti' → Set
+          T = {!!}
         briTerm = {!!}
         poiTerm = {!!}
         jekTerm = {!!}
