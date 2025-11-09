@@ -287,8 +287,8 @@ module lojban where
     module Jek
       where
 
-      JE : Set
-      JE = {!!}
+      data JE : Set
+        where
 
       record JekTerm (Selma'o : Set) : Set₁
         where
