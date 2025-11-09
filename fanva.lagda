@@ -149,7 +149,7 @@ module lojban where
       x = tLerfu 'x'
 
       z : Set
-      z = {!!}
+      z = tLerfu 'z'
 
       karsna : Set
       karsna = a ⊎ e ⊎ i ⊎ o ⊎ u
