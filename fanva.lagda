@@ -157,6 +157,11 @@ module lojban where
       karsna : Set
       karsna = a ⊎ e ⊎ i ⊎ o ⊎ u
 
+      zunsna : Set
+      zunsna = b ⊎ c ⊎ d ⊎ f ⊎ g ⊎
+               j ⊎ k ⊎ l ⊎ m ⊎ n ⊎ p ⊎
+               r ⊎ s ⊎ t ⊎ v ⊎ x ⊎ z
+
     data NIhO : Set
     I : Set
     FAhO : Set
