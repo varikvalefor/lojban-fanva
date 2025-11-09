@@ -19,6 +19,11 @@ open import Function
     _∘_;
     _$_
   )
+open import Data.Char
+  as 𝕃
+  using (
+    Char
+  )
 open import Data.List
   as 𝕃
   using (
@@ -71,6 +76,9 @@ record Fanva (t₁ t₂ : TB) : Set₁
 module lojban where
   module T where
     module Lerfu where
+      tLerfu : Char → Set
+      tLerfu = {!!}
+
       -- | ni'o le cmene be le ctaipe
       -- cu na jai frili
       -- .i la'e di'u xajmi la .varik.
