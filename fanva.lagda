@@ -365,6 +365,7 @@ module lojban where
           T : Sumti' → Set
           T (KOhAC k) = {!!}
           T (POIC x t p j) = {!!}
+          T (LeSelbriC l s) = {!!}
           T (JekC x t j x₂) = {!!}
         briTerm = {!!}
         poiTerm = {!!}
