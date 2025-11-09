@@ -287,6 +287,9 @@ module lojban where
     module Jek
       where
 
+      JE : Set
+      JE = {!!}
+
       record JekTerm (Selma'o : Set) : Set₁
         where
         field
@@ -295,8 +298,10 @@ module lojban where
       Term : {A : Set} → ⦃ JekTerm A ⦄ → A → Set
       Term ⦃ T ⦄ = JekTerm.Term T
 
+      -- | ni'o la .varik. na birti lo du'u xu kau cadga fa
+      -- lo nu curmi tu'a lo cnima'o
       Jek' : Set
-      Jek' = Maybe Na Σ.× {!!} Σ.× Maybe Nai
+      Jek' = Maybe Na Σ.× JE Σ.× Maybe Nai
 
     Jek = Jek.Jek'
 
