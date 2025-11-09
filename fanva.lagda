@@ -299,7 +299,7 @@ module lojban where
 
         instance
           cniTerm : Cnima'o.CniTerm JE
-          cniTerm = {!!}
+          cniTerm = record {Term = λ _ → ⊤}
 
       JE = JE.JE
 
