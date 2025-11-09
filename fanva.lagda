@@ -83,7 +83,7 @@ module lojban where
       -- cu na jai frili
       -- .i la'e di'u xajmi la .varik.
       y : Set
-      y = {!!}
+      y = tLerfu 'y'
 
       a : Set
       a = {!!}
