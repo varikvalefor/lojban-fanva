@@ -401,7 +401,7 @@ module lojban where
       instance
         cniTerm⊎ : Bri.BriTerm $ Sumti ⊎ BAI × Sumti
         cniTerm⊎ = record {
-          Term = λ {(inj₁ s) → T s; (inj₂ (b , s)) → T s}
+          Term = λ {(inj₁ s) → T s; (inj₂ (_ , s)) → T s}
           }
 
       field
