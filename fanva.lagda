@@ -289,6 +289,7 @@ module lojban where
 
       data JE : Set
         where
+        JaC : Lerfu.j Σ.× Lerfu.a → JE
         JeC : Lerfu.j Σ.× Lerfu.e → JE
 
       record JekTerm (Selma'o : Set) : Set₁
