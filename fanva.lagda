@@ -128,7 +128,7 @@ module lojban where
       m = tLerfu 'm'
 
       n : Set
-      n = {!!}
+      m = tLerfu 'n'
 
       p : Set
       p = {!!}
