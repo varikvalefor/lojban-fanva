@@ -356,6 +356,7 @@ module lojban where
              → Jek
              → Sumti'
              → Sumti'
+        UIC : Cnima'o.Cni Sumti' → Sumti'
 
       instance
         cniTerm = record {
@@ -367,6 +368,7 @@ module lojban where
           T (POIC x t p j) = {!!}
           T (LeSelbriC l s) = {!!}
           T (JekC x t j x₂) = {!!}
+          T (UIC (Cnima'o.CniX s t c)) = {!!}
         briTerm = {!!}
         poiTerm = {!!}
         jekTerm = {!!}
