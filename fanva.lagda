@@ -144,7 +144,7 @@ module lojban where
       z = {!!}
 
       karsna : Set
-      karsna = {!!}
+      karsna = a ⊎ e ⊎ i ⊎ o ⊎ u
 
     data NIhO : Set
     I : Set
