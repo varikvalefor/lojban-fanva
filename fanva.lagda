@@ -287,13 +287,21 @@ module lojban where
     module Jek
       where
 
-      data JE : Set
+      module JE
         where
-        JaC : Lerfu.j Σ.× Lerfu.a → JE
-        JeC : Lerfu.j Σ.× Lerfu.e → JE
-        JiC : Lerfu.j Σ.× Lerfu.i → JE
-        JoC : Lerfu.j Σ.× Lerfu.i → JE
-        JuC : Lerfu.j Σ.× Lerfu.i → JE
+        data JE : Set
+          where
+          JaC : Lerfu.j Σ.× Lerfu.a → JE
+          JeC : Lerfu.j Σ.× Lerfu.e → JE
+          JiC : Lerfu.j Σ.× Lerfu.i → JE
+          JoC : Lerfu.j Σ.× Lerfu.i → JE
+          JuC : Lerfu.j Σ.× Lerfu.i → JE
+
+        instance
+          cniTerm : Cnima'o.CniTerm JE
+          cniTerm = {!!}
+
+      JE = JE.JE
 
       record JekTerm (Selma'o : Set) : Set₁
         where
@@ -303,10 +311,8 @@ module lojban where
       Term : {A : Set} → ⦃ JekTerm A ⦄ → A → Set
       Term ⦃ T ⦄ = JekTerm.Term T
 
-      -- | ni'o la .varik. na birti lo du'u xu kau cadga fa
-      -- lo nu curmi tu'a lo cnima'o
       Jek' : Set
-      Jek' = Maybe Na Σ.× JE Σ.× Maybe Nai
+      Jek' = Maybe Na Σ.× Cnima'o.Cni JE
 
     Jek = Jek.Jek'
 
