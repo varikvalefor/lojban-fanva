@@ -143,6 +143,9 @@ module lojban where
       z : Set
       z = {!!}
 
+      karsna : Set
+      karsna = {!!}
+
     data NIhO : Set
     I : Set
     FAhO : Set
