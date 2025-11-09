@@ -363,7 +363,9 @@ module lojban where
           }
           where
           T : Sumti' → Set
-          T = {!!}
+          T (KOhAC k) = {!!}
+          T (POIC x t p j) = {!!}
+          T (JekC x t j x₂) = {!!}
         briTerm = {!!}
         poiTerm = {!!}
         jekTerm = {!!}
