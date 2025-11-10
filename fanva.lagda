@@ -396,7 +396,9 @@ module lojban where
           T : Sumti' → Set
           T (KOhAC x) = {!!}
           T (LeSelbriC x x₁) = {!!}
-          T (POIC x) = {!!}
+          T (POIC x) with 𝕃.last (POI.PoiCl.cl x)
+          ... | ⁇.just x2 = Σ.uncurry POI.JePoiTerm x2
+          ... | ⁇.nothing = {!!}
           T (JekC x x₁ x₂ x₃) = {!!}
           T (UIC x) = {!!}
         jekTerm = {!!}
