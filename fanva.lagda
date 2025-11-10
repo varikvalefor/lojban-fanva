@@ -341,7 +341,7 @@ module lojban where
                     → 𝕃.length x ≡ 0
           ¯1↓≡[]⇒[] x d with 𝕃.length x ℕ.≟ 0
           ... | yes d = d
-          ... | no N = ⊥-elim $ LSJ {n = _} {_} (Σ.proj₂ $ ≢0⇒S N) x _≡_.refl d
+          ... | no N = ⊥-elim $ LSJ {n = _} (Σ.proj₂ $ ≢0⇒S N) x _≡_.refl d
             where
             ≢0⇒S : {n : ℕ} → ¬ (n ≡ 0) → Σ ℕ $ λ m → n ≡ ℕ.suc m
             ≢0⇒S = {!!}
