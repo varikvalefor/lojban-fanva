@@ -343,7 +343,7 @@ module lojban where
           ... | yes d = d
           ... | no N = ⊥-elim $ LSJ {n = {!!}} {{!!}} {!!} x {!!} d
             where
-            ≢0⇒S : {n : ℕ} → ¬ (0 ≡ n) → Σ ℕ $ λ m → n ≡ ℕ.suc m
+            ≢0⇒S : {n : ℕ} → ¬ (n ≡ 0) → Σ ℕ $ λ m → n ≡ ℕ.suc m
             ≢0⇒S = {!!}
             LSJ : ∀ {a} → {A : Set a} → {n m : ℕ}
                 → n ≡ ℕ.suc m
