@@ -345,7 +345,7 @@ module lojban where
             where
             ≢0⇒S : {n : ℕ} → ¬ (n ≡ 0) → Σ ℕ $ λ m → n ≡ ℕ.suc m
             ≢0⇒S {0} N = ⊥-elim $ N _≡_.refl
-            ≢0⇒S {ℕ.suc n} N = {!!}
+            ≢0⇒S {ℕ.suc n} N = n , _≡_.refl
             LSJ : ∀ {a} → {A : Set a} → {n m : ℕ}
                 → n ≡ ℕ.suc m
                 → (x : List A)
