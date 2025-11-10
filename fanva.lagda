@@ -329,7 +329,7 @@ module lojban where
         cl-romoi : ⁇.Is-just $ 𝕃.last cl
         cl-romoi with 𝕃.last cl | _≡_.inspect 𝕃.last cl
         ... | ⁇.just x | d = ⁇∀.just _
-        ... | ⁇.nothing | d = ⊥-elim $ #≢0 $ ¯1↓≡[]⇒[] cl {!!}
+        ... | ⁇.nothing | d = ⊥-elim $ #≢0 $ ¯1↓≡[]⇒[] cl $ d ._≡_.Reveal_·_is_.eq
           where
           #≢0 : ¬_ $ 𝕃.length cl ≡ 0
           #≢0 = {!!}
