@@ -341,15 +341,14 @@ module lojban where
                     → 𝕃.length x ≡ 0
           ¯1↓≡[]⇒[] x d with 𝕃.length x ℕ.≟ 0
           ... | yes d = d
-          ... | no N = ⊥-elim $ LSJ (Σ.proj₂ $ ≢0⇒S N) x _≡_.refl d
+          ... | no N = ⊥-elim $ LSJ x (Σ.proj₂ $ ≢0⇒S N) d
             where
             ≢0⇒S : {n : ℕ} → ¬ (n ≡ 0) → Σ ℕ $ λ m → n ≡ ℕ.suc m
             ≢0⇒S {0} N = ⊥-elim $ N _≡_.refl
             ≢0⇒S {ℕ.suc n} N = n , _≡_.refl
-            LSJ : ∀ {a} → {A : Set a} → {n m : ℕ}
-                → n ≡ ℕ.suc m
+            LSJ : ∀ {a} → {A : Set a} → {m : ℕ}
                 → (x : List A)
-                → 𝕃.length x ≡ n
+                → 𝕃.length x ≡ ℕ.suc m
                 → ¬ (𝕃.last x ≡ ⁇.nothing)
             LSJ = {!!}
           
