@@ -394,7 +394,11 @@ module lojban where
           }
           where
           T : Sumti' → Set
-          T = {!!}
+          T (KOhAC x) = {!!}
+          T (LeSelbriC x x₁) = {!!}
+          T (POIC x) = {!!}
+          T (JekC x x₁ x₂ x₃) = {!!}
+          T (UIC x) = {!!}
         jekTerm = {!!}
 
     Sumti = Sumti.Sumti'
