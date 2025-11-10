@@ -390,8 +390,11 @@ module lojban where
           T (UIC (Cnima'o.CniX s t c)) = {!!}
         briTerm = {!!}
         poiTerm = record {
-          Term = {!!}
+          Term = T
           }
+          where
+          T : Sumti' → Set
+          T = {!!}
         jekTerm = {!!}
 
     Sumti = Sumti.Sumti'
