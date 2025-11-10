@@ -296,13 +296,21 @@ module lojban where
       data POI'
         where
 
+      JePoiTerm : POI → Jufra → Set
+      JePoiTerm = {!!}
+
       record PoiCl : Set
         where
         inductive
+
+        ¯1↓ : ∀ {a} → {A : Set a} → List A → List A
+        ¯1↓ = 𝕃.reverse ∘ 𝕃.drop 1 ∘ 𝕃.reverse
+
         field
           cl : List $ POI × Jufra
           jek : List Jek
           len : 𝕃.length jek ≡ 𝕃.length cl ℕ.∸ 1
+          term : All (Σ.uncurry JePoiTerm) $ ¯1↓ cl
           
     POI = POI.POI'
 
