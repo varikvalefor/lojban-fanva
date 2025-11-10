@@ -210,6 +210,11 @@ module lojban where
              → Cnima'oCo'e
              → Cni Selma'o
 
+      -- instance
+      --   -- | ni'o filri'a zo'e je tu'a zo toi'e
+      --   cniTerm : CniTerm Cnima'oCo'e
+      --   cniTerm = {!!}
+
     Cnima'oCo'e : Set
     Cnima'oCo'e = Cnima'o.Cnima'oCo'e
 
@@ -291,6 +296,14 @@ module lojban where
       data POI'
         where
 
+      record PoiCl : Set
+        where
+        inductive
+        field
+          cl : List $ POI × Jufra
+          jek : List Jek
+          len : 𝕃.length jek ≡ 𝕃.length cl ℕ.∸ 1
+          
     POI = POI.POI'
 
     module Na where
@@ -348,8 +361,7 @@ module lojban where
         LeSelbriC : LE → Selbri → Sumti'
         POIC : (x : Sumti')
              → POI.Term x
-             → POI
-             → Jufra
+             → POI.PoiCl
              → Sumti'
         JekC : (x : Sumti')
              → Jek.Term x
@@ -365,7 +377,7 @@ module lojban where
           where
           T : Sumti' → Set
           T (KOhAC k) = {!!}
-          T (POIC x t p j) = {!!}
+          T (POIC x t p) = {!!}
           T (LeSelbriC l s) = {!!}
           T (JekC x t j x₂) = {!!}
           T (UIC (Cnima'o.CniX s t c)) = {!!}
