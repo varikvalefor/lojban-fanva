@@ -53,6 +53,8 @@ open import Data.Product
   )
 open import Relation.Nullary
   using (
+    yes;
+    no;
     ¬_
   )
 open import Truthbrary.Record.SR
@@ -337,9 +339,9 @@ module lojban where
                     → (x : List A)
                     → 𝕃.last x ≡ ⁇.nothing
                     → 𝕃.length x ≡ 0
-          ¯1↓≡[]⇒[] 𝕃.[] = λ z → _≡_.refl
-          ¯1↓≡[]⇒[] (x 𝕃.∷ 𝕃.[]) = λ ()
-          ¯1↓≡[]⇒[] (x 𝕃.∷ xs) = {!!}
+          ¯1↓≡[]⇒[] x d with 𝕃.length x ℕ.≟ 0
+          ... | yes d = {!!}
+          ... | no N = {!!}
           
     POI = POI.POI'
 
