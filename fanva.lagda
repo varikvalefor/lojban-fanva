@@ -312,6 +312,9 @@ module lojban where
           jek : List Jek
           len : 𝕃.length jek ≡ 𝕃.length cl ℕ.∸ 1
           term : All (Σ.uncurry JePoiTerm) $ ¯1↓ cl
+
+        cl-romoi : ⁇.Is-just $ 𝕃.last cl
+        cl-romoi = {!!}
           
     POI = POI.POI'
 
