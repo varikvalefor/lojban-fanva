@@ -329,10 +329,15 @@ module lojban where
         cl-romoi : ⁇.Is-just $ 𝕃.last cl
         cl-romoi with 𝕃.last cl
         ... | ⁇.just x = ⁇∀.just _
-        ... | ⁇.nothing = ⊥-elim $ #≢0 {!!}
+        ... | ⁇.nothing = ⊥-elim $ #≢0 $ ¯1↓≡[]⇒[] cl {!!}
           where
           #≢0 : ¬_ $ 𝕃.length cl ≡ 0
           #≢0 = {!!}
+          ¯1↓≡[]⇒[] : ∀ {a} → {A : Set a}
+                    → (x : List A)
+                    → 𝕃.last x ≡ ⁇.nothing
+                    → 𝕃.length x ≡ 0
+          ¯1↓≡[]⇒[] = {!!}
           
     POI = POI.POI'
 
