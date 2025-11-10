@@ -340,7 +340,7 @@ module lojban where
                     → 𝕃.last x ≡ ⁇.nothing
                     → 𝕃.length x ≡ 0
           ¯1↓≡[]⇒[] x d with 𝕃.length x ℕ.≟ 0
-          ... | yes d = {!!}
+          ... | yes d = d
           ... | no N = {!!}
           
     POI = POI.POI'
