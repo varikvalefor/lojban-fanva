@@ -327,9 +327,9 @@ module lojban where
           term : All (Σ.uncurry JePoiTerm) $ ¯1↓ cl
 
         cl-romoi : ⁇.Is-just $ 𝕃.last cl
-        cl-romoi with 𝕃.last cl
-        ... | ⁇.just x = ⁇∀.just _
-        ... | ⁇.nothing = ⊥-elim $ #≢0 $ ¯1↓≡[]⇒[] cl {!!}
+        cl-romoi with 𝕃.last cl | _≡_.inspect 𝕃.last cl
+        ... | ⁇.just x | d = ⁇∀.just _
+        ... | ⁇.nothing | d = ⊥-elim $ #≢0 $ ¯1↓≡[]⇒[] cl {!!}
           where
           #≢0 : ¬_ $ 𝕃.length cl ≡ 0
           #≢0 = {!!}
