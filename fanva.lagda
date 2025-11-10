@@ -299,7 +299,7 @@ module lojban where
       JePoiTerm : POI → Jufra → Set
       JePoiTerm = {!!}
 
-      record PoiCl : Set
+      record PoiCl (Selma'o : Set) : Set
         where
         inductive
 
@@ -307,6 +307,7 @@ module lojban where
         ¯1↓ = 𝕃.reverse ∘ 𝕃.drop 1 ∘ 𝕃.reverse
 
         field
+          s : Selma'o
           cl : List $ POI × Jufra
           jek : List Jek
           len : 𝕃.length jek ≡ 𝕃.length cl ℕ.∸ 1
@@ -367,9 +368,7 @@ module lojban where
         where
         KOhAC : KOhA → Sumti'
         LeSelbriC : LE → Selbri → Sumti'
-        POIC : (x : Sumti')
-             → POI.Term x
-             → POI.PoiCl
+        POIC : POI.PoiCl Sumti'
              → Sumti'
         JekC : (x : Sumti')
              → Jek.Term x
@@ -385,7 +384,7 @@ module lojban where
           where
           T : Sumti' → Set
           T (KOhAC k) = {!!}
-          T (POIC x t p) = {!!}
+          T (POIC c) = {!!}
           T (LeSelbriC l s) = {!!}
           T (JekC x t j x₂) = {!!}
           T (UIC (Cnima'o.CniX s t c)) = {!!}
