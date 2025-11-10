@@ -389,7 +389,9 @@ module lojban where
           T (JekC x t j x₂) = {!!}
           T (UIC (Cnima'o.CniX s t c)) = {!!}
         briTerm = {!!}
-        poiTerm = {!!}
+        poiTerm = record {
+          Term = {!!}
+          }
         jekTerm = {!!}
 
     Sumti = Sumti.Sumti'
