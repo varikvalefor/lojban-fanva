@@ -57,6 +57,10 @@ open import Data.List.Relation.Unary.All
   using (
     All
   )
+open import Data.Maybe.Relation.Unary.Any
+  as ⁇∀
+  using (
+  )
 open import Relation.Binary.PropositionalEquality
   as _≡_
   using (
@@ -315,7 +319,7 @@ module lojban where
 
         cl-romoi : ⁇.Is-just $ 𝕃.last cl
         cl-romoi with 𝕃.last cl
-        ... | ⁇.just x = {!!}
+        ... | ⁇.just x = ⁇∀.just _
         ... | ⁇.nothing = {!!}
           
     POI = POI.POI'
