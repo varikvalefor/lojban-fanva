@@ -350,7 +350,7 @@ module lojban where
                 → (x : List A)
                 → 𝕃.length x ≡ ℕ.suc m
                 → ¬ (𝕃.last x ≡ ⁇.nothing)
-            LSJ 𝕃.[] d = {!!}
+            LSJ 𝕃.[] d = λ _ → ⊥-elim $ (¬ (0 ≡ _) Function.∋ λ ()) d
             LSJ (x 𝕃.∷ xs) d = {!!}
           
     POI = POI.POI'
