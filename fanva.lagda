@@ -341,7 +341,16 @@ module lojban where
                     → 𝕃.length x ≡ 0
           ¯1↓≡[]⇒[] x d with 𝕃.length x ℕ.≟ 0
           ... | yes d = d
-          ... | no N = {!!}
+          ... | no N = ⊥-elim $ LSJ {n = {!!}} {{!!}} {!!} x {!!} d
+            where
+            ≢0⇒S : {n : ℕ} → ¬ (0 ≡ n) → Σ ℕ $ λ m → n ≡ ℕ.suc m
+            ≢0⇒S = {!!}
+            LSJ : ∀ {a} → {A : Set a} → {n m : ℕ}
+                → n ≡ ℕ.suc m
+                → (x : List A)
+                → 𝕃.length x ≡ n
+                → ¬ (𝕃.last x ≡ ⁇.nothing)
+            LSJ = {!!}
           
     POI = POI.POI'
 
