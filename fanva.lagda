@@ -344,7 +344,7 @@ module lojban where
           ... | no N = ⊥-elim $ LSJ (Σ.proj₂ $ ≢0⇒S N) x _≡_.refl d
             where
             ≢0⇒S : {n : ℕ} → ¬ (n ≡ 0) → Σ ℕ $ λ m → n ≡ ℕ.suc m
-            ≢0⇒S {0} N = {!!}
+            ≢0⇒S {0} N = ⊥-elim $ N _≡_.refl
             ≢0⇒S {ℕ.suc n} N = {!!}
             LSJ : ∀ {a} → {A : Set a} → {n m : ℕ}
                 → n ≡ ℕ.suc m
