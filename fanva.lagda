@@ -39,12 +39,21 @@ open import Data.Maybe
   using (
     Maybe
   )
+open import Data.Empty
+  using (
+    ⊥-elim;
+    ⊥
+  )
 open import Data.Product
   as Σ
   using (
     _×_;
     _,_;
     Σ
+  )
+open import Relation.Nullary
+  using (
+    ¬_
   )
 open import Truthbrary.Record.SR
   using (
@@ -320,7 +329,10 @@ module lojban where
         cl-romoi : ⁇.Is-just $ 𝕃.last cl
         cl-romoi with 𝕃.last cl
         ... | ⁇.just x = ⁇∀.just _
-        ... | ⁇.nothing = {!!}
+        ... | ⁇.nothing = ⊥-elim $ #≢0 {!!}
+          where
+          #≢0 : ¬_ $ 𝕃.length cl ≡ 0
+          #≢0 = {!!}
           
     POI = POI.POI'
 
