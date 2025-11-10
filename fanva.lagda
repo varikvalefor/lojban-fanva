@@ -314,7 +314,9 @@ module lojban where
           term : All (Σ.uncurry JePoiTerm) $ ¯1↓ cl
 
         cl-romoi : ⁇.Is-just $ 𝕃.last cl
-        cl-romoi = {!!}
+        cl-romoi with 𝕃.last cl
+        ... | ⁇.just x = {!!}
+        ... | ⁇.nothing = {!!}
           
     POI = POI.POI'
 
