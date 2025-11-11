@@ -334,7 +334,7 @@ module lojban where
         ... | ⁇.nothing | d = ⊥-elim $ #≢0 $ ¯1↓≡[]⇒[] cl $ d ._≡_.Reveal_·_is_.eq
           where
           #≢0 : ¬_ $ 𝕃.length cl ≡ 0
-          #≢0 = {!!}
+          #≢0 = λ x → ?
           ¯1↓≡[]⇒[] : ∀ {a} → {A : Set a}
                     → (x : List A)
                     → 𝕃.last x ≡ ⁇.nothing
@@ -352,7 +352,7 @@ module lojban where
                 → ¬ (𝕃.last x ≡ ⁇.nothing)
             LSJ 𝕃.[] d = λ _ → ⊥-elim $ (¬ (0 ≡ _) Function.∋ λ ()) d
             LSJ (x 𝕃.∷ 𝕃.[]) d = λ ()
-            LSJ (x 𝕃.∷ xs) d = {!!}
+            LSJ {m = ℕ.suc m} (z 𝕃.∷ (x 𝕃.∷ xs)) d = LSJ (x 𝕃.∷ xs) _≡_.refl
           
     POI = POI.POI'
 
