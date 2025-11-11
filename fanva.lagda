@@ -325,7 +325,7 @@ module lojban where
           s : Selma'o
           cl : List $ POI × Jufra
           jek : List Jek
-          len : 𝕃.length jek ≡ 𝕃.length cl ℕ.∸ 1
+          len : 𝕃.length cl ≡ ℕ.suc (𝕃.length jek)
           term : All (Σ.uncurry JePoiTerm) $ ¯1↓ cl
 
         cl-romoi : ⁇.Is-just $ 𝕃.last cl
