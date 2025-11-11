@@ -334,7 +334,10 @@ module lojban where
         ... | ⁇.nothing | d = ⊥-elim $ #≢0 $ ¯1↓≡[]⇒[] cl $ d ._≡_.Reveal_·_is_.eq
           where
           #≢0 : ¬_ $ 𝕃.length cl ≡ 0
-          #≢0 = {!!}
+          #≢0 = S⇒≢0 len
+            where
+            S⇒≢0 : {m n : ℕ} → n ≡ ℕ.suc m → ¬_ $ n ≡ 0
+            S⇒≢0 = {!!}
           ¯1↓≡[]⇒[] : ∀ {a} → {A : Set a}
                     → (x : List A)
                     → 𝕃.last x ≡ ⁇.nothing
