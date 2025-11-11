@@ -337,7 +337,7 @@ module lojban where
           #≢0 = S⇒≢0 len
             where
             S⇒≢0 : {m n : ℕ} → n ≡ ℕ.suc m → ¬_ $ n ≡ 0
-            S⇒≢0 = {!!}
+            S⇒≢0 = λ {_≡_.refl → λ ()}
           ¯1↓≡[]⇒[] : ∀ {a} → {A : Set a}
                     → (x : List A)
                     → 𝕃.last x ≡ ⁇.nothing
