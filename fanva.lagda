@@ -353,7 +353,7 @@ module lojban where
                 → (x : List A)
                 → 𝕃.length x ≡ ℕ.suc m
                 → ¬ (𝕃.last x ≡ ⁇.nothing)
-            LSJ 𝕃.[] d = λ _ → ⊥-elim $ (¬ (0 ≡ _) Function.∋ λ ()) d
+            LSJ 𝕃.[] d = ⊥-elim $ (¬ (0 ≡ _) Function.∋ λ ()) d
             LSJ (x 𝕃.∷ 𝕃.[]) d = λ ()
             LSJ {m = ℕ.suc m} (z 𝕃.∷ (x 𝕃.∷ xs)) d = LSJ (x 𝕃.∷ xs) _≡_.refl
           
