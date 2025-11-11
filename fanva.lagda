@@ -356,7 +356,7 @@ module lojban where
                 → 𝕃.length x ≡ ℕ.suc m
                 → ¬ (𝕃.last x ≡ ⁇.nothing)
             LSJ 𝕃.[] ()
-            LSJ (x 𝕃.∷ 𝕃.[]) d = λ ()
+            LSJ (x 𝕃.∷ 𝕃.[]) _ = λ ()
             LSJ (_ 𝕃.∷ zs@(_ 𝕃.∷ _)) _ = LSJ zs _≡_.refl
           
     POI = POI.POI'
