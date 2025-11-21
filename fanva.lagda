@@ -44,6 +44,10 @@ open import Data.Empty
     ⊥-elim;
     ⊥
   )
+open import Data.String
+  using (
+    String
+  )
 open import Data.Product
   as Σ
   using (
@@ -93,8 +97,17 @@ record Fanva (t₁ t₂ : TB) : Set₁
 module lojban where
   module T where
     module Lerfu where
-      tLerfu : Char → Set
-      tLerfu = {!!}
+      record tLerfu (c : Char) : Set
+        where
+        field
+          s : String
+          nC : ℕ
+
+        ,s = Data.String.fromList $ 𝕃.replicate nC ','
+        c' = Data.String.fromChar c
+
+        field
+          d : s ≡ (,s Data.String.++ c')
 
       -- | ni'o le cmene be le ctaipe
       -- cu na jai frili
