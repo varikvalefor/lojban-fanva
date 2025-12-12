@@ -343,7 +343,7 @@ module lojban where
           s : Selma'o
           cl₀ : T
           clx : List $ Jek × T
-          term : All (Σ.uncurry JePoiTerm) $ ¯1↓ (cl₀ 𝕃.∷ 𝕃.map Σ.proj₂ clx)
+          term : All (Σ.uncurry JePoiTerm) $ cl₀ 𝕃.∷ 𝕃.map Σ.proj₂ (¯1↓ clx)
 
         cl : List T
         cl = cl₀ 𝕃.∷ 𝕃.map Σ.proj₂ clx
