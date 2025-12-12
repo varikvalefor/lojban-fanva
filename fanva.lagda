@@ -324,6 +324,7 @@ module lojban where
       data POI'
         where
         poiC : Lerfu.p → Lerfu.o → Lerfu.i → POI'
+        noiC : Lerfu.n → Lerfu.o → Lerfu.i → POI'
 
       JePoiTerm : POI → Jufra → Set
       JePoiTerm = {!!}
