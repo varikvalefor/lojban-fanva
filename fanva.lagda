@@ -336,43 +336,17 @@ module lojban where
         ¯1↓ : ∀ {a} → {A : Set a} → List A → List A
         ¯1↓ = 𝕃.reverse ∘ 𝕃.drop 1 ∘ 𝕃.reverse
 
+        T : Set
+        T = POI × Jufra
+        
         field
           s : Selma'o
-          cl : List $ POI × Jufra
-          jek : List Jek
-          len : 𝕃.length cl ≡ ℕ.suc (𝕃.length jek)
-          term : All (Σ.uncurry JePoiTerm) $ ¯1↓ cl
+          cl₀ : T
+          clx : List $ Jek × T
+          term : All (Σ.uncurry JePoiTerm) $ ¯1↓ (cl₀ 𝕃.∷ 𝕃.map Σ.proj₂ clx)
 
-        cl-romoi : ⁇.Is-just $ 𝕃.last cl
-        cl-romoi with 𝕃.last cl | _≡_.inspect 𝕃.last cl
-        ... | ⁇.just x | d = ⁇∀.just _
-        ... | ⁇.nothing | d = ⊥-elim $ #≢0 $ ¯1↓≡[]⇒[] cl $ d ._≡_.Reveal_·_is_.eq
-          where
-          #≢0 : ¬_ $ 𝕃.length cl ≡ 0
-          #≢0 = S⇒≢0 len
-            where
-            S⇒≢0 : {m n : ℕ} → n ≡ ℕ.suc m → ¬_ $ n ≡ 0
-            S⇒≢0 = λ {_≡_.refl → λ ()}
-          ¯1↓≡[]⇒[] : ∀ {a} → {A : Set a}
-                    → (x : List A)
-                    → 𝕃.last x ≡ ⁇.nothing
-                    → 𝕃.length x ≡ 0
-          ¯1↓≡[]⇒[] x d with 𝕃.length x ℕ.≟ 0
-          ... | yes d = d
-          ... | no N = ⊥-elim $ LSJ x (Σ.proj₂ $ ≢0⇒S N) d
-            where
-            ≢0⇒S : {n : ℕ}
-                 → ¬ (n ≡ 0)
-                 → Σ ℕ $ λ m → n ≡ ℕ.suc m
-            ≢0⇒S {0} N = ⊥-elim $ N _≡_.refl
-            ≢0⇒S {ℕ.suc n} N = n , _≡_.refl
-            LSJ : ∀ {a} → {A : Set a} → {m : ℕ}
-                → (x : List A)
-                → 𝕃.length x ≡ ℕ.suc m
-                → ¬ (𝕃.last x ≡ ⁇.nothing)
-            LSJ 𝕃.[] ()
-            LSJ (_ 𝕃.∷ 𝕃.[]) _ = λ ()
-            LSJ (_ 𝕃.∷ zs@(_ 𝕃.∷ _)) _ = LSJ zs _≡_.refl
+        cl : List T
+        cl = cl₀ 𝕃.∷ 𝕃.map Σ.proj₂ clx
           
     POI = POI.POI'
 
