@@ -219,6 +219,10 @@ module lojban where
     Jek : Set
     Jufra : Set
 
+    -- | ni'o filri'a tu'a lo valsi bitmu lerfu
+    Vlapoi : List Set → Set
+    Vlapoi = {!!}
+
     module Cnima'o where
       Cnima'oCo'e : Set
       Cnima'oCo'e = {!!}
