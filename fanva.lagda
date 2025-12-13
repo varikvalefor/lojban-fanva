@@ -221,7 +221,7 @@ module lojban where
 
     -- | ni'o filri'a tu'a lo valsi bitmu lerfu
     Vlapoi : List Set → Set
-    Vlapoi 𝕃.[] = {!!}
+    Vlapoi 𝕃.[] = ⊥
     Vlapoi (x 𝕃.∷ xs) = {!!}
 
     module Cnima'o where
