@@ -347,6 +347,12 @@ module lojban where
 
         cl : List T
         cl = cl₀ 𝕃.∷ 𝕃.map Σ.proj₂ clx
+
+      instance
+        poiTermPoiCl : {s : Set}
+                     → ⦃ _ : PoiTerm s ⦄
+                     → PoiTerm (PoiCl s)
+        poiTermPoiCl = {!!}
           
     POI = POI.POI'
 
