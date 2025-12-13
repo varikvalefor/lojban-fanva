@@ -391,7 +391,7 @@ module lojban where
       Term ⦃ T ⦄ = JekTerm.Term T
 
       Jek' : Set
-      Jek' = Maybe Na × Cnima'o.Cni JE
+      Jek' = Maybe Na × Cnima'o.Cni JE × Maybe Nai
 
     Jek = Jek.Jek'
 
