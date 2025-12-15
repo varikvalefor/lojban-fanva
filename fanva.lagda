@@ -223,7 +223,9 @@ module lojban where
     Vlapoi : List Set → Set
     Vlapoi 𝕃.[] = ⊥
     Vlapoi (x 𝕃.∷ 𝕃.[]) = x
-    Vlapoi (x 𝕃.∷ xs) = {!!}
+    Vlapoi (x 𝕃.∷ xs) = x × ValsiBitmuLerfuCo'e × Vlapoi xs
+      where
+      ValsiBitmuLerfuCo'e = {!!}
 
     module Cnima'o where
       Cnima'oCo'e : Set
