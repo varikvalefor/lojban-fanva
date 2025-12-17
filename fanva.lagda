@@ -548,6 +548,7 @@ open lojban using (lojban)
 
 module glibau where
 
+  -- | ni'o sucta gerna le glibau be la .varik.
   module T where
     record Encl (Selma'oPe'a : Set) : Set₁
       where
