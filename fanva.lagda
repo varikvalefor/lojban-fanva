@@ -599,6 +599,7 @@ module glibau where
       module P where
         data P : Set
           where
+          Causes : P
           Things : P
           Proofs : P
           Types : P
@@ -607,6 +608,7 @@ module glibau where
       module S where
         data S : Set
           where
+          Cause : S
           Thing : S
           Proof : S
           Type : S
