@@ -555,8 +555,12 @@ module glibau where
     Brivla : Sumti → Set
     Brivla = {!!}
 
-    Jufra : Set
-    Jufra = {!!}
+    record Jufra : Set
+      where
+      field
+        x₁ : Sumti
+        brivla : Brivla x₁
+        x₂ : Maybe Sumti
 
     T : Set
     T = {!!}
