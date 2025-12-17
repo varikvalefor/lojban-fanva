@@ -621,6 +621,14 @@ module glibau where
           x₂ : Maybe Sumti
           fanmo-punkt : Punkt
 
+    module JufraBitmu where
+      data JufraBitmu : Set
+        where
+        SSep : JufraBitmu -- "  "
+        Ni'oCu'i : JufraBitmu -- "\n\n"
+
+    JufraBitmu = JufraBitmu.JufraBitmu
+
     T : Set
     T = {!!}
 
