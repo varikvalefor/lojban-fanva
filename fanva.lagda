@@ -529,7 +529,7 @@ module lojban where
 
       field
         liste : List $ INI'O ⊎ Jufra
-        famo : Maybe FAhO
+        fanmo : Maybe FAhO
         -- | .i ctaipe lo su'u bitmu lo jufra
         bitmu : (i₁ i₂ : 𝔽.Fin _)
               → 𝔽.toℕ i₁ ≡ ℕ.suc (𝔽.toℕ i₂)
