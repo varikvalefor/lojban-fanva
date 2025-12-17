@@ -650,6 +650,9 @@ module glibau where
 
     JufraBitmu = JufraBitmu.JufraBitmu
 
+    Pluja-Jufra : Set
+    Pluja-Jufra = Jufra × List (JufraBitmu × Jufra)
+
     T : Set
     T = {!!}
 
