@@ -549,6 +549,15 @@ open lojban using (lojban)
 module glibau where
 
   module T where
+    Sumti : Set
+    Sumti = {!!}
+
+    Brivla : Sumti → Set
+    Brivla = {!!}
+
+    Jufra : Set
+    Jufra = {!!}
+
     T : Set
     T = {!!}
 
