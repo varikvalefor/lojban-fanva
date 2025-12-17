@@ -619,8 +619,15 @@ module glibau where
         sumtiPrep : Sumti → PrepPh → Sumti
         sumtiListe : (x : List Sumti) → 𝕃.length x ℕ.> 0 → Sumti
 
-      Selbri : Sumti → Set
-      Selbri = {!!}
+      Selbrivla : Sumti → Set
+      Selbrivla = {!!}
+
+      record Selbri (s : Sumti) : Set
+        where
+        field
+          adv₁ : Adverb
+          sbv : Selbrivla s
+          adv₂ : Adverb
 
       record PrepPhSampu : Set
         where
