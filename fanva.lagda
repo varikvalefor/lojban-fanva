@@ -554,6 +554,9 @@ module glibau where
       field
         isEncl : Selma'oPe'a → Set
 
+    Conjunction : Set
+    Conjunction = {!!}
+
     mutual
       data Sumti : Set
         where
