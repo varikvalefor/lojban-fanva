@@ -547,7 +547,11 @@ module lojban where
 open lojban using (lojban)
 
 glibau : TB
-glibau = {!!}
+glibau = record {
+  T = {!!};
+  R = {!!};
+  S = {!!}
+  }
 
 l→g : Fanva lojban glibau
 l→g = {!!}
