@@ -596,16 +596,20 @@ module glibau where
       S = {!!}
 
     module NounValsi where
-      PNounValsi : Set
-      PNounValsi = {!!}
+      module P where
+        data P : Set
+          where
+          Jbovla : String → P
 
-      SNounValsi : Set
-      SNounValsi = {!!}
+      module S where
+        data S : Set
+          where
+          Jbovla : String → S
 
       data NounValsi : Set
         where
-        P : PNounValsi → NounValsi
-        S : SNounValsi → NounValsi
+        P : P.P → NounValsi
+        S : S.S → NounValsi
 
     NounValsi = NounValsi.NounValsi
 
