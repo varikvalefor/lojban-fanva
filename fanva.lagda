@@ -620,7 +620,10 @@ module glibau where
         sumtiListe : (x : List Sumti) → 𝕃.length x ℕ.> 0 → Sumti
 
       Selbrivla : Sumti → Set
-      Selbrivla = {!!}
+      Selbrivla (sumtiNVla x x₁ x₂) = {!!}
+      Selbrivla (sumtiArAdj x x₁) = {!!}
+      Selbrivla (sumtiPrep x x₁) = {!!}
+      Selbrivla (sumtiListe x x₁) = {!!}
 
       record Selbri (s : Sumti) : Set
         where
