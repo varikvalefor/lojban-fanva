@@ -577,8 +577,19 @@ module glibau where
     Article : Set
     Article = {!!}
 
-    NounValsi : Set
-    NounValsi = {!!}
+    module NounValsi where
+      PNounValsi : Set
+      PNounValsi = {!!}
+
+      SNounValsi : Set
+      SNounValsi = {!!}
+
+      data NounValsi : Set
+        where
+        P : PNounValsi → NounValsi
+        S : SNounValsi → NounValsi
+
+    NounValsi = NounValsi.NounValsi
 
     mutual
       Adjective : Set
