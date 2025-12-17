@@ -546,12 +546,16 @@ module lojban where
 
 open lojban using (lojban)
 
-glibau : TB
-glibau = record {
-  T = {!!};
-  R = {!!};
-  S = {!!}
-  }
+module glibau where
+
+  glibau : TB
+  glibau = record {
+    T = {!!};
+    R = {!!};
+    S = {!!}
+    }
+
+open glibau using (glibau)
 
 l→g : Fanva lojban glibau
 l→g = {!!}
