@@ -629,7 +629,7 @@ module glibau where
       Selbrivla : Sumti → Set
       Selbrivla (sumtiNVla x x₁ x₂) = Selbrivla0.S
       Selbrivla (sumtiArAdj x x₁) = {!!}
-      Selbrivla (sumtiPrep x x₁) = {!!}
+      Selbrivla (sumtiPrep x x₁) = Selbrivla x
       Selbrivla (sumtiListe x x₁) = {!!}
 
       record Selbri (s : Sumti) : Set
