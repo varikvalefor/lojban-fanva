@@ -564,8 +564,15 @@ module glibau where
 
     Punkt = Punkt.Punkt
 
-    Conjunction : Set
-    Conjunction = {!!}
+    module Conjunction where
+      data Conjunction : Set
+        where
+        And : Conjunction
+        And-Not : Conjunction
+        Or : Conjunction
+        Iff : Conjunction
+
+    Conjunction = Conjunction.Conjunction
 
     Article : Set
     Article = {!!}
