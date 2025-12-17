@@ -562,8 +562,9 @@ module glibau where
       where
       field
         x₁ : Sumti
+        adv₁ : List Adverb
         brivla : Brivla x₁
-        adv : List Adverb
+        adv₂ : List Adverb
         x₂ : Maybe Sumti
 
     T : Set
