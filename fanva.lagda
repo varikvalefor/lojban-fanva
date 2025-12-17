@@ -561,12 +561,16 @@ module glibau where
     Article : Set
     Article = {!!}
 
+    NounValsi : Set
+    NounValsi = {!!}
+
     mutual
       Adjective : Set
       Adjective = {!!}
 
       data Sumti : Set
         where
+        sumtiNVla : Maybe Article → Maybe Adjective → NounValsi → Sumti
         sumtiArAdj : Article → Adjective → Sumti
         sumtiPrep : Sumti → PrepPh → Sumti
 
