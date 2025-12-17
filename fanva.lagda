@@ -600,6 +600,7 @@ module glibau where
         sumtiNVla : Maybe Article → Maybe Adjective → NounValsi → Sumti
         sumtiArAdj : Article → Adjective → Sumti
         sumtiPrep : Sumti → PrepPh → Sumti
+        sumtiListe : (x : List Sumti) → 𝕃.length x ℕ.> 0 → Sumti
 
       Brivla : Sumti → Set
       Brivla = {!!}
