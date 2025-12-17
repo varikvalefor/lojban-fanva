@@ -574,8 +574,13 @@ module glibau where
 
     Conjunction = Conjunction.Conjunction
 
-    Article : Set
-    Article = {!!}
+    module Article where
+      data Article : Set
+        where
+        A : Article
+        The : Article
+
+    Article = Article.Article
 
     module NounValsi where
       PNounValsi : Set
@@ -611,10 +616,13 @@ module glibau where
       Adverb : Set
       Adverb = {!!}
 
+      IntroPh : Set
+      IntroPh = {!!}
+
       record Jufra : Set
         where
         field
-          adv₀ : List Adverb
+          intro : IntroPh
           x₁ : Sumti
           adv₁ : List Adverb
           brivla : Brivla x₁
