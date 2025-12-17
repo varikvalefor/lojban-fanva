@@ -630,7 +630,7 @@ module glibau where
       Selbrivla (sumtiNVla _ _ _) = Selbrivla0.S
       Selbrivla (sumtiArAdj x x₁) = {!!}
       Selbrivla (sumtiPrep x _) = Selbrivla x
-      Selbrivla (sumtiListe x x₁) with 𝕃.length x ℕ.>? 1
+      Selbrivla (sumtiListe x _) with 𝕃.length x ℕ.>? 1
       ... | yes _ = Selbrivla0.P
       ... | no _ = Selbrivla0.S
 
