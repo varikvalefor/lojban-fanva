@@ -649,9 +649,7 @@ module glibau where
         field
           intro : IntroPh
           x₁ : Sumti
-          adv₁ : List Adverb
           brivla : Selbri x₁
-          adv₂ : List Adverb
           x₂ : Maybe Sumti
           fanmo-punkt : Punkt
 
