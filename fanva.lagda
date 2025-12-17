@@ -599,11 +599,15 @@ module glibau where
       module P where
         data P : Set
           where
+          Proofs : P
+          Types : P
           Jbovla : String → P
 
       module S where
         data S : Set
           where
+          Proof : S
+          Type : S
           Jbovla : String → S
 
       data NounValsi : Set
