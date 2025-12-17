@@ -549,6 +549,11 @@ open lojban using (lojban)
 module glibau where
 
   module T where
+    record Encl (Selma'oPe'a : Set) : Set₁
+      where
+      field
+        isEncl : Selma'oPe'a → Set
+
     mutual
       data Sumti : Set
         where
