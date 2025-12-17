@@ -550,8 +550,9 @@ module glibau where
 
   module T where
     mutual
-      Sumti : Set
-      Sumti = {!!}
+      data Sumti : Set
+        where
+        sumtiPrep : Sumti → PrepPh → Sumti
 
       Brivla : Sumti → Set
       Brivla = {!!}
