@@ -549,26 +549,27 @@ open lojban using (lojban)
 module glibau where
 
   module T where
-    Sumti : Set
-    Sumti = {!!}
+    mutual
+      Sumti : Set
+      Sumti = {!!}
 
-    Brivla : Sumti → Set
-    Brivla = {!!}
+      Brivla : Sumti → Set
+      Brivla = {!!}
 
-    PrepPh : Set
-    PrepPh = {!!}
+      PrepPh : Set
+      PrepPh = {!!}
 
-    Adverb : Set
-    Adverb = {!!}
+      Adverb : Set
+      Adverb = {!!}
 
-    record Jufra : Set
-      where
-      field
-        x₁ : Sumti
-        adv₁ : List Adverb
-        brivla : Brivla x₁
-        adv₂ : List Adverb
-        x₂ : Maybe Sumti
+      record Jufra : Set
+        where
+        field
+          x₁ : Sumti
+          adv₁ : List Adverb
+          brivla : Brivla x₁
+          adv₂ : List Adverb
+          x₂ : Maybe Sumti
 
     T : Set
     T = {!!}
