@@ -659,6 +659,7 @@ module glibau where
       data Adverb : Set
         where
         AdverbAdverbivla : Adverbivla → Adverb
+        AdverbP : PrepPh → Adverb
 
       data IntroPh : Set
         where
