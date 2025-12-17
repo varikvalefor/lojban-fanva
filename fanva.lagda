@@ -588,6 +588,13 @@ module glibau where
 
     Article = Article.Article
 
+    module Selbrivla0 where
+      P : Set
+      P = {!!}
+
+      S : Set
+      S = {!!}
+
     module NounValsi where
       PNounValsi : Set
       PNounValsi = {!!}
