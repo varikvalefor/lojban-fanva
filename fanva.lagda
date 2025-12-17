@@ -558,9 +558,16 @@ module glibau where
     Conjunction : Set
     Conjunction = {!!}
 
+    Article : Set
+    Article = {!!}
+
     mutual
+      Adjective : Set
+      Adjective = {!!}
+
       data Sumti : Set
         where
+        sumtiArAdj : Article → Adjective → Sumti
         sumtiPrep : Sumti → PrepPh → Sumti
 
       Brivla : Sumti → Set
