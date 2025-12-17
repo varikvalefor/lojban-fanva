@@ -574,6 +574,12 @@ module glibau where
 
     Conjunction = Conjunction.Conjunction
 
+    module Preposition where
+      data Preposition : Set
+        where
+
+    Preposition = Preposition.Preposition
+
     module Article where
       data Article : Set
         where
@@ -610,8 +616,13 @@ module glibau where
       Brivla : Sumti → Set
       Brivla = {!!}
 
-      PrepPh : Set
-      PrepPh = {!!}
+      record PrepPh : Set
+        where
+        inductive
+        field
+          adv : Adverb
+          pv : Preposition
+          x₁ : Sumti
 
       Adverb : Set
       Adverb = {!!}
