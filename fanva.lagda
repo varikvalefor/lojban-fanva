@@ -622,7 +622,7 @@ module glibau where
       Selbri : Sumti → Set
       Selbri = {!!}
 
-      record PrepPh : Set
+      record PrepPhSampu : Set
         where
         inductive
         field
@@ -630,8 +630,15 @@ module glibau where
           pv : Preposition
           x₁ : Sumti
 
-      Adverb : Set
-      Adverb = {!!}
+      data PrepPh : Set
+        where
+        PrepPhL : (x : List PrepPhSampu)
+                → 𝕃.length x ℕ.> 0
+                → PrepPh
+
+      data Adverb : Set
+        where
+        AdverbAdverbivla : Adverbivla → Adverb
 
       data IntroPh : Set
         where
