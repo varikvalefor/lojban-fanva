@@ -555,6 +555,15 @@ module glibau where
       field
         isEncl : Selma'oPe'a → Set
 
+    module Punkt where
+      data Punkt : Set
+        where
+        Excl : Punkt
+        FStop : Punkt
+        Preti : Punkt
+
+    Punkt = Punkt.Punkt
+
     Conjunction : Set
     Conjunction = {!!}
 
@@ -591,6 +600,7 @@ module glibau where
           brivla : Brivla x₁
           adv₂ : List Adverb
           x₂ : Maybe Sumti
+          fanmo-punkt : Punkt
 
     T : Set
     T = {!!}
