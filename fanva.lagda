@@ -627,8 +627,9 @@ module glibau where
       Adverb : Set
       Adverb = {!!}
 
-      IntroPh : Set
-      IntroPh = {!!}
+      data IntroPh : Set
+        where
+        IPP : PrepPh → IntroPh
 
       record Jufra : Set
         where
