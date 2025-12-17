@@ -602,6 +602,12 @@ module glibau where
 
     NounValsi = NounValsi.NounValsi
 
+    module Adverbivla where
+      Adverbivla : Set
+      Adverbivla = {!!}
+
+    Adverbivla = Adverbivla.Adverbivla
+
     mutual
       Adjective : Set
       Adjective = {!!}
