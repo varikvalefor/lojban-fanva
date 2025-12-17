@@ -555,6 +555,9 @@ module glibau where
     Brivla : Sumti → Set
     Brivla = {!!}
 
+    PrepPh : Set
+    PrepPh = {!!}
+
     Adverb : Set
     Adverb = {!!}
 
