@@ -613,8 +613,8 @@ module glibau where
         sumtiPrep : Sumti → PrepPh → Sumti
         sumtiListe : (x : List Sumti) → 𝕃.length x ℕ.> 0 → Sumti
 
-      Brivla : Sumti → Set
-      Brivla = {!!}
+      Selbri : Sumti → Set
+      Selbri = {!!}
 
       record PrepPh : Set
         where
@@ -637,7 +637,7 @@ module glibau where
           intro : IntroPh
           x₁ : Sumti
           adv₁ : List Adverb
-          brivla : Brivla x₁
+          brivla : Selbri x₁
           adv₂ : List Adverb
           x₂ : Maybe Sumti
           fanmo-punkt : Punkt
