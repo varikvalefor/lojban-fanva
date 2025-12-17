@@ -599,6 +599,7 @@ module glibau where
       module P where
         data P : Set
           where
+          Things : P
           Proofs : P
           Types : P
           Jbovla : String → P
@@ -606,6 +607,7 @@ module glibau where
       module S where
         data S : Set
           where
+          Thing : S
           Proof : S
           Type : S
           Jbovla : String → S
