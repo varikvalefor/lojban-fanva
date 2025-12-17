@@ -650,6 +650,9 @@ module glibau where
 
     JufraBitmu = JufraBitmu.JufraBitmu
 
+    Emoticon : Set
+    Emoticon = {!!}
+
     Pluja-Jufra : Set
     Pluja-Jufra = Jufra × List (JufraBitmu × Jufra)
 
