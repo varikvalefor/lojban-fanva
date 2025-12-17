@@ -548,9 +548,13 @@ open lojban using (lojban)
 
 module glibau where
 
+  module T where
+    T : Set
+    T = {!!}
+
   glibau : TB
   glibau = record {
-    T = {!!};
+    T = T.T;
     R = {!!};
     S = {!!}
     }
