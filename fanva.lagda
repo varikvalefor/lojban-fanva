@@ -614,6 +614,7 @@ module glibau where
       record Jufra : Set
         where
         field
+          adv₀ : List Adverb
           x₁ : Sumti
           adv₁ : List Adverb
           brivla : Brivla x₁
