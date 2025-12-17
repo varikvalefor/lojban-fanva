@@ -555,11 +555,15 @@ module glibau where
     Brivla : Sumti → Set
     Brivla = {!!}
 
+    Adverb : Set
+    Adverb = {!!}
+
     record Jufra : Set
       where
       field
         x₁ : Sumti
         brivla : Brivla x₁
+        adv : List Adverb
         x₂ : Maybe Sumti
 
     T : Set
