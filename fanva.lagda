@@ -19,6 +19,11 @@ open import Function
     _∘_;
     _$_
   )
+open import Data.Bool
+  as 𝔹
+  using (
+    Bool
+  )
 open import Data.Char
   as 𝕃
   using (
@@ -659,6 +664,7 @@ module glibau where
       record RelPh (s : Sumti) : Set
         where
         field
+          restrictive : Bool
           bt : BridiTail s
 
       record Selbri (s : Sumti) : Set
