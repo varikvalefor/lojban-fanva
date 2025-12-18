@@ -687,14 +687,18 @@ module glibau where
         Adv : Adverb → IntroPh
         IPP : PrepPh → IntroPh
 
+      record BridiTail (x₁ : Sumti) : Set
+        where
+        field
+          brivla : Selbri x₁
+          x₂ : Maybe Sumti
+
       record Jufra : Set
         where
         field
           intro : IntroPh
           x₁ : Sumti
-          brivla : Selbri x₁
-          x₂ : Maybe Sumti
-          fanmo-punkt : Punkt
+          bt : BridiTail x₁
 
     module JufraBitmu where
       data JufraBitmu : Set
