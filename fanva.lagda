@@ -663,6 +663,7 @@ module glibau where
 
       record RelPh (s : Sumti) : Set
         where
+        inductive
         field
           restrictive : Bool
           bt : BridiTail s
