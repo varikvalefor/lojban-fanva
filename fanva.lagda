@@ -680,6 +680,7 @@ module glibau where
 
       data IntroPh : Set
         where
+        Adv : Adverb → IntroPh
         IPP : PrepPh → IntroPh
 
       record Jufra : Set
