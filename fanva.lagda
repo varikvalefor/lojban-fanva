@@ -636,6 +636,7 @@ module glibau where
 
       data Sumti : Set
         where
+        sumtiQuote : String → Sumti
         sumtiNVla : Maybe Article → Maybe Adjective → NounValsi → Sumti
         sumtiArAdj : Article → Adjective → Sumti
         sumtiPrep : Sumti → PrepPh → Sumti
@@ -645,6 +646,7 @@ module glibau where
         sumtiVarDecl : Sumti → Variable → Sumti
 
       Selbrivla : Sumti → Set
+      Selbrivla (sumtiQuote x) = {!!}
       Selbrivla (sumtiNVla _ _ (NounValsi.P _)) = Selbrivla0.P
       Selbrivla (sumtiNVla _ _ (NounValsi.S _)) = Selbrivla0.S
       Selbrivla (sumtiArAdj _ _) = Selbrivla0.P × Selbrivla0.S -- "is/are"
