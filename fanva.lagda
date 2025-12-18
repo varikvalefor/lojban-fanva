@@ -645,7 +645,7 @@ module glibau where
       Selbrivla : Sumti → Set
       Selbrivla (sumtiNVla _ _ (NounValsi.P _)) = Selbrivla0.P
       Selbrivla (sumtiNVla _ _ (NounValsi.S _)) = Selbrivla0.S
-      Selbrivla (sumtiArAdj x _) = Selbrivla0.P × Selbrivla0.S -- "is/are"
+      Selbrivla (sumtiArAdj _ _) = Selbrivla0.P × Selbrivla0.S -- "is/are"
       Selbrivla (sumtiPrep x _) = Selbrivla x
       Selbrivla (sumtiVarDecl s _) = Selbrivla s
       Selbrivla (sumtiListe x _) with 𝕃.length x ℕ.>? 1
