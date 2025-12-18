@@ -656,6 +656,11 @@ module glibau where
       ... | yes _ = Selbrivla0.P
       ... | no _ = Selbrivla0.S
 
+      record RelPh (s : Sumti) : Set
+        where
+        field
+          bt : BridiTail s
+
       record Selbri (s : Sumti) : Set
         where
         field
@@ -699,6 +704,7 @@ module glibau where
           intro : IntroPh
           x₁ : Sumti
           bt : BridiTail x₁
+          punkt : Punkt
 
     module JufraBitmu where
       data JufraBitmu : Set
