@@ -640,6 +640,8 @@ module glibau where
         sumtiArAdj : Article → Adjective → Sumti
         sumtiPrep : Sumti → PrepPh → Sumti
         sumtiListe : (x : List Sumti) → 𝕃.length x ℕ.> 0 → Sumti
+        -- | ni'o mapti zoi glibau. ((A THING $s$) $v$) $z$ .glibau.
+        -- .i toldji la'e di'u
         sumtiVarDecl : Sumti → Variable → Sumti
 
       Selbrivla : Sumti → Set
