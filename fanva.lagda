@@ -508,20 +508,19 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
     Nai = {!!}
 
+    module JE
+      where
+      JE : Set
+      JE = Lerfu.j × Lerfu.karsna
+
+      instance
+        cniTerm : Cnima'o.CniTerm JE
+        cniTerm = record {Term = λ _ → ⊤}
+
+    JE = JE.JE
+
     module Jek
       where
-
-      module JE
-        where
-        JE : Set
-        JE = Lerfu.j × Lerfu.karsna
-
-        instance
-          cniTerm : Cnima'o.CniTerm JE
-          cniTerm = record {Term = λ _ → ⊤}
-
-      JE = JE.JE
-
       record JekTerm (Selma'o : Set) : Set₁
         where
         field
