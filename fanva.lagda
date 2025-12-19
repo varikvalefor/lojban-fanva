@@ -343,13 +343,23 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     Jek : Set
     Jufra : Set
 
-    -- | ni'o filri'a tu'a lo valsi bitmu lerfu
-    Vlapoi : List Set → Set
-    Vlapoi 𝕃.[] = ⊥
-    Vlapoi (x 𝕃.∷ 𝕃.[]) = x
-    Vlapoi (x 𝕃.∷ xs) = x × ValsiBitmuLerfuCo'e × Vlapoi xs
-      where
+    module Vlapoi where
+      data VCX : Set₁
+        where
+        _!! : Set → VCX
+        _?? : Set → VCX
+
+      ValsiBitmuLerfuCo'e : Set
       ValsiBitmuLerfuCo'e = {!!}
+      
+      -- | ni'o filri'a tu'a lo valsi bitmu lerfu
+      Vlapoi : List VCX → Set
+      Vlapoi 𝕃.[] = ⊥
+      Vlapoi (_!! x 𝕃.∷ 𝕃.[]) = x
+      Vlapoi (_!! x 𝕃.∷ xs) = x × ValsiBitmuLerfuCo'e × Vlapoi xs
+      Vlapoi (_?? x 𝕃.∷ xs) = Maybe (x × ValsiBitmuLerfuCo'e) × Vlapoi xs
+
+    Vlapoi = Vlapoi.Vlapoi
 
     module Cnima'o where
       Cnima'oCo'e : Set
