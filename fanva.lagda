@@ -560,7 +560,7 @@ module lojban where
     S = {!!}
     }
 
-open lojban using (lojban)
+lojban = lojban.lojban
 
 module glibau where
 
