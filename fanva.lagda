@@ -728,6 +728,7 @@ module glibau where
       data JufraBitmu : Set
         where
         SSep : JufraBitmu -- "  "
+        Ni'oCu'iCai : JufraBitmu -- "\n"
         Ni'oCu'i : JufraBitmu -- "\n\n"
 
     JufraBitmu = JufraBitmu.JufraBitmu
