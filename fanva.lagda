@@ -204,6 +204,7 @@ module lojban where
     INI'O : Set
 
     LE : Set
+    KU : Set
 
     BAI  : Set
 
@@ -295,6 +296,13 @@ module lojban where
           Term (UIC u) = {!!}
 
     I = I.I'
+
+    module KU where
+      data KU' : Set
+        where
+          KUC : KU'
+
+    KU = KU.KU'
 
     FAhO = {!!}
 
