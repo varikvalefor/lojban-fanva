@@ -1,3 +1,95 @@
+\documentclass{report}
+
+\usepackage{ar}
+\usepackage[bw]{agda}
+\usepackage{ifsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{parskip}
+\usepackage{mathabx}
+\usepackage{unicode-math}
+\usepackage{newunicodechar}
+
+\newunicodechar{λ}{\ensuremath{\mathnormal\lambda}}
+\newunicodechar{∷}{\ensuremath{\mathnormal\Colon}}
+\newunicodechar{𝕍}{\ensuremath{\mathnormal{\mathbb V}}}
+\newunicodechar{∋}{\ensuremath{\mathnormal\ni}}
+\newunicodechar{∃}{\ensuremath{\mathnormal\exists}}
+\newunicodechar{⟨}{\ensuremath{\mathnormal\langle}}
+\newunicodechar{⟩}{\ensuremath{\mathnormal\rangle}}
+\newunicodechar{≡}{\ensuremath{\mathnormal\equiv}}
+\newunicodechar{∎}{\ensuremath{\mathnormal\blacksquare}}
+\newunicodechar{𝔽}{\ensuremath{\mathnormal{\mathbb F}}}
+\newunicodechar{𝕄}{\ensuremath{\mathnormal{\mathbb M}}}
+\newunicodechar{ℕ}{\ensuremath{\mathnormal{\mathbb N}}}
+\newunicodechar{𝕊}{\ensuremath{\mathnormal{\mathbb S}}}
+\newunicodechar{𝕃}{\ensuremath{\mathnormal{\mathbb L}}}
+\newunicodechar{𝔹}{\ensuremath{\mathnormal{\mathbb B}}}
+\newunicodechar{ν}{\ensuremath{\mathnormal\nu}}
+\newunicodechar{μ}{\ensuremath{\mathnormal\mu}}
+\newunicodechar{τ}{\ensuremath{\mathnormal\tau}}
+\newunicodechar{∸}{\ensuremath{\mathnormal\dotdiv}}
+\newunicodechar{ᵇ}{\ensuremath{\mathnormal{^\AgdaFontStyle{b}}}}
+\newunicodechar{ˡ}{\ensuremath{\mathnormal{^\AgdaFontStyle{l}}}}
+\newunicodechar{ʳ}{\ensuremath{\mathnormal{^\AgdaFontStyle{r}}}}
+\newunicodechar{≥}{\ensuremath{\mathnormal\geq}}
+\newunicodechar{≮}{\ensuremath{\mathnormal\nless}}
+\newunicodechar{ϕ}{\ensuremath{\mathnormal\phi}}
+\newunicodechar{∧}{\ensuremath{\mathnormal\wedge}}
+\newunicodechar{∣}{\ensuremath{\mathnormal |}}
+\newunicodechar{∘}{\ensuremath{\mathnormal\circ}}
+\newunicodechar{∀}{\ensuremath{\mathnormal\forall}}
+\newunicodechar{ℓ}{\ensuremath{\mathnormal\ell}}
+\newunicodechar{σ}{\ensuremath{\mathnormal\sigma}}
+\newunicodechar{π}{\ensuremath{\mathnormal\pi}}
+\newunicodechar{α}{\ensuremath{\mathnormal\alpha}}
+\newunicodechar{₀}{\ensuremath{\mathnormal{_0}}}
+\newunicodechar{₁}{\ensuremath{\mathnormal{_1}}}
+\newunicodechar{₂}{\ensuremath{\mathnormal{_2}}}
+\newunicodechar{₃}{\ensuremath{\mathnormal{_3}}}
+\newunicodechar{∈}{\ensuremath{\mathnormal\in}}
+\newunicodechar{⊆}{\ensuremath{\mathnormal\subseteq}}
+\newunicodechar{ᵢ}{\ensuremath{\mathnormal{_\AgdaFontStyle{i}}}}
+\newunicodechar{ₗ}{\ensuremath{\mathnormal{_\AgdaFontStyle{l}}}}
+\newunicodechar{ₓ}{\ensuremath{\mathnormal{_\AgdaFontStyle{x}}}}
+\newunicodechar{ᵥ}{\ensuremath{\mathnormal{_\AgdaFontStyle{v}}}}
+\newunicodechar{ₘ}{\ensuremath{\mathnormal{_\AgdaFontStyle{m}}}}
+\newunicodechar{ₚ}{\ensuremath{\mathnormal{_\AgdaFontStyle{p}}}}
+\newunicodechar{≤}{\ensuremath{\mathnormal\leq}}
+\newunicodechar{⍉}{\ensuremath{\mathnormal{∘\hspace{-0.455em}\backslash}}}
+\newunicodechar{≟}{\ensuremath{\mathnormal{\stackrel{?}{=}}}}
+\newunicodechar{δ}{\ensuremath{\mathnormal\delta}}
+\newunicodechar{⇒}{\ensuremath{\mathnormal\Rightarrow}}
+\newunicodechar{⇐}{\ensuremath{\mathnormal\Leftarrow}}
+\newunicodechar{↔}{\ensuremath{\mathnormal\leftrightarrow}}
+\newunicodechar{≰}{\ensuremath{\mathnormal\nleq}}
+\newunicodechar{⦃}{\ensuremath{\mathnormal{\lbrace\hspace{-0.3em}|}}}
+\newunicodechar{⦄}{\ensuremath{\mathnormal{|\hspace{-0.3em}\rbrace}}}
+\newunicodechar{▹}{\ensuremath{\mathnormal\triangleright}}
+\newunicodechar{⊓}{\ensuremath{\mathnormal\sqcap}}
+\newunicodechar{⊎}{\ensuremath{\mathnormal\uplus}}
+\newunicodechar{⍨}{\ensuremath{\raisebox{-0.25ex}{\ddot\sim}}}
+\newunicodechar{⁇}{\ensuremath{\mathnormal{?\hspace{-0.3em}?}}}
+\newunicodechar{⊤}{\ensuremath{\mathnormal{\top}}}
+\newunicodechar{⊥}{\ensuremath{\mathnormal{\bot}}}
+
+\newcommand\Sym\AgdaSymbol
+\newcommand\D\AgdaDatatype
+\newcommand\F\AgdaFunction
+\newcommand\B\AgdaBound
+\newcommand\OpF[1]{\AgdaOperator{\F{#1}}}
+
+\newcommand\sds{\spacefactor\sfcode`.\ \space}
+
+\title{la fanva}
+\author{la .varik.\ .VALefor.}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
 \begin{code}
 open import Data.Nat
   as ℕ
@@ -86,20 +178,46 @@ open import Relation.Binary.PropositionalEquality
   using (
     _≡_
   )
+\end{code}
 
+\part{le vrici}
+
+\chapter{la'oi .\AgdaRecord{TB}.}
+ni'o ro da poi ke'a me'oi .Unicode.\ bangu zo'u ro de poi ke'a ctaipe la'oi .\D{TB}.\ zo'u ga jo de mapti da gi lo mu'oi glibau.\ \AgdaField{TB.T}\ .zoi.\ be de cu ctaipe lo ro te gerna be da
+
+\begin{code}
 record TB : Set₁
   where
   field
     T : Set
     R : Read T
     S : Show T
+\end{code}
 
+\chapter{la'oi .\AgdaRecord{Fanva}.}
+ni'o ro da xi pa poi ke'a bangu zo'u ro da xi re poi ke'a bangu zo'u ro de xi pa poi ke'a ctaipe la'oi .\AgdaRecord{TB}.\ je cu mapti da xi pa zo'u ro de xi re poi ke'a ctaipe la'oi .\AgdaRecord{TB}.\ je cu mapti da xi re zo'u ro di poi ke'a ctaipe lo me'oi .\AgdaRecord{Fanva}.\ be de xi pa bei de xi re zo'u di zabna le ka ce'u mapti kei naja cu ckaji le ka ro cy poi gerna da xi pa ke'a zo'u lo mu'oi glibau.\ \AgdaField{Fanva.fanva}\ .glibau.\ be di bei cy je cu te gerna da xi re
+
+.i la .varik.\ na birti lo du'u ma kau zabna le ka ce'u filri'a lo nu ciksi lo ctaipe be lo su'u mapti  .i lakne fa lo nu pluja fa lo smuni se ctaipe
+
+\begin{code}
 record Fanva (t₁ t₂ : TB) : Set₁
   where
   field
     fanva : TB.T t₁ → TB.T t₂
+\end{code}
 
+\part{le bangu se ctaipe}
+
+\chapter{le sinxa be la .lojban.}
+
+\begin{code}
 module lojban where
+\end{code}
+
+\section{le gerna}
+ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le gerna be le jbobau be vo'a
+
+\begin{code}
   module T where
     module Lerfu where
       record tLerfu (c : Char) : Set
@@ -551,19 +669,34 @@ module lojban where
               → 𝔽.toℕ i₁ ≡ ℕ.suc (𝔽.toℕ i₂)
               → Is-inj₂ (𝕃.lookup liste i₁)
               → Is-inj₁ (𝕃.lookup liste i₂)
-              
+\end{code}
 
+\section{le sinxa be le te tcidu bangu}
+ni'o la .varik.\ cu troci lo nu la'oi .\F{lojban}.\ co'e ja velcki le jbobau be vo'a\sds  .i ku'i la'oi .\F{lojban}.\ na mulno pe'a
+
+\begin{code}
   lojban : TB
   lojban = record {
     T = T.T;
     R = {!!};
     S = {!!}
     }
+\end{code}
 
+\begin{code}
 lojban = lojban.lojban
+\end{code}
 
+\chapter{le sinxa be le glibau}
+
+\begin{code}
 module glibau where
+\end{code}
 
+\section{le gerna}
+ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le gerna be le glibau be vo'a  .i ku'i ko'a na mulno pe'a
+
+\begin{code}
   -- | ni'o sucta gerna le glibau be la .varik.
   module T where
     record Encl (Selma'oPe'a : Set) : Set₁
@@ -741,16 +874,28 @@ module glibau where
 
     T : Set
     T = {!!}
+\end{code}
 
+\section{le sinxa be le te tcidu bangu}
+ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\F{glibau}.\ co'e ja velcki le glibau be vo'a\sds  .i ku'i ko'a na mulno pe'a
+
+\begin{code}
   glibau : TB
   glibau = record {
     T = T.T;
     R = {!!};
     S = {!!}
     }
+\end{code}
 
+\begin{code}
 glibau = glibau.glibau
+\end{code}
 
+\part{le fanva co'e}
+
+\begin{code}
 l→g : Fanva lojban glibau
 l→g = {!!}
 \end{code}
+\end{document}
