@@ -385,9 +385,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       --   cniTerm : CniTerm Cnima'oCo'e
       --   cniTerm = {!!}
 
-    Cnima'oCo'e : Set
-    Cnima'oCo'e = Cnima'o.Cnima'oCo'e
-
     module Bri
       where
       record BriTerm (Selma'o : Set) : Set₁
