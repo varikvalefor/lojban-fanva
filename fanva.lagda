@@ -435,6 +435,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
       data LE'
         where
+        laC : Lerfu.l → Lerfu.a → LE'
         leC : Lerfu.l → Lerfu.e → LE'
         loC : Lerfu.l → Lerfu.o → LE'
         UIC : Cnima'o.Cni LE' → LE'
