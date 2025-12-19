@@ -506,9 +506,12 @@ module lojban where
           Term = λ {(inj₁ s) → T s; (inj₂ (_ , s)) → T s}
           }
 
+      ST : Set
+      ST = Sumti ⊎ (BAI × Sumti)
+
       field
         selbri : Selbri
-        terbri : List $ Sumti ⊎ (BAI × Sumti)
+        terbri : List $ ST
         term : All Bri.Term $ ¯1↓ terbri
 
     module Jufra
