@@ -749,7 +749,7 @@ module glibau where
     S = {!!}
     }
 
-open glibau using (glibau)
+glibau = glibau.glibau
 
 l→g : Fanva lojban glibau
 l→g = {!!}
