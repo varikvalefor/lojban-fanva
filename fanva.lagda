@@ -530,7 +530,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       Term ⦃ T ⦄ = JekTerm.Term T
 
       Jek' : Set
-      Jek' = Maybe Na × Cnima'o.Cni JE × Maybe Nai
+      Jek' = Maybe Na × Cnima'o.Cni JE
 
     Jek = Jek.Jek'
 
