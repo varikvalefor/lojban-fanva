@@ -879,7 +879,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
       Adverbivla = {!!}
 
     Adverbivla = Adverbivla.Adverbivla
+\end{code}
 
+\begin{code}
     mutual
       Variable : Set
       Variable = {!!}
