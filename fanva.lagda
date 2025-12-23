@@ -655,7 +655,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
           }
           where
           T : Sumti' → Set
-          T (KOhAC k) = {!!}
+          T (KOhAC k) = Cnima'o.CniTerm.Term KOhA.cniTerm k
           T (POIC c) = {!!}
           T (LeSelbriC l s) = {!!}
           T (JekC x t j x₂) = {!!}
