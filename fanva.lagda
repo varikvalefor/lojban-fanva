@@ -947,7 +947,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
           adv : Maybe Adverb
           pv : Preposition
           x₁ : Sumti
+\end{code}
 
+\begin{code}
       data PrepPh : Set
         where
         PrepPhPx : PrepPh → PrepPhSampu → PrepPh
