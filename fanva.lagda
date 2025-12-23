@@ -629,7 +629,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       where
       Z = Lerfu.zunsna
       K = Lerfu.karsna
+\begin{code}
 
+\end{code}
     module Selbri
       where
       data Selbri' : Set
