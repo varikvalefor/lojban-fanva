@@ -816,7 +816,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         Iff : Conjunction
 
     Conjunction = Conjunction.Conjunction
+\end{code}
 
+\begin{code}
     module Preposition where
       data Preposition : Set
         where
