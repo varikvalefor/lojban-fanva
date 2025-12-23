@@ -427,6 +427,11 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
+    INI'O : Set
+    INI'O = I ⊎ NIhO
+\end{code}
+
+\begin{code}
     module LE
       where
       data LE' : Set
@@ -449,8 +454,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \begin{code}
     FAhO : Set
-
-    INI'O : Set
 
     KU : Set
 
@@ -494,10 +497,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
       Term : {A : Set} → ⦃ BriTerm A ⦄ → A → Set
       Term ⦃ T ⦄ = BriTerm.Term T
-\end{code}
-
-\begin{code}
-    INI'O = I ⊎ NIhO
 \end{code}
 
 \begin{code}
