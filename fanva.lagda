@@ -537,7 +537,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
     NA = Na.NA'
     Na = Na.Na'
+\begin{code}
 
+\end{code}
     Nai = {!!}
 
     module JE
