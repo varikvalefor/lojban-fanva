@@ -342,7 +342,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     record Bridi : Set
     Jek : Set
     Jufra : Set
+\end{code}
 
+\begin{code}
     module Vlapoi where
       record ValsiBitmu (b : Bool) : Set
         where
@@ -352,7 +354,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       Vlapoi ((x , d) 𝕃.∷ xs) b = x × ValsiBitmu d × Vlapoi xs b
 
     Vlapoi = Vlapoi.Vlapoi
+\end{code}
 
+\begin{code}
     module Cnima'o where
       Cnima'oCo'e : Set
       Cnima'oCo'e = {!!}
