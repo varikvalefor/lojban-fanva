@@ -888,7 +888,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
 \begin{code}
       Variable : Set
       Variable = {!!}
+\end{code}
 
+\begin{code}
       Adjective : Set
       Adjective = {!!}
 
