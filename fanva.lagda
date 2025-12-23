@@ -433,6 +433,10 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
+    INI'O = I ⊎ NIhO
+\end{code}
+
+\begin{code}
     module KU where
       data KU' : Set
         where
@@ -443,10 +447,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \begin{code}
     FAhO = {!!}
-\end{code}
-
-\begin{code}
-    INI'O = I ⊎ NIhO
 \end{code}
 
 \begin{code}
