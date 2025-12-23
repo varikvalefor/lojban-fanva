@@ -343,12 +343,15 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     Jek : Set
     Jufra : Set
 
-    record ValsiBitmu (m : ℕ) : Set
-      where
-      field
-        n' : ℕ
+    module Vlapoi where
+      record ValsiBitmu (b : Bool) : Set
+        where
 
-      n = n' ℕ.+ m
+      Vlapoi : List $ Set × Bool → Set → Set
+      Vlapoi 𝕃.[] b = b
+      Vlapoi ((x , d) 𝕃.∷ xs) b = x × ValsiBitmu d × Vlapoi xs b
+
+    Vlapoi = Vlapoi.Vlapoi
 
     module Cnima'o where
       Cnima'oCo'e : Set
@@ -525,13 +528,8 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       Term : {A : Set} → ⦃ JekTerm A ⦄ → A → Set
       Term ⦃ T ⦄ = JekTerm.Term T
 
-      record Jek' : Set
-        where
-        inductive
-        field
-          na : Maybe Na
-          sp : ValsiBitmu 0
-          jek : Cnima'o.Cni JE
+      Jek' : Set
+      Jek' = Vlapoi 𝕃.[ Na , 𝔹.false ] $ Cnima'o.Cni JE
 
     Jek = Jek.Jek'
 
