@@ -340,8 +340,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     NA : Set
     Na : Set
 
-    Nai : Set
-
     Sumti : Set
     Cmevla : Set
     Gismu : Set
@@ -537,10 +535,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
     NA = Na.NA'
     Na = Na.Na'
-\begin{code}
-
-\end{code}
-    Nai = {!!}
 \begin{code}
 
 \end{code}
