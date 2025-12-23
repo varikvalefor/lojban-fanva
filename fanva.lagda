@@ -883,6 +883,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
 
 \begin{code}
     mutual
+\end{code}
+
+\begin{code}
       Variable : Set
       Variable = {!!}
 
