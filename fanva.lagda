@@ -906,7 +906,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         -- | ni'o mapti zoi glibau. ((A THING $s$) $v$) $z$ .glibau.
         -- .i toldji la'e di'u
         sumtiVarDecl : Sumti → Variable → Sumti
+\end{code}
 
+\begin{code}
       Selbrivla : Sumti → Set
       Selbrivla (sumtiQuote x) = {!!}
       Selbrivla (sumtiNVla _ _ (NounValsi.P _)) = Selbrivla0.P
