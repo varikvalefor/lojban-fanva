@@ -311,7 +311,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
       y'y : Set
       y'y = tLerfu '\''
+\end{code}
 
+\begin{code}
       data karsna : Set
         where
         karsnaA : a → karsna
