@@ -843,7 +843,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
 
       S : Set
       S = {!!}
+\end{code}
 
+\begin{code}
     module NounValsi where
       module P where
         data P : Set
