@@ -219,6 +219,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \begin{code}
   module T where
+\end{code}
+
+\begin{code}
     module Lerfu where
       record tLerfu (c : Char) : Set
         where
