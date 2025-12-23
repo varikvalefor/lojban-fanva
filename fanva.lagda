@@ -384,6 +384,24 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
+    module NIhO where
+      data NIhO' : Set
+
+      instance
+        cniTerm : Cnima'o.CniTerm NIhO'
+
+      data NIhO'
+        where
+          Ni'oC : Lerfu.n → Lerfu.i → Lerfu.y'y → Lerfu.o → NIhO'
+          UIC : Cnima'o.Cni NIhO' → NIhO'
+
+      instance
+        cniTerm = {!!}
+
+    NIhO = NIhO.NIhO'
+\end{code}
+
+\begin{code}
     module LE
       where
       data LE' : Set
@@ -405,7 +423,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
-    NIhO : Set
     I : Set
     FAhO : Set
 
@@ -453,24 +470,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
       Term : {A : Set} → ⦃ BriTerm A ⦄ → A → Set
       Term ⦃ T ⦄ = BriTerm.Term T
-\end{code}
-
-\begin{code}
-    module NIhO where
-      data NIhO' : Set
-
-      instance
-        cniTerm : Cnima'o.CniTerm NIhO'
-
-      data NIhO'
-        where
-          Ni'oC : Lerfu.n → Lerfu.i → Lerfu.y'y → Lerfu.o → NIhO'
-          UIC : Cnima'o.Cni NIhO' → NIhO'
-
-      instance
-        cniTerm = {!!}
-
-    NIhO = NIhO.NIhO'
 \end{code}
 
 \begin{code}
