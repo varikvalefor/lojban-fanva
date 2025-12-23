@@ -439,7 +439,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
       data NIhO'
         where
-          Ni'oC : NIhO'
+          Ni'oC : Lerfu.n → Lerfu.i → Lerfu.y'y → Lerfu.o → NIhO'
           UIC : Cnima'o.Cni NIhO' → NIhO'
 
       instance
