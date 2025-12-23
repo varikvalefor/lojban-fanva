@@ -481,8 +481,11 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
-    KOhA : Set
-    KOhA = {!!}
+    module KOhA where
+      data KOhA' : Set
+        where
+
+    KOhA = KOhA.KOhA'
 \end{code}
 
 \begin{code}
@@ -644,7 +647,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
           }
           where
           T : Sumti' → Set
-          T (KOhAC k) = T k
+          T (KOhAC k) = {!!}
           T (POIC c) = {!!}
           T (LeSelbriC l s) = {!!}
           T (JekC x t j x₂) = {!!}
