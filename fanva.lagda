@@ -712,16 +712,13 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       ¯1↓ : ∀ {a} → {A : Set a} → List A → List A
       ¯1↓ = 𝕃.reverse ∘ 𝕃.drop 1 ∘ 𝕃.reverse
 
-      private
-        T = Bri.BriTerm.Term $ Sumti.briTerm
-
       ST : Set
       ST = Maybe (FA ⊎ BAI) × Sumti
 
       instance
         cniTerm⊎ : Bri.BriTerm ST
         cniTerm⊎ = record {
-          Term = T ∘ Σ.proj₂
+          Term = Bri.BriTerm.Term Sumti.briTerm ∘ Σ.proj₂
           }
 
       field
