@@ -919,9 +919,8 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
 
       data PrepPh : Set
         where
-        PrepPhL : (x : List PrepPhSampu)
-                → 𝕃.length x ℕ.> 0
-                → PrepPh
+        PrepPhPx : PrepPh → PrepPhSampu → PrepPh
+        PrepPhJe : PrepPh → PrepPhSampu → PrepPh
 
       data Adverb : Set
         where
