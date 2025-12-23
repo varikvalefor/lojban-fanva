@@ -466,7 +466,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
       instance
         cniTerm = {!!}
+\end{code}
 
+\begin{code}
     LE = LE.LE'
 
     BAI = {!!}
