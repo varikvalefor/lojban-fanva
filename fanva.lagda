@@ -312,8 +312,13 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       y'y : Set
       y'y = tLerfu '\''
 
-      karsna : Set
-      karsna = a ⊎ e ⊎ i ⊎ o ⊎ u
+      data karsna : Set
+        where
+        karsnaA : a → karsna
+        karsnaE : e → karsna
+        karsnaI : i → karsna
+        karsnaO : o → karsna
+        karsnaU : u → karsna
 
       zunsna : Set
       zunsna = b ⊎ c ⊎ d ⊎ f ⊎ g ⊎
