@@ -320,10 +320,25 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         karsnaO : o → karsna
         karsnaU : u → karsna
 
-      zunsna : Set
-      zunsna = b ⊎ c ⊎ d ⊎ f ⊎ g ⊎
-               j ⊎ k ⊎ l ⊎ m ⊎ n ⊎ p ⊎
-               r ⊎ s ⊎ t ⊎ v ⊎ x ⊎ z
+      data zunsna : Set
+        where
+        zunsnaB : b → zunsna
+        zunsnaC : c → zunsna
+        zunsnaD : d → zunsna
+        zunsnaF : f → zunsna
+        zunsnaG : g → zunsna
+        zunsnaJ : j → zunsna
+        zunsnaK : k → zunsna
+        zunsnaL : l → zunsna
+        zunsnaM : m → zunsna
+        zunsnaN : n → zunsna
+        zunsnaP : p → zunsna
+        zunsnaR : r → zunsna
+        zunsnaS : s → zunsna
+        zunsnaT : t → zunsna
+        zunsnaV : v → zunsna
+        zunsnaX : x → zunsna
+        zunsnaZ : z → zunsna
 \end{code}
 
 \begin{code}
