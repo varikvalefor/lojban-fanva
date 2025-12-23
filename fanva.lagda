@@ -354,7 +354,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
-    data NIhO : Set
+    NIhO : Set
     I : Set
     FAhO : Set
 
@@ -431,9 +431,12 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
-    data NIhO
-      where
-        Ni'oC : NIhO
+    module NIhO where
+      data NIhO' : Set
+        where
+          Ni'oC : NIhO'
+
+    NIhO = NIhO.NIhO'
 \end{code}
 
 \begin{code}
