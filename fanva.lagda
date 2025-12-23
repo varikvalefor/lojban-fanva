@@ -231,7 +231,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
         field
           d : s ≡ (,s Data.String.++ c')
+\end{code}
 
+\begin{code}
       -- | ni'o le cmene be le ctaipe
       -- cu na jai frili
       -- .i la'e di'u xajmi la .varik.
