@@ -690,7 +690,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         cniTerm = {!!}
 
     Jufra = Jufra.Jufra'
+\begin{code}
 
+\end{code}
     record T : Set
       where
       Is-inj₁ : ∀ {a b} → {A : Set a} → {B : Set b}
