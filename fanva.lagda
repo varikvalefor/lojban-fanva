@@ -476,7 +476,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \begin{code}
     KOhA = {!!}
+\end{code}
 
+\begin{code}
     module POI
       where
       record PoiTerm (Selma'o : Set) : Set₁
