@@ -752,7 +752,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       NILC : T
       JufraC : Jufra → T
       INI'OC : Vlapoi 𝕃.[ T , {!!} ] INI'O → T
-      INI'OJC : Vlapoi ((T , {!!}) 𝕃.∷ (INI'O , {!!}) 𝕃.∷ 𝕃.[]) Jufra → T
+      INI'OJC : Vlapoi ((T , {!!}) 𝕃.∷ (INI'O , 𝔹.false) 𝕃.∷ 𝕃.[]) Jufra → T
 \end{code}
 
 \section{le sinxa be le te tcidu bangu}
