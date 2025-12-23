@@ -433,8 +433,16 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \begin{code}
     module NIhO where
       data NIhO' : Set
+
+      instance
+        cniTerm : Cnima'o.CniTerm NIhO'
+
+      data NIhO'
         where
           Ni'oC : NIhO'
+
+      instance
+        cniTerm = {!!}
 
     NIhO = NIhO.NIhO'
 \end{code}
