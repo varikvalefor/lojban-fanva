@@ -477,7 +477,10 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \begin{code}
     BAI  : Set
+    BAI = {!!}
+\end{code}
 
+\begin{code}
     KOhA : Set
 
     POI : Set
@@ -515,10 +518,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
       Term : {A : Set} → ⦃ BriTerm A ⦄ → A → Set
       Term ⦃ T ⦄ = BriTerm.Term T
-\end{code}
-
-\begin{code}
-    BAI = {!!}
 \end{code}
 
 \begin{code}
