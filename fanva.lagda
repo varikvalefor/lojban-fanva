@@ -321,7 +321,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         karsnaI : i → karsna
         karsnaO : o → karsna
         karsnaU : u → karsna
+\end{code}
 
+\begin{code}
       data zunsna : Set
         where
         zunsnaB : b → zunsna
