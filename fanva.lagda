@@ -928,7 +928,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         field
           restrictive : Bool
           bt : BridiTail s
+\end{code}
 
+\begin{code}
       record Selbri (s : Sumti) : Set
         where
         field
