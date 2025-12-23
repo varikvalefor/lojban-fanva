@@ -405,7 +405,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     data NIhO
       where
         ValsiNi'o : NIhO
+\end{code}
 
+\begin{code}
     module I
       where
       data I' : Set
