@@ -747,26 +747,12 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
-    record T : Set
+    data T : Set
       where
-      Is-inj₁ : ∀ {a b} → {A : Set a} → {B : Set b}
-              → A ⊎ B
-              → Set _
-      Is-inj₁ x = Σ _ $ (x ≡_) ∘ inj₁
-
-      Is-inj₂ : ∀ {a b} → {A : Set a} → {B : Set b}
-              → A ⊎ B
-              → Set _
-      Is-inj₂ x = Σ _ $ (x ≡_) ∘ inj₂
-
-      field
-        liste : List $ INI'O ⊎ Jufra
-        fanmo : Maybe FAhO
-        -- | .i ctaipe lo su'u bitmu lo jufra
-        bitmu : (i₁ i₂ : 𝔽.Fin _)
-              → 𝔽.toℕ i₁ ≡ ℕ.suc (𝔽.toℕ i₂)
-              → Is-inj₂ (𝕃.lookup liste i₁)
-              → Is-inj₁ (𝕃.lookup liste i₂)
+      NILC : T
+      JufraC : Jufra → T
+      INI'OC : Vlapoi 𝕃.[ T , {!!} ] INI'O → T
+      INI'OJC : Vlapoi ((T , {!!}) 𝕃.∷ (INI'O , {!!}) 𝕃.∷ 𝕃.[]) Jufra → T
 \end{code}
 
 \section{le sinxa be le te tcidu bangu}
