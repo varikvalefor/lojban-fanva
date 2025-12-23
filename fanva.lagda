@@ -804,7 +804,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         Preti : Punkt
 
     Punkt = Punkt.Punkt
+\end{code}
 
+\begin{code}
     module Conjunction where
       data Conjunction : Set
         where
