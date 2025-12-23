@@ -221,6 +221,8 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
   module T where
 \end{code}
 
+\subsection{le lerfu co'e\ldots noi ke'a se vasru pe'a la'oi .\AgdaModule{Lerfu}.}
+
 \begin{code}
     module Lerfu where
       record tLerfu (c : Char) : Set
