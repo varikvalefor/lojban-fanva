@@ -986,7 +986,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
           x₁ : Sumti
           bt : BridiTail x₁
           punkt : Punkt
+\end{code}
 
+\begin{code}
     module JufraBitmu where
       data JufraBitmu : Set
         where
