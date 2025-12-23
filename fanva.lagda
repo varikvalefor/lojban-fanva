@@ -321,6 +321,13 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
                r ⊎ s ⊎ t ⊎ v ⊎ x ⊎ z
 \end{code}
 
+\end{code}
+    Gismu = (Z × Z × K × Z × K) ⊎ (Z × K × Z × Z × K)
+      where
+      Z = Lerfu.zunsna
+      K = Lerfu.karsna
+\begin{code}
+
 \begin{code}
     data NIhO : Set
     I : Set
@@ -622,13 +629,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \end{code}
     Cmevla = {!!}
-\begin{code}
-
-\end{code}
-    Gismu = (Z × Z × K × Z × K) ⊎ (Z × K × Z × Z × K)
-      where
-      Z = Lerfu.zunsna
-      K = Lerfu.karsna
 \begin{code}
 
 \end{code}
