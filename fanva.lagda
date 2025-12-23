@@ -919,7 +919,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
       Selbrivla (sumtiListe x _) with 𝕃.length x ℕ.>? 1
       ... | yes _ = Selbrivla0.P
       ... | no _ = Selbrivla0.S
+\end{code}
 
+\begin{code}
       record RelPh (s : Sumti) : Set
         where
         inductive
