@@ -357,6 +357,8 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       K = Lerfu.karsna
 \end{code}
 
+\subsection{le cnima'o co'e}
+
 \begin{code}
     module Cnima'o where
       Cnima'oCo'e : Set
