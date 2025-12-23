@@ -347,6 +347,8 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         zunsnaZ : z → zunsna
 \end{code}
 
+\subsection{la'oi .\AgdaFunction{Gismu}.}
+
 \begin{code}
     Gismu : Set
     Gismu = (Z × Z × K × Z × K) ⊎ (Z × K × Z × Z × K)
