@@ -1002,7 +1002,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
 \begin{code}
     Emoticon : Set
     Emoticon = {!!}
+\end{code}
 
+\begin{code}
     Pluja-Jufra : Set
     Pluja-Jufra = Jufra × List (JufraBitmu × Jufra)
 
