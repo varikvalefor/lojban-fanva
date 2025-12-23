@@ -321,12 +321,13 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
                r ⊎ s ⊎ t ⊎ v ⊎ x ⊎ z
 \end{code}
 
-\end{code}
+\begin{code}
+    Gismu : Set
     Gismu = (Z × Z × K × Z × K) ⊎ (Z × K × Z × Z × K)
       where
       Z = Lerfu.zunsna
       K = Lerfu.karsna
-\begin{code}
+\end{code}
 
 \begin{code}
     data NIhO : Set
@@ -349,7 +350,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
     Sumti : Set
     Cmevla : Set
-    Gismu : Set
     Selbri : Set
     record Bridi : Set
     Jek : Set
@@ -530,9 +530,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         poiTermPoiCl = {!!}
           
     POI = POI.POI'
-\begin{code}
-
 \end{code}
+
+\begin{code}
     module Na where
       NA' : Set
       Na' : Set
@@ -542,9 +542,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
     NA = Na.NA'
     Na = Na.Na'
-\begin{code}
-
 \end{code}
+
+\begin{code}
     module JE
       where
       JE : Set
@@ -555,9 +555,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         cniTerm = record {Term = λ _ → ⊤}
 
     JE = JE.JE
-\begin{code}
-
 \end{code}
+
+\begin{code}
     module Jek
       where
       record JekTerm (Selma'o : Set) : Set₁
@@ -572,9 +572,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       Jek' = Vlapoi 𝕃.[ Na , 𝔹.false ] $ Cnima'o.Cni JE
 
     Jek = Jek.Jek'
-\begin{code}
-
 \end{code}
+
+\begin{code}
     module Sumti
       where
       data Sumti' : Set
@@ -625,13 +625,13 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         jekTerm = {!!}
 
     Sumti = Sumti.Sumti'
-\begin{code}
-
 \end{code}
+
+\begin{code}
     Cmevla = {!!}
-\begin{code}
-
 \end{code}
+
+\begin{code}
     module Selbri
       where
       data Selbri' : Set
@@ -647,9 +647,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       instance cniTerm = {!!}
 
     Selbri = Selbri.Selbri'
-\begin{code}
-
 \end{code}
+
+\begin{code}
     record Bridi
       where
       inductive
@@ -690,9 +690,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         cniTerm = {!!}
 
     Jufra = Jufra.Jufra'
-\begin{code}
-
 \end{code}
+
+\begin{code}
     record T : Set
       where
       Is-inj₁ : ∀ {a b} → {A : Set a} → {B : Set b}
