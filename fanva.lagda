@@ -440,6 +440,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       data NIhO'
         where
           Ni'oC : NIhO'
+          UIC : Cnima'o.Cni NIhO' → NIhO'
 
       instance
         cniTerm = {!!}
