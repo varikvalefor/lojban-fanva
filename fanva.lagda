@@ -834,7 +834,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         The : Article
 
     Article = Article.Article
+\end{code}
 
+\begin{code}
     module Selbrivla0 where
       P : Set
       P = {!!}
