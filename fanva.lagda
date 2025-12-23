@@ -384,13 +384,33 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
+    module LE
+      where
+      data LE' : Set
+
+      instance
+        cniTerm : Cnima'o.CniTerm LE'
+
+      data LE'
+        where
+        laC : Lerfu.l → Lerfu.a → LE'
+        leC : Lerfu.l → Lerfu.e → LE'
+        loC : Lerfu.l → Lerfu.o → LE'
+        UIC : Cnima'o.Cni LE' → LE'
+
+      instance
+        cniTerm = {!!}
+
+    LE = LE.LE'
+\end{code}
+
+\begin{code}
     NIhO : Set
     I : Set
     FAhO : Set
 
     INI'O : Set
 
-    LE : Set
     KU : Set
 
     FA : Set
@@ -493,27 +513,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \begin{code}
     FAhO = {!!}
-\end{code}
-
-\begin{code}
-    module LE
-      where
-      data LE' : Set
-
-      instance
-        cniTerm : Cnima'o.CniTerm LE'
-
-      data LE'
-        where
-        laC : Lerfu.l → Lerfu.a → LE'
-        leC : Lerfu.l → Lerfu.e → LE'
-        loC : Lerfu.l → Lerfu.o → LE'
-        UIC : Cnima'o.Cni LE' → LE'
-
-      instance
-        cniTerm = {!!}
-
-    LE = LE.LE'
 \end{code}
 
 \begin{code}
