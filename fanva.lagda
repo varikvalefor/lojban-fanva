@@ -618,7 +618,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         jekTerm = {!!}
 
     Sumti = Sumti.Sumti'
+\begin{code}
 
+\end{code}
     Cmevla = {!!}
 
     Gismu = (Z × Z × K × Z × K) ⊎ (Z × K × Z × Z × K)
