@@ -871,7 +871,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         S : S.S → NounValsi
 
     NounValsi = NounValsi.NounValsi
+\end{code}
 
+\begin{code}
     module Adverbivla where
       Adverbivla : Set
       Adverbivla = {!!}
