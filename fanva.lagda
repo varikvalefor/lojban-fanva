@@ -937,7 +937,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
           adv₁ : Adverb
           sbv : Selbrivla s
           adv₂ : Adverb
+\end{code}
 
+\begin{code}
       record PrepPhSampu : Set
         where
         inductive
