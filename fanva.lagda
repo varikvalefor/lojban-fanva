@@ -548,7 +548,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         cniTerm = record {Term = λ _ → ⊤}
 
     JE = JE.JE
+\begin{code}
 
+\end{code}
     module Jek
       where
       record JekTerm (Selma'o : Set) : Set₁
@@ -563,7 +565,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       Jek' = Vlapoi 𝕃.[ Na , 𝔹.false ] $ Cnima'o.Cni JE
 
     Jek = Jek.Jek'
+\begin{code}
 
+\end{code}
     module Sumti
       where
       data Sumti' : Set
