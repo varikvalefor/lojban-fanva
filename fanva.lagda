@@ -468,7 +468,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         cniTerm = {!!}
 
     LE = LE.LE'
+\end{code}
 
+\begin{code}
     BAI = {!!}
 
     KOhA = {!!}
