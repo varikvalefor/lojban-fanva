@@ -647,7 +647,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       instance cniTerm = {!!}
 
     Selbri = Selbri.Selbri'
+\begin{code}
 
+\end{code}
     record Bridi
       where
       inductive
