@@ -997,7 +997,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         Ni'oCu'i : JufraBitmu -- "\n\n"
 
     JufraBitmu = JufraBitmu.JufraBitmu
+\end{code}
 
+\begin{code}
     Emoticon : Set
     Emoticon = {!!}
 
