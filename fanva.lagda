@@ -358,6 +358,32 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
+    module Cnima'o where
+      Cnima'oCo'e : Set
+      Cnima'oCo'e = {!!}
+
+      record CniTerm (Selma'o : Set) : Set₁
+        where
+        field
+          Term : Selma'o → Set
+
+      Term : {A : Set} → ⦃ CniTerm A ⦄ → A → Set
+      Term ⦃ T ⦄ = CniTerm.Term T
+
+      data Cni (Selma'o : Set) ⦃ _ : CniTerm Selma'o ⦄ : Set
+        where
+        CniX : (x : Selma'o)
+             → Term x
+             → Cnima'oCo'e
+             → Cni Selma'o
+
+      -- instance
+      --   -- | ni'o filri'a zo'e je tu'a zo toi'e
+      --   cniTerm : CniTerm Cnima'oCo'e
+      --   cniTerm = {!!}
+\end{code}
+
+\begin{code}
     NIhO : Set
     I : Set
     FAhO : Set
@@ -395,32 +421,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       Vlapoi ((x , d) 𝕃.∷ xs) b = x × ValsiBitmu d × Vlapoi xs b
 
     Vlapoi = Vlapoi.Vlapoi
-\end{code}
-
-\begin{code}
-    module Cnima'o where
-      Cnima'oCo'e : Set
-      Cnima'oCo'e = {!!}
-
-      record CniTerm (Selma'o : Set) : Set₁
-        where
-        field
-          Term : Selma'o → Set
-
-      Term : {A : Set} → ⦃ CniTerm A ⦄ → A → Set
-      Term ⦃ T ⦄ = CniTerm.Term T
-
-      data Cni (Selma'o : Set) ⦃ _ : CniTerm Selma'o ⦄ : Set
-        where
-        CniX : (x : Selma'o)
-             → Term x
-             → Cnima'oCo'e
-             → Cni Selma'o
-
-      -- instance
-      --   -- | ni'o filri'a zo'e je tu'a zo toi'e
-      --   cniTerm : CniTerm Cnima'oCo'e
-      --   cniTerm = {!!}
 \end{code}
 
 \begin{code}
