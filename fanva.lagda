@@ -319,7 +319,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       zunsna = b ⊎ c ⊎ d ⊎ f ⊎ g ⊎
                j ⊎ k ⊎ l ⊎ m ⊎ n ⊎ p ⊎
                r ⊎ s ⊎ t ⊎ v ⊎ x ⊎ z
+\end{code}
 
+\begin{code}
     data NIhO : Set
     I : Set
     FAhO : Set
