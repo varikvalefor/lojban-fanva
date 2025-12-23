@@ -716,12 +716,12 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         T = Bri.BriTerm.Term $ Sumti.briTerm
 
       ST : Set
-      ST = Sumti ⊎ (BAI × Sumti)
+      ST = Maybe (FA ⊎ BAI) × Sumti
 
       instance
         cniTerm⊎ : Bri.BriTerm ST
         cniTerm⊎ = record {
-          Term = λ {(inj₁ s) → T s; (inj₂ (_ , s)) → T s}
+          Term = {!!}
           }
 
       field
