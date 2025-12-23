@@ -893,7 +893,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
 \begin{code}
       Adjective : Set
       Adjective = {!!}
+\end{code}
 
+\begin{code}
       data Sumti : Set
         where
         sumtiQuote : String → Sumti
