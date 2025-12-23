@@ -725,7 +725,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         selbri : Selbri
         terbri : List $ ST
         term : All Bri.Term $ ¯1↓ terbri
+\end{code}
 
+\begin{code}
     module Jufra
       where
       data Jufra' : Set
