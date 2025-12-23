@@ -719,7 +719,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       ST = Sumti ⊎ (BAI × Sumti)
 
       instance
-        cniTerm⊎ : Bri.BriTerm $ ST
+        cniTerm⊎ : Bri.BriTerm ST
         cniTerm⊎ = record {
           Term = λ {(inj₁ s) → T s; (inj₂ (_ , s)) → T s}
           }
