@@ -453,9 +453,16 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
-    FAhO : Set
+    module KU where
+      data KU' : Set
+        where
+          KUC : Lerfu.k → Lerfu.u → KU'
 
-    KU : Set
+    KU = KU.KU'
+\end{code}
+
+\begin{code}
+    FAhO : Set
 
     FA : Set
     BAI  : Set
@@ -497,15 +504,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
       Term : {A : Set} → ⦃ BriTerm A ⦄ → A → Set
       Term ⦃ T ⦄ = BriTerm.Term T
-\end{code}
-
-\begin{code}
-    module KU where
-      data KU' : Set
-        where
-          KUC : Lerfu.k → Lerfu.u → KU'
-
-    KU = KU.KU'
 \end{code}
 
 \begin{code}
