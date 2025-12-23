@@ -525,7 +525,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         poiTermPoiCl = {!!}
           
     POI = POI.POI'
+\begin{code}
 
+\end{code}
     module Na where
       NA' : Set
       Na' : Set
