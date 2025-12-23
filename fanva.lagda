@@ -793,7 +793,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
       where
       field
         isEncl : Selma'oPe'a → Set
+\end{code}
 
+\begin{code}
     module Punkt where
       data Punkt : Set
         where
