@@ -472,7 +472,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \begin{code}
     BAI = {!!}
+\end{code}
 
+\begin{code}
     KOhA = {!!}
 
     module POI
