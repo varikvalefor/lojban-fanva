@@ -913,7 +913,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         where
         inductive
         field
-          adv : Adverb
+          adv : Maybe Adverb
           pv : Preposition
           x₁ : Sumti
 
