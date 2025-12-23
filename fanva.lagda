@@ -954,7 +954,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         where
         PrepPhPx : PrepPh → PrepPhSampu → PrepPh
         PrepPhJe : PrepPh → PrepPhSampu → PrepPh
+\end{code}
 
+\begin{code}
       data Adverb : Set
         where
         AdverbAdverbivla : Adverbivla → Adverb
