@@ -976,7 +976,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         field
           brivla : Selbri x₁
           x₂ : Maybe Sumti
+\end{code}
 
+\begin{code}
       record Jufra : Set
         where
         field
