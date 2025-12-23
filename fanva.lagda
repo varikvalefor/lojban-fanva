@@ -481,7 +481,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     module KU where
       data KU' : Set
         where
-          KUC : KU'
+          KUC : Lerfu.k → Lerfu.u → KU'
 
     KU = KU.KU'
 \end{code}
