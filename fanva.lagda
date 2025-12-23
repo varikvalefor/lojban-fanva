@@ -447,6 +447,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \begin{code}
     INI'O = I ⊎ NIhO
+\end{code}
+
+\begin{code}
 
     module LE
       where
