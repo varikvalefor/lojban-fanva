@@ -541,7 +541,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \end{code}
     Nai = {!!}
+\begin{code}
 
+\end{code}
     module JE
       where
       JE : Set
