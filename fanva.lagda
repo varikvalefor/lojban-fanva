@@ -513,7 +513,12 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
-    FA = {!!}
+    module FA where
+      data FA' : Set
+        where
+        FAC : Lerfu.f → Lerfu.karsna → FA'
+
+    FA = FA.FA'
 \end{code}
 
 \begin{code}
