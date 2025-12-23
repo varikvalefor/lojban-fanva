@@ -430,7 +430,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
           Term (UIC u) = {!!}
 
     I = I.I'
+\end{code}
 
+\begin{code}
     module KU where
       data KU' : Set
         where
