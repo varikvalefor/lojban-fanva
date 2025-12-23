@@ -433,7 +433,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \begin{code}
     data NIhO
       where
-        ValsiNi'o : NIhO
+        Ni'oC : NIhO
 \end{code}
 
 \begin{code}
