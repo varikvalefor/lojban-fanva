@@ -968,7 +968,9 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         where
         Adv : Adverb → IntroPh
         IPP : PrepPh → IntroPh
+\end{code}
 
+\begin{code}
       record BridiTail (x₁ : Sumti) : Set
         where
         field
