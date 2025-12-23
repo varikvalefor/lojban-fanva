@@ -439,7 +439,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
           KUC : KU'
 
     KU = KU.KU'
+\end{code}
 
+\begin{code}
     FAhO = {!!}
 
     INI'O = I ⊎ NIhO
