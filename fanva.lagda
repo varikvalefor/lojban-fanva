@@ -1006,6 +1006,13 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
 \subsection{ko'a goi la'oi .\AgdaRecord{RelCl}.}
 ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be bau le glibau be la .varik.
 
+.i sa'u nai ru'e ro da poi ke'a ctaipe ko'a zo'u ga je\ldots
+
+\begin{itemize}
+	\item lo mu'oi zoi.\ \AgdaField{AgdaRecord.restrictive}\ .zoi.\ be da cu srana lo du'u xu kau mu'oi glibau.\ restrictive clause .glibau.\ gi
+	\item lo mu'oi zoi.\ \AgdaField{AgdaRecord.bt}\ .zoi.\ be da cu velski lo sumti je ke co'e ja se velski be da
+\end{itemize}
+
 \begin{code}
       record RelCl (s : Sumti) : Set
         where
