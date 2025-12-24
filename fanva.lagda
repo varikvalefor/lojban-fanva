@@ -521,6 +521,8 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     NA = NA.NA'
 \end{code}
 
+\subsection{le zmadu be fi le ka ce'u pluja}
+
 \begin{code}
     POI : Set
 
