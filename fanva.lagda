@@ -728,6 +728,16 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         term : All Bri.Term $ ¯1↓ terbri
 \end{code}
 
+\subsection{zo'e je la'oi .\F{Jufra}.}
+ni'o la'oi .\F{Jufra}.\ ctaipe zo'e ja lo ro jufra be fi le jbobau be la .varik.
+
+.i sa'u nai ru'e ro da poi ke'a ctaipe la'oi .\F{Jufra}.\ zo'u ga jonai ga je\ldots
+
+\begin{itemize}
+	\item da du la'o zoi.\ \IC{BridiC} \B{b}\ .zoi. gi da sinxa lo se sinxa be la'oi .\B{b}.\ gi ga je
+	\item da du la'o zoi.\ \IC{UIC} \B{v}\ .zoi. gi da sinxa lo se sinxa be la'oi .\B{v}.
+\end{itemize}
+
 \begin{code}
     module Jufra
       where
