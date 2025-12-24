@@ -109,6 +109,7 @@ open import Data.Sum
   )
 open import Function
   using (
+    const;
     _∘_;
     _$_
   )
@@ -652,7 +653,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       Term ⦃ T ⦄ = JekTerm.Term T
 
       Jek' : Set
-      Jek' = Vlapoi 𝕃.[ Na , Function.const 𝔹.false ] $ Cnima'o.Cni JE
+      Jek' = Vlapoi 𝕃.[ Na , const 𝔹.false ] $ Cnima'o.Cni JE
 
     Jek = Jek.Jek'
 \end{code}
@@ -816,7 +817,7 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ se ctaipe lo ro te gerna 
         NILC : T
         INI'OC : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] INI'O
                → T
-        FA'OC : Vlapoi ((T , valsiBitmuSarcu) 𝕃.∷ 𝕃.[ FAhO , Function.const 𝔹.true ]) String
+        FA'OC : Vlapoi ((T , valsiBitmuSarcu) 𝕃.∷ 𝕃.[ FAhO , const 𝔹.true ]) String
               → T
         JufraC : (v : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] Jufra)
                → JufraMapti $ Σ.proj₁ $ Σ.proj₁ v
