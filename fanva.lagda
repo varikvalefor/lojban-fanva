@@ -1106,9 +1106,17 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
 \end{code}
 
 \begin{code}
-    data T : Set
-      where
-      NILC : T
+    mutual
+      data T : Set
+        where
+        NILC : T
+        JufraC : (t : T) → JBT t → Jufra → T
+
+      jufraBitmuSarcu : T → Bool
+      jufraBitmuSarcu = {!!}
+
+      JBT : T → Set
+      JBT = {!!}
 \end{code}
 
 \section{le sinxa be le te tcidu bangu}
