@@ -521,6 +521,8 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     NA = NA.NA'
 \end{code}
 
+\subsection{le vlapoi se ctaipe}
+
 \begin{code}
     module Vlapoi where
       record ValsiBitmu (b : Bool) : Set
