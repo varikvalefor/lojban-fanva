@@ -348,6 +348,11 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         zunsnaZ : z → zunsna
 \end{code}
 
+\begin{code}
+      valsiBitmu : Set
+      valsiBitmu = {!!}
+\end{code}
+
 \subsection{la'oi .\AgdaFunction{Gismu}.}
 
 \begin{code}
@@ -525,13 +530,10 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \begin{code}
     module Vlapoi where
-      BitmuLerfu : Set
-      BitmuLerfu = {!!}
-
       record ValsiBitmu (b : Bool) : Set
         where
         field
-          vl : List BitmuLerfu
+          vl : List Lerfu.valsiBitmu
           zasti : 𝔹.if b then 𝕃.length vl ℕ.> 0 else ⊤
 
       Vlapoi : List $ Σ Set (λ A → A → Bool) → Set → Set
