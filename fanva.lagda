@@ -760,7 +760,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       JufraC : (v : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] Jufra)
              → JufraMapti $ Σ.proj₁ $ Σ.proj₁ v
              → T
-      INI'OC : Vlapoi 𝕃.[ T , {!!} ] INI'O → T
+      INI'OC : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] INI'O → T
 
     JufraMapti NILC = ⊤
     JufraMapti (JufraC _ _) = ⊥
