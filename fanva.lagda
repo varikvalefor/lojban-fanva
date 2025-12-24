@@ -77,6 +77,7 @@
 \newcommand\D\AgdaDatatype
 \newcommand\F\AgdaFunction
 \newcommand\B\AgdaBound
+\newcommand\IC\AgdaInductiveConstructor
 \newcommand\OpF[1]{\AgdaOperator{\F{#1}}}
 
 \newcommand\sds{\spacefactor\sfcode`.\ \space}
@@ -745,6 +746,17 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
     Jufra = Jufra.Jufra'
 \end{code}
+
+\subsection{la'oi .\D{T}.\ noi ke'a ctaipe lo'i ro te gerna be le jbobau be la .varik.}
+ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ ctaipe lo'i ro te gerna be le jbobau be la .varik.
+
+.i ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jonai ga je\ldots
+
+\begin{itemize}
+	\item da du la'oi .\IC{NILC}.\ gi da sinxa lo kunti gi ga jonai ga je
+	\item da du la'o zoi. \IC{INI'OC} \Sym( \Sym( \B{v} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{n}\Sym) gi da sinxa lo koknatena be lo se sinxa be la'oi .\B{v}.\ be'o bei lo se sinxa be la'oi .\B{n}.\ gi
+	\item da du la'o zoi. \IC{INI'OC} \Sym( \Sym( \B{v} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{j}\Sym) \AgdaBound{m} gi da sinxa lo koknatena be lo se sinxa be la'oi .\B{v}.\ be'o bei lo se sinxa be la'oi .\B{j}.
+\end{itemize}
 
 \begin{code}
     data T : Set
