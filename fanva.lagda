@@ -525,8 +525,14 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \begin{code}
     module Vlapoi where
+      BitmuLerfu : Set
+      BitmuLerfu = {!!}
+
       record ValsiBitmu (b : Bool) : Set
         where
+        field
+          vl : List BitmuLerfu
+          zasti : 𝔹.if b then 𝕃.length vl ℕ.> 0 else ⊤
 
       Vlapoi : List $ Σ Set (λ A → A → Bool) → Set → Set
       Vlapoi 𝕃.[] b = b
