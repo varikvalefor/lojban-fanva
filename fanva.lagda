@@ -687,6 +687,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     Cmevla = {!!}
 \end{code}
 
+\subsection{zo'e je la'oi .\F{Selbri}.}
+ni'o sa'u la'oi .\F{Selbri}.\ ctaipe zo'e ja lo selbri co'e be bau le jbobau be la .varik.
+
 \begin{code}
     module Selbri where
       mutual
