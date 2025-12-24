@@ -139,6 +139,8 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
     Punkt = Punkt.Punkt
 \end{code}
 
+\chapter{le valsi}
+
 \begin{code}
     module Conjunction where
       data Conjunction : Set
