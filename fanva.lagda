@@ -507,8 +507,11 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
-    NA : Set
-    NA = {!!}
+    module NA where
+      data NA' : Set
+        where
+
+    NA = NA.NA'
 \end{code}
 
 \begin{code}
