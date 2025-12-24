@@ -1118,7 +1118,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
 
       jufraBitmuSarcu : T → Bool
       jufraBitmuSarcu NILC = 𝔹.false
-      jufraBitmuSarcu (JufraC x x₁ x₂) = {!!}
+      jufraBitmuSarcu (JufraC x x₁ x₂) = 𝔹.true
 
       JBT : T → Set
       JBT = λ t → JufraBitmu ▹_ $ 𝔹.if jufraBitmuSarcu t then Maybe else id
