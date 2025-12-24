@@ -139,7 +139,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
     Punkt = Punkt.Punkt
 \end{code}
 
-\chapter{le valsi}
+\section{le valsi}
 
 \begin{code}
     module Conjunction where
@@ -226,7 +226,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
     Gerund = Gerund.Gerund
 \end{code}
 
-\chapter{le zabna be le ka ce'u pluja}
+\chapter{le zmadu be le ka ce'u pluja}
 
 \begin{code}
     mutual
@@ -242,7 +242,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
       Adjective = {!!}
 \end{code}
 
-\chapter{la'oi .\D{Noun}.}
+\section{la'oi .\D{Noun}.}
 
 \begin{code}
       data Noun : Set
@@ -274,7 +274,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
       ... | no _ = Selbrivla0.S
 \end{code}
 
-\chapter{ko'a goi la'oi .\AgdaRecord{RelCl}.}
+\section{ko'a goi la'oi .\AgdaRecord{RelCl}.}
 ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be bau le glibau be la .varik.
 
 .i sa'u nai ru'e ro da poi ke'a ctaipe ko'a zo'u ga je\ldots
@@ -293,7 +293,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
           bt : Clause s
 \end{code}
 
-\chapter{la'oi .\AgdaRecord{Selbri}.}
+\section{la'oi .\AgdaRecord{Selbri}.}
 
 \begin{code}
       record Selbri (s : Noun) : Set
