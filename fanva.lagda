@@ -705,6 +705,17 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     Selbri = Selbri.Selbri'
 \end{code}
 
+\subsection{zo'e je la'oi .\AgdaRecord{Bridi}.}
+ni'o la'oi .\AgdaRecord{Bridi}.\ ctaipe zo'e ja lo ro bridi be bau le jbobau be la .varik.
+
+.i sa'u nai ru'e ro da poi ke'a ctaipe la'oi .\AgdaRecord{Bridi}.\ zo'u ga je\ldots
+
+\begin{itemize}
+	\item co'e gi ga je
+	\item lo mu'oi zoi.\ \AgdaField{Bridi.selbri}\ .zoi.\ be da cu selbri lo co'e be da gi
+	\item lo mu'oi zoi.\ \AgdaField{Bridi.terbri}\ .zoi.\ be da cu liste lo'i ro co'e joi selbri be lo co'e be da
+\end{itemize}
+
 \begin{code}
     record Bridi
       where
