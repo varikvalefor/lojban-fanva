@@ -226,6 +226,8 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
     Gerund = Gerund.Gerund
 \end{code}
 
+\chapter{le zabna be le ka ce'u pluja}
+
 \begin{code}
     mutual
 \end{code}
