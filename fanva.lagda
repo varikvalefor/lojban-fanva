@@ -817,12 +817,12 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ se ctaipe lo ro te gerna 
         NILC : T
         INI'OC : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] INI'O
                → T
-        FA'OC : let TX = T , valsiBitmuSarcu in
-                Vlapoi (TX 𝕃.∷ 𝕃.[ FAhO , const 𝔹.true ]) String
-              → T
         JufraC : (v : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] Jufra)
                → JufraMapti $ Σ.proj₁ $ Σ.proj₁ v
                → T
+        FA'OC : let TX = T , valsiBitmuSarcu in
+                Vlapoi (TX 𝕃.∷ 𝕃.[ FAhO , const 𝔹.true ]) String
+              → T
 \end{code}
 
 \subsubsection{la'oi .\F{JufraMapti}.}
