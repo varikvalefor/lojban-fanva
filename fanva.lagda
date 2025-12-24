@@ -711,7 +711,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \subsection{zo'e je la'oi .\F{Selbri}.}
-ni'o sa'u la'oi .\F{Selbri}.\ ctaipe zo'e ja lo selbri co'e be bau le jbobau be la .varik.
+ni'o sa'u la'oi .\F{Selbri}.\ se ctaipe zo'e ja lo selbri co'e be bau le jbobau be la .varik.
 
 \begin{code}
     module Selbri where
@@ -730,7 +730,7 @@ ni'o sa'u la'oi .\F{Selbri}.\ ctaipe zo'e ja lo selbri co'e be bau le jbobau be 
 \end{code}
 
 \subsection{zo'e je la'oi .\AgdaRecord{Bridi}.}
-ni'o la'oi .\AgdaRecord{Bridi}.\ ctaipe zo'e ja lo ro bridi be bau le jbobau be la .varik.
+ni'o la'oi .\AgdaRecord{Bridi}.\ se ctaipe zo'e ja lo ro bridi be bau le jbobau be la .varik.
 
 .i sa'u nai ru'e ro da poi ke'a ctaipe la'oi .\AgdaRecord{Bridi}.\ zo'u ga je\ldots
 
@@ -764,7 +764,7 @@ ni'o la'oi .\AgdaRecord{Bridi}.\ ctaipe zo'e ja lo ro bridi be bau le jbobau be 
 \end{code}
 
 \subsection{zo'e je la'oi .\F{Jufra}.}
-ni'o la'oi .\F{Jufra}.\ ctaipe zo'e ja lo ro jufra be fi le jbobau be la .varik.
+ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .varik.
 
 .i sa'u nai ru'e ro da poi ke'a ctaipe la'oi .\F{Jufra}.\ zo'u ga jonai ga je\ldots
 
@@ -792,14 +792,14 @@ ni'o la'oi .\F{Jufra}.\ ctaipe zo'e ja lo ro jufra be fi le jbobau be la .varik.
     Jufra = Jufra.Jufra'
 \end{code}
 
-\subsection{zo'e je la'oi .\D{T}.\ noi ke'a ctaipe lo ro te gerna be le jbobau be la .varik.}
+\subsection{zo'e je la'oi .\D{T}.\ noi ke'a se ctaipe lo ro te gerna be le jbobau be la .varik.}
 
 \begin{code}
     mutual
 \end{code}
 
 \subsubsection{la'oi .\D{T}.}
-ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ ctaipe lo ro te gerna be le jbobau be la .varik.
+ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ se ctaipe lo ro te gerna be le jbobau be la .varik.
 
 .i ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jonai ga je\ldots
 
