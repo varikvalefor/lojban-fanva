@@ -759,27 +759,24 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ ctaipe lo'i ro te gerna b
 \end{itemize}
 
 \begin{code}
-    data T : Set
+    mutual
+      data T : Set
+        where
+        NILC : T
+        INI'OC : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] INI'O → T
+        JufraC : (v : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] Jufra)
+               → JufraMapti $ Σ.proj₁ $ Σ.proj₁ v
+               → T
 
-    JufraMapti : T → Set
+      JufraMapti : T → Set
+      JufraMapti NILC = ⊤
+      JufraMapti (JufraC _ _) = ⊥
+      JufraMapti (INI'OC _) = ⊤
 
-    valsiBitmuSarcu : T → Bool
-
-    data T
-      where
-      NILC : T
-      INI'OC : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] INI'O → T
-      JufraC : (v : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] Jufra)
-             → JufraMapti $ Σ.proj₁ $ Σ.proj₁ v
-             → T
-
-    valsiBitmuSarcu NILC = 𝔹.false
-    valsiBitmuSarcu (INI'OC x) = {!!}
-    valsiBitmuSarcu (JufraC v x) = {!!}
-
-    JufraMapti NILC = ⊤
-    JufraMapti (JufraC _ _) = ⊥
-    JufraMapti (INI'OC _) = ⊤
+      valsiBitmuSarcu : T → Bool
+      valsiBitmuSarcu NILC = 𝔹.false
+      valsiBitmuSarcu (INI'OC x) = {!!}
+      valsiBitmuSarcu (JufraC v x) = {!!}
 \end{code}
 
 \section{le sinxa be le te tcidu bangu}
