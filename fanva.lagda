@@ -814,7 +814,8 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ se ctaipe lo ro te gerna 
       data T : Set
         where
         NILC : T
-        INI'OC : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] INI'O → T
+        INI'OC : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] INI'O
+               → T
         FA'OC : Vlapoi ((T , valsiBitmuSarcu) 𝕃.∷ 𝕃.[ FAhO , {!!} ]) String
               → T
         JufraC : (v : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] Jufra)
