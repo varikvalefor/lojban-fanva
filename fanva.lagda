@@ -766,14 +766,14 @@ ni'o la'oi .\F{Jufra}.\ ctaipe zo'e ja lo ro jufra be fi le jbobau be la .varik.
     Jufra = Jufra.Jufra'
 \end{code}
 
-\subsection{zo'e je la'oi .\D{T}.\ noi ke'a ctaipe lo'i ro te gerna be le jbobau be la .varik.}
+\subsection{zo'e je la'oi .\D{T}.\ noi ke'a ctaipe lo ro te gerna be le jbobau be la .varik.}
 
 \begin{code}
     mutual
 \end{code}
 
 \subsubsection{la'oi .\D{T}.}
-ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ ctaipe lo'i ro te gerna be le jbobau be la .varik.
+ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ ctaipe lo ro te gerna be le jbobau be la .varik.
 
 .i ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jonai ga je\ldots
 
