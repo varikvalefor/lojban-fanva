@@ -526,6 +526,16 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     NA = NA.NA'
 \end{code}
 
+\begin{code}
+    module POI where
+      data POI' : Set
+        where
+        poiC : Lerfu.p → Lerfu.o → Lerfu.i → POI'
+        noiC : Lerfu.n → Lerfu.o → Lerfu.i → POI'
+
+    POI = POI.POI'
+\end{code}
+
 \subsection{zo'e je le vlapoi se ctaipe}
 
 \begin{code}
@@ -546,8 +556,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \subsection{le zmadu be fi le ka ce'u pluja}
 
 \begin{code}
-    POI : Set
-
     Na : Set
 
     Sumti : Set
@@ -572,7 +580,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
-    module POI
+    module Poi
       where
       record PoiTerm (Selma'o : Set) : Set₁
         where
@@ -581,13 +589,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         
       Term : {A : Set} → ⦃ PoiTerm A ⦄ → A → Set
       Term ⦃ T ⦄ = PoiTerm.Term T
-
-      data POI' : Set
-
-      data POI'
-        where
-        poiC : Lerfu.p → Lerfu.o → Lerfu.i → POI'
-        noiC : Lerfu.n → Lerfu.o → Lerfu.i → POI'
 
       JePoiTerm : POI → Jufra → Set
       JePoiTerm = {!!}
@@ -616,8 +617,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
                      → ⦃ _ : PoiTerm s ⦄
                      → PoiTerm (PoiCl s)
         poiTermPoiCl = {!!}
-          
-    POI = POI.POI'
 \end{code}
 
 \begin{code}
@@ -666,14 +665,14 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       instance
         cniTerm : Cnima'o.CniTerm Sumti'
         briTerm : Bri.BriTerm Sumti'
-        poiTerm : POI.PoiTerm Sumti'
+        poiTerm : Poi.PoiTerm Sumti'
         jekTerm : Jek.JekTerm Sumti'
 
       data Sumti'
         where
         KOhAC : KOhA → Sumti'
         LeSelbriC : LE → Selbri → Sumti'
-        POIC : POI.PoiCl Sumti'
+        POIC : Poi.PoiCl Sumti'
              → Sumti'
         JekC : (x : Sumti')
              → Jek.Term x
@@ -701,8 +700,8 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
           T : Sumti' → Set
           T (KOhAC x) = {!!}
           T (LeSelbriC x x₁) = {!!}
-          T (POIC x) with 𝕃.last (POI.PoiCl.cl x)
-          ... | ⁇.just x2 = Σ.uncurry POI.JePoiTerm x2
+          T (POIC x) with 𝕃.last (Poi.PoiCl.cl x)
+          ... | ⁇.just x2 = Σ.uncurry Poi.JePoiTerm x2
           ... | ⁇.nothing = {!!}
           T (JekC x x₁ x₂ x₃) = {!!}
           T (UIC x) = {!!}
