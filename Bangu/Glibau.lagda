@@ -187,6 +187,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
           Things : P
           Proofs : P
           Types : P
+          ProperName : String → P
           Jbovla : String → P
 
       module S where
