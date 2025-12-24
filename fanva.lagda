@@ -508,7 +508,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     Na : Set
 
     Sumti : Set
-    Cmevla : Set
     Selbri : Set
     record Bridi : Set
     Jek : Set
@@ -537,6 +536,11 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
       Term : {A : Set} → ⦃ BriTerm A ⦄ → A → Set
       Term ⦃ T ⦄ = BriTerm.Term T
+\end{code}
+
+\begin{code}
+    Cmevla : Set
+    Cmevla = {!!}
 \end{code}
 
 \begin{code}
@@ -681,10 +685,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
         jekTerm = {!!}
 
     Sumti = Sumti.Sumti'
-\end{code}
-
-\begin{code}
-    Cmevla = {!!}
 \end{code}
 
 \subsection{zo'e je la'oi .\F{Selbri}.}
