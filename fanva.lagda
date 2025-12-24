@@ -761,7 +761,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
              → JufraMapti $ Σ.proj₁ $ Σ.proj₁ v
              → T
 
-    valsiBitmuSarcu = {!!}
+    valsiBitmuSarcu NILC = ?
+    valsiBitmuSarcu (INI'OC x) = ?
+    valsiBitmuSarcu (JufraC v x) = ?
 
     JufraMapti NILC = ⊤
     JufraMapti (JufraC _ _) = ⊥
