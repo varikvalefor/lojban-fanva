@@ -111,7 +111,8 @@ open import Function
   using (
     const;
     _∘_;
-    _$_
+    _$_;
+    id
   )
   renaming (
     _|>_ to _▹_
@@ -1119,7 +1120,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
       jufraBitmuSarcu = {!!}
 
       JBT : T → Set
-      JBT = λ t → JufraBitmu ▹_ $ 𝔹.if jufraBitmuSarcu t then Maybe else Function.id
+      JBT = λ t → JufraBitmu ▹_ $ 𝔹.if jufraBitmuSarcu t then Maybe else id
 \end{code}
 
 \section{le sinxa be le te tcidu bangu}
