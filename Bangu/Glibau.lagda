@@ -245,7 +245,8 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         nounVarDecl : (n : Noun) → Variable → ¬ NounIsVarDecl n → Noun
 
       NounIsVarDecl : Noun → Set
-      NounIsVarDecl = {!!}
+      NounIsVarDecl (nounVarDecl _ _ _) = ⊤
+      NounIsVarDecl _ = ⊥
 \end{code}
 
 \begin{code}
