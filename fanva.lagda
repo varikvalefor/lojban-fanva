@@ -760,7 +760,7 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ ctaipe lo'i ro te gerna b
 
 \begin{itemize}
 	\item da du la'oi .\IC{NILC}.\ gi da sinxa lo kunti gi ga jonai ga je
-	\item da du la'o zoi. \IC{INI'OC} \Sym(\Sym(\B{v} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{n}\Sym) gi da sinxa lo koknatena be lo se sinxa be la'oi .\B{v}.\ be'o bei lo se sinxa be la'oi .\B{n}.\ gi ga je
+	\item da du la'o zoi. \IC{INI'OC} \Sym(\Sym(\B{v} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{n}\Sym) gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{v}.\ be'o bei lo se sinxa be la'oi .\B{n}.\ gi ga je
 	\item da du la'o zoi. \IC{JufraC} \Sym(\Sym(\B{v} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{j}\Sym) \AgdaBound{m} gi da sinxa lo koknatena be lo se sinxa be la'oi .\B{v}.\ be'o bei lo se sinxa be la'oi .\B{j}.
 \end{itemize}
 
