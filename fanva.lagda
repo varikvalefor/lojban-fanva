@@ -519,9 +519,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       record ValsiBitmu (b : Bool) : Set
         where
 
-      Vlapoi : List $ Set × Bool → Set → Set
+      Vlapoi : List $ Σ Set (λ A → A → Bool) → Set → Set
       Vlapoi 𝕃.[] b = b
-      Vlapoi ((x , d) 𝕃.∷ xs) b = x × ValsiBitmu d × Vlapoi xs b
+      Vlapoi ((x , d) 𝕃.∷ xs) b = Σ x (ValsiBitmu ∘ d) × Vlapoi xs b
 
     Vlapoi = Vlapoi.Vlapoi
 \end{code}
@@ -624,7 +624,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       Term ⦃ T ⦄ = JekTerm.Term T
 
       Jek' : Set
-      Jek' = Vlapoi 𝕃.[ Na , 𝔹.false ] $ Cnima'o.Cni JE
+      Jek' = Vlapoi 𝕃.[ Na , Function.const 𝔹.false ] $ Cnima'o.Cni JE
 
     Jek = Jek.Jek'
 \end{code}
@@ -758,7 +758,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
       where
       NILC : T
       JufraC : (v : Vlapoi 𝕃.[ T , {!!} ] Jufra)
-             → JufraMapti $ Σ.proj₁ v
+             → JufraMapti $ Σ.proj₁ $ Σ.proj₁ v
              → T
       INI'OC : Vlapoi 𝕃.[ T , {!!} ] INI'O → T
 
