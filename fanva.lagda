@@ -750,7 +750,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     data T : Set
 
     JufraMapti : T → Set
-    JufraMapti = {!!}
 
     data T
       where
@@ -759,6 +758,8 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
              → JufraMapti $ Σ.proj₁ v
              → T
       INI'OC : Vlapoi 𝕃.[ T , {!!} ] INI'O → T
+
+    JufraMapti = {!!}
 \end{code}
 
 \section{le sinxa be le te tcidu bangu}
