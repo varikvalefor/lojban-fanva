@@ -784,6 +784,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo ctaipe lo me'oi .\F{JufraMa
       JufraMapti (INI'OC _) = ⊤
 \end{code}
 
+\subsubsection{la'oi .\F{valsiBitmuSarcu}.}
+ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ .zoi.\ me'oi .\F{valsiBitmuSarcu}.\ da gi sarcu va'o zo'e fa lo nu zo'e ja lo valsi bitmu lerfu cu bitmu lo se sinxa be da be'o bei lo jufra
+
 \begin{code}
       valsiBitmuSarcu : T → Bool
       valsiBitmuSarcu NILC = 𝔹.false
