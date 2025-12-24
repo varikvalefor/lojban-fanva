@@ -1106,8 +1106,9 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
 \end{code}
 
 \begin{code}
-    T : Set
-    T = {!!}
+    data T : Set
+      where
+      NILC : T
 \end{code}
 
 \section{le sinxa be le te tcidu bangu}
