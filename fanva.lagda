@@ -145,7 +145,6 @@ lojban = record {
   }
 \end{code}
 
-
 \chapter{le sinxa be le glibau}
 ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\F{glibau}.\ co'e ja velcki le glibau be vo'a\sds  .i ku'i ko'a na mulno pe'a
 
