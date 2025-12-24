@@ -510,6 +510,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     module NA where
       data NA' : Set
         where
+        NAC : NA'
 
     NA = NA.NA'
 \end{code}
