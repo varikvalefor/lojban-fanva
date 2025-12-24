@@ -688,8 +688,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
-    module Selbri
-      where
+    module Selbri where
       mutual
         data Selbri' : Set
           where
