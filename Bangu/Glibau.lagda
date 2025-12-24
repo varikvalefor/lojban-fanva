@@ -196,6 +196,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
           Thing : S
           Proof : S
           Type : S
+          ProperName : String → S
           Jbovla : String → S
 
       data NounValsi : Set
