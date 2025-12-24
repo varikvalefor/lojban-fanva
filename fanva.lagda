@@ -507,9 +507,13 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
+    NA : Set
+    NA = {!!}
+\end{code}
+
+\begin{code}
     POI : Set
 
-    NA : Set
     Na : Set
 
     Sumti : Set
@@ -594,13 +598,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \begin{code}
     module Na where
-      NA' : Set
       Na' : Set
-
-      NA' = {!!}
       Na' = {!!}
 
-    NA = Na.NA'
     Na = Na.Na'
 \end{code}
 
