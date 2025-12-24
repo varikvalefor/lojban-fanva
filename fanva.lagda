@@ -747,7 +747,13 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     Jufra = Jufra.Jufra'
 \end{code}
 
-\subsection{la'oi .\D{T}.\ noi ke'a ctaipe lo'i ro te gerna be le jbobau be la .varik.}
+\subsection{zo'e je la'oi .\D{T}.\ noi ke'a ctaipe lo'i ro te gerna be le jbobau be la .varik.}
+
+\begin{code}
+    mutual
+\end{code}
+
+\subsubsection{la'oi .\D{T}.}
 ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ ctaipe lo'i ro te gerna be le jbobau be la .varik.
 
 .i ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jonai ga je\ldots
@@ -759,7 +765,6 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ ctaipe lo'i ro te gerna b
 \end{itemize}
 
 \begin{code}
-    mutual
       data T : Set
         where
         NILC : T
@@ -767,12 +772,16 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ ctaipe lo'i ro te gerna b
         JufraC : (v : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] Jufra)
                → JufraMapti $ Σ.proj₁ $ Σ.proj₁ v
                → T
+\end{code}
 
+\begin{code}
       JufraMapti : T → Set
       JufraMapti NILC = ⊤
       JufraMapti (JufraC _ _) = ⊥
       JufraMapti (INI'OC _) = ⊤
+\end{code}
 
+\begin{code}
       valsiBitmuSarcu : T → Bool
       valsiBitmuSarcu NILC = 𝔹.false
       valsiBitmuSarcu (INI'OC x) = {!!}
