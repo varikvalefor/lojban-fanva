@@ -219,6 +219,14 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
 \end{code}
 
 \begin{code}
+    module Gerund where
+      Gerund : Set
+      Gerund = {!!}
+
+    Gerund = Gerund.Gerund
+\end{code}
+
+\begin{code}
     mutual
 \end{code}
 
@@ -243,6 +251,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         nounPrep : Noun → PrepPh → Noun
         nounListe : (x : List Noun) → 𝕃.length x ℕ.> 0 → Noun
         nounVarDecl : (n : Noun) → Variable → ¬ NounIsVarDecl n → Noun
+        nounGerund : Gerund → Noun → Noun
 
       NounIsVarDecl : Noun → Set
       NounIsVarDecl (nounVarDecl _ _ _) = ⊤
@@ -257,6 +266,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
       Selbrivla (nounArAdj _ _) = Selbrivla0.P × Selbrivla0.S -- "is/are"
       Selbrivla (nounPrep x _) = Selbrivla x
       Selbrivla (nounVarDecl s _ _) = Selbrivla s
+      Selbrivla (nounGerund g n) = {!!}
       Selbrivla (nounListe x _) with 𝕃.length x ℕ.>? 1
       ... | yes _ = Selbrivla0.P
       ... | no _ = Selbrivla0.S
