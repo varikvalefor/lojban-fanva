@@ -1003,8 +1003,11 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
       ... | no _ = Selbrivla0.S
 \end{code}
 
+\subsection{ko'a goi la'oi .\AgdaRecord{RelCl}.}
+ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be bau le glibau be la .varik.
+
 \begin{code}
-      record RelPh (s : Sumti) : Set
+      record RelCl (s : Sumti) : Set
         where
         inductive
         field
