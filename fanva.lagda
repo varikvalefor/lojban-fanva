@@ -1009,7 +1009,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         inductive
         field
           restrictive : Bool
-          bt : BridiTail s
+          bt : Clause s
 \end{code}
 
 \begin{code}
@@ -1053,7 +1053,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
 \end{code}
 
 \begin{code}
-      record BridiTail (x₁ : Sumti) : Set
+      record Clause (x₁ : Sumti) : Set
         where
         field
           brivla : Selbri x₁
@@ -1066,7 +1066,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         field
           intro : IntroPh
           x₁ : Sumti
-          bt : BridiTail x₁
+          bt : Clause x₁
           punkt : Punkt
 \end{code}
 
