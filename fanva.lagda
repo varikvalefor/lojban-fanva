@@ -133,9 +133,7 @@ record Fanva (t₁ t₂ : TB) : Set₁
     fanva : TB.T t₁ → TB.T t₂
 \end{code}
 
-\part{le bangu se ctaipe}
-
-\section{le sinxa be le te tcidu bangu}
+\chapter{le sinxa be la .lojban.}
 ni'o la .varik.\ cu troci lo nu la'oi .\F{lojban}.\ co'e ja velcki le jbobau be vo'a\sds  .i ku'i la'oi .\F{lojban}.\ na mulno pe'a
 
 \begin{code}
@@ -148,7 +146,7 @@ lojban = record {
 \end{code}
 
 
-\section{le sinxa be le te tcidu bangu}
+\chapter{le sinxa be le glibau}
 ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\F{glibau}.\ co'e ja velcki le glibau be vo'a\sds  .i ku'i ko'a na mulno pe'a
 
 \begin{code}
