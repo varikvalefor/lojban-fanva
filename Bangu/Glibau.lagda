@@ -232,6 +232,8 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
       Adjective = {!!}
 \end{code}
 
+\chapter{la'oi .\D{Sumti}.}
+
 \begin{code}
       data Sumti : Set
         where
