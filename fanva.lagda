@@ -113,6 +113,9 @@ open import Function
     _∘_;
     _$_
   )
+  renaming (
+    _|>_ to _▹_
+  )
 open import Data.Bool
   as 𝔹
   using (
@@ -1116,7 +1119,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
       jufraBitmuSarcu = {!!}
 
       JBT : T → Set
-      JBT = λ t → (𝔹.if jufraBitmuSarcu t then Maybe else Function.id) JufraBitmu
+      JBT = λ t → JufraBitmu ▹_ $ 𝔹.if jufraBitmuSarcu t then Maybe else Function.id
 \end{code}
 
 \section{le sinxa be le te tcidu bangu}
