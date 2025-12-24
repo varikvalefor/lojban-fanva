@@ -508,9 +508,15 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
 \begin{code}
     module NA where
-      data NA' : Set
-        where
-        NAC : NA'
+      mutual
+        data NA' : Set
+          where
+          NAC : NA'
+          UIC : Cnima'o.Cni NA' → NA'
+
+        instance
+          cniTerm : Cnima'o.CniTerm NA'
+          cniTerm = {!!}
 
     NA = NA.NA'
 \end{code}
