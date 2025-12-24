@@ -279,6 +279,8 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
           bt : Clause s
 \end{code}
 
+\chapter{la'oi .\AgdaRecord{Selbri}.}
+
 \begin{code}
       record Selbri (s : Noun) : Set
         where
