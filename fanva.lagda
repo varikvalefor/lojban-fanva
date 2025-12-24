@@ -557,6 +557,8 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
     Jufra : Set
 \end{code}
 
+\subsection{zo'e je le fanmo se ctaipe pe lo bridi}
+
 \begin{code}
     module Bri
       where
