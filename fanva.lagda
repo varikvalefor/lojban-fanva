@@ -690,17 +690,16 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \begin{code}
     module Selbri
       where
-      data Selbri' : Set
-      
-      instance cniTerm : Cnima'o.CniTerm Selbri'
-      
-      data Selbri'
-        where
-        GismuC : Gismu → Selbri'
-        CmevlaC : Cmevla → Selbri'
-        UIC : Cnima'o.Cni Selbri' → Selbri'
+      mutual
+        data Selbri' : Set
+          where
+          GismuC : Gismu → Selbri'
+          CmevlaC : Cmevla → Selbri'
+          UIC : Cnima'o.Cni Selbri' → Selbri'
 
-      instance cniTerm = {!!}
+        instance
+          cniTerm : Cnima'o.CniTerm Selbri'
+          cniTerm = {!!}
 
     Selbri = Selbri.Selbri'
 \end{code}
