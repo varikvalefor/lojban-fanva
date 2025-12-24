@@ -242,9 +242,10 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
         nounArAdj : Article → Adjective → Noun
         nounPrep : Noun → PrepPh → Noun
         nounListe : (x : List Noun) → 𝕃.length x ℕ.> 0 → Noun
-        -- | ni'o mapti zoi glibau. ((A THING $s$) $v$) $z$ .glibau.
-        -- .i toldji la'e di'u
-        nounVarDecl : Noun → Variable → Noun
+        nounVarDecl : (n : Noun) → Variable → ¬ NounIsVarDecl n → Noun
+
+      NounIsVarDecl : Noun → Set
+      NounIsVarDecl = {!!}
 \end{code}
 
 \begin{code}
@@ -254,7 +255,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
       Selbrivla (nounNVla _ _ (NounValsi.S _)) = Selbrivla0.S
       Selbrivla (nounArAdj _ _) = Selbrivla0.P × Selbrivla0.S -- "is/are"
       Selbrivla (nounPrep x _) = Selbrivla x
-      Selbrivla (nounVarDecl s _) = Selbrivla s
+      Selbrivla (nounVarDecl s _ _) = Selbrivla s
       Selbrivla (nounListe x _) with 𝕃.length x ℕ.>? 1
       ... | yes _ = Selbrivla0.P
       ... | no _ = Selbrivla0.S
