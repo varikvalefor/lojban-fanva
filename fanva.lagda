@@ -751,6 +751,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
     JufraMapti : T → Set
 
+    valsiBitmuSarcu : T → Bool
+    valsiBitmuSarcu = {!!}
+
     data T
       where
       NILC : T
