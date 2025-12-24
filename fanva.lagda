@@ -502,6 +502,11 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 \end{code}
 
 \begin{code}
+    Cmevla : Set
+    Cmevla = {!!}
+\end{code}
+
+\begin{code}
     POI : Set
 
     NA : Set
@@ -536,11 +541,6 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
       Term : {A : Set} → ⦃ BriTerm A ⦄ → A → Set
       Term ⦃ T ⦄ = BriTerm.Term T
-\end{code}
-
-\begin{code}
-    Cmevla : Set
-    Cmevla = {!!}
 \end{code}
 
 \begin{code}
