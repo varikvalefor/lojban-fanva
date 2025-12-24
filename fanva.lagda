@@ -775,7 +775,7 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ ctaipe lo'i ro te gerna b
 \end{code}
 
 \subsubsection{la'oi .\F{JufraMapti}.}
-ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo ctaipe lo me'oi .\F{JufraMapti}.\ be da gi gerna fi lo konkatena be lo se sinxa be da bei lo jufra
+ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo ctaipe lo me'oi .\F{JufraMapti}.\ be da gi gerna fi lo konkatena be lo se sinxa be da be'o bei lo jufra
 
 \begin{code}
       JufraMapti : T → Set
