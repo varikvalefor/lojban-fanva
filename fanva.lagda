@@ -1116,7 +1116,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
       jufraBitmuSarcu = {!!}
 
       JBT : T → Set
-      JBT = {!!}
+      JBT = λ t → (𝔹.if jufraBitmuSarcu t then Maybe else Function.id) JufraBitmu
 \end{code}
 
 \section{le sinxa be le te tcidu bangu}
