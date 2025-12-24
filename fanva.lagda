@@ -759,7 +759,9 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
              → T
       INI'OC : Vlapoi 𝕃.[ T , {!!} ] INI'O → T
 
-    JufraMapti = {!!}
+    JufraMapti NILC = {!!}
+    JufraMapti (JufraC v m) = {!!}
+    JufraMapti (INI'OC n) = {!!}
 \end{code}
 
 \section{le sinxa be le te tcidu bangu}
