@@ -232,30 +232,30 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
       Adjective = {!!}
 \end{code}
 
-\chapter{la'oi .\D{Sumti}.}
+\chapter{la'oi .\D{Noun}.}
 
 \begin{code}
-      data Sumti : Set
+      data Noun : Set
         where
-        sumtiQuote : String → Sumti
-        sumtiNVla : Maybe Article → Maybe Adjective → NounValsi → Sumti
-        sumtiArAdj : Article → Adjective → Sumti
-        sumtiPrep : Sumti → PrepPh → Sumti
-        sumtiListe : (x : List Sumti) → 𝕃.length x ℕ.> 0 → Sumti
+        nounQuote : String → Noun
+        nounNVla : Maybe Article → Maybe Adjective → NounValsi → Noun
+        nounArAdj : Article → Adjective → Noun
+        nounPrep : Noun → PrepPh → Noun
+        nounListe : (x : List Noun) → 𝕃.length x ℕ.> 0 → Noun
         -- | ni'o mapti zoi glibau. ((A THING $s$) $v$) $z$ .glibau.
         -- .i toldji la'e di'u
-        sumtiVarDecl : Sumti → Variable → Sumti
+        nounVarDecl : Noun → Variable → Noun
 \end{code}
 
 \begin{code}
-      Selbrivla : Sumti → Set
-      Selbrivla (sumtiQuote x) = {!!}
-      Selbrivla (sumtiNVla _ _ (NounValsi.P _)) = Selbrivla0.P
-      Selbrivla (sumtiNVla _ _ (NounValsi.S _)) = Selbrivla0.S
-      Selbrivla (sumtiArAdj _ _) = Selbrivla0.P × Selbrivla0.S -- "is/are"
-      Selbrivla (sumtiPrep x _) = Selbrivla x
-      Selbrivla (sumtiVarDecl s _) = Selbrivla s
-      Selbrivla (sumtiListe x _) with 𝕃.length x ℕ.>? 1
+      Selbrivla : Noun → Set
+      Selbrivla (nounQuote x) = {!!}
+      Selbrivla (nounNVla _ _ (NounValsi.P _)) = Selbrivla0.P
+      Selbrivla (nounNVla _ _ (NounValsi.S _)) = Selbrivla0.S
+      Selbrivla (nounArAdj _ _) = Selbrivla0.P × Selbrivla0.S -- "is/are"
+      Selbrivla (nounPrep x _) = Selbrivla x
+      Selbrivla (nounVarDecl s _) = Selbrivla s
+      Selbrivla (nounListe x _) with 𝕃.length x ℕ.>? 1
       ... | yes _ = Selbrivla0.P
       ... | no _ = Selbrivla0.S
 \end{code}
@@ -271,7 +271,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
 \end{itemize}
 
 \begin{code}
-      record RelCl (s : Sumti) : Set
+      record RelCl (s : Noun) : Set
         where
         inductive
         field
@@ -280,7 +280,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
 \end{code}
 
 \begin{code}
-      record Selbri (s : Sumti) : Set
+      record Selbri (s : Noun) : Set
         where
         field
           adv₁ : Adverb
@@ -295,7 +295,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
         field
           adv : Maybe Adverb
           pv : Preposition
-          x₁ : Sumti
+          x₁ : Noun
 \end{code}
 
 \begin{code}
@@ -320,11 +320,11 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
 \end{code}
 
 \begin{code}
-      record Clause (x₁ : Sumti) : Set
+      record Clause (x₁ : Noun) : Set
         where
         field
           brivla : Selbri x₁
-          x₂ : Maybe Sumti
+          x₂ : Maybe Noun
 \end{code}
 
 \begin{code}
@@ -332,7 +332,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
         where
         field
           intro : IntroPh
-          x₁ : Sumti
+          x₁ : Noun
           bt : Clause x₁
           punkt : Punkt
 \end{code}
