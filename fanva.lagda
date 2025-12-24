@@ -761,7 +761,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le g
 
     JufraMapti NILC = ⊤
     JufraMapti (JufraC v m) = ⊥
-    JufraMapti (INI'OC n) = {!!}
+    JufraMapti (INI'OC n) = ⊤
 \end{code}
 
 \section{le sinxa be le te tcidu bangu}
