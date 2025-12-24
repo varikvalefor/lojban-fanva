@@ -806,7 +806,7 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ ctaipe lo ro te gerna be 
 \begin{itemize}
 	\item da du la'oi .\IC{NILC}.\ gi da sinxa lo kunti gi ga jonai ga je
 	\item da du la'o zoi. \IC{INI'OC} \Sym(\Sym(\B{v} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{n}\Sym) gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{v}.\ be'o bei lo se sinxa be la'oi .\B{n}.\ gi ga jonai ga je
-	\item da du la'o zoi. \IC{FAhOC} \Sym(\Sym(\B{t} \IC{,} \AgdaUnderscore \Sym) \IC{,} \Sym(\B{f} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{s}\Sym)\ .zoi.\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{t}.\ be'o bei lo se sinxa be la'oi .\B{f}.\ be'o bei la'oi .\B{s}.\ gi ga je
+	\item da du la'o zoi. \IC{FA'OC} \Sym(\Sym(\B{t} \IC{,} \AgdaUnderscore \Sym) \IC{,} \Sym(\B{f} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{s}\Sym)\ .zoi.\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{t}.\ be'o bei lo se sinxa be la'oi .\B{f}.\ be'o bei la'oi .\B{s}.\ gi ga je
 	\item da du la'o zoi. \IC{JufraC} \Sym(\Sym(\B{v} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{j}\Sym) \AgdaBound{m} gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{v}.\ be'o bei lo se sinxa be la'oi .\B{j}.
 \end{itemize}
 
@@ -815,7 +815,7 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ ctaipe lo ro te gerna be 
         where
         NILC : T
         INI'OC : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] INI'O → T
-        FAhOC : Vlapoi ((T , valsiBitmuSarcu) 𝕃.∷ 𝕃.[ FAhO , {!!} ]) String → T
+        FA'OC : Vlapoi ((T , valsiBitmuSarcu) 𝕃.∷ 𝕃.[ FAhO , {!!} ]) String → T
         JufraC : (v : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] Jufra)
                → JufraMapti $ Σ.proj₁ $ Σ.proj₁ v
                → T
@@ -829,7 +829,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo ctaipe lo me'oi .\F{JufraMa
       JufraMapti NILC = ⊤
       JufraMapti (JufraC _ _) = ⊥
       JufraMapti (INI'OC _) = ⊤
-      JufraMapti (FAhOC _) = ⊥
+      JufraMapti (FA'OC _) = ⊥
 \end{code}
 
 \subsubsection{la'oi .\F{valsiBitmuSarcu}.}
@@ -840,7 +840,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
       valsiBitmuSarcu NILC = 𝔹.false
       valsiBitmuSarcu (INI'OC x) = {!!}
       valsiBitmuSarcu (JufraC v x) = {!!}
-      valsiBitmuSarcu (FAhOC _ ) = {!!}
+      valsiBitmuSarcu (FA'OC _ ) = {!!}
 \end{code}
 
 \section{le sinxa be le te tcidu bangu}
