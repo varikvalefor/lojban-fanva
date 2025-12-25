@@ -410,6 +410,14 @@ module T where
 \end{code}
 
 \begin{code}
+  module ZOhU where
+    data ZOhU : Set
+      where
+
+  ZOhU = ZOhU.ZOhU
+\end{code}
+
+\begin{code}
   module NA where
     mutual
       data NA' : Set
