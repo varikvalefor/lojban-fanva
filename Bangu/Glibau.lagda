@@ -172,7 +172,7 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
 \end{code}
 
 \begin{code}
-    module Selbrivla0 where
+    module VerbWord0 where
       P : Set
       P = {!!}
 
@@ -261,17 +261,17 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
 \end{code}
 
 \begin{code}
-      Selbrivla : Noun → Set
-      Selbrivla (nounQuote x) = {!!}
-      Selbrivla (nounNVla _ _ (NounValsi.P _)) = Selbrivla0.P
-      Selbrivla (nounNVla _ _ (NounValsi.S _)) = Selbrivla0.S
-      Selbrivla (nounArAdj _ _) = Selbrivla0.P × Selbrivla0.S -- "is/are"
-      Selbrivla (nounPrep x _) = Selbrivla x
-      Selbrivla (nounVarDecl s _ _) = Selbrivla s
-      Selbrivla (nounGerund a₁ g a₂ n) = {!!}
-      Selbrivla (nounListe x _) with 𝕃.length x ℕ.>? 1
-      ... | yes _ = Selbrivla0.P
-      ... | no _ = Selbrivla0.S
+      VerbWord : Noun → Set
+      VerbWord (nounQuote x) = {!!}
+      VerbWord (nounNVla _ _ (NounValsi.P _)) = VerbWord0.P
+      VerbWord (nounNVla _ _ (NounValsi.S _)) = VerbWord0.S
+      VerbWord (nounArAdj _ _) = VerbWord0.P × VerbWord0.S -- "is/are"
+      VerbWord (nounPrep x _) = VerbWord x
+      VerbWord (nounVarDecl s _ _) = VerbWord s
+      VerbWord (nounGerund a₁ g a₂ n) = {!!}
+      VerbWord (nounListe x _) with 𝕃.length x ℕ.>? 1
+      ... | yes _ = VerbWord0.P
+      ... | no _ = VerbWord0.S
 \end{code}
 
 \section{ko'a goi la'oi .\AgdaRecord{RelCl}.}
@@ -300,7 +300,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
         where
         field
           adv₁ : Adverb
-          sbv : Selbrivla s
+          sbv : VerbWord s
           adv₂ : Adverb
 \end{code}
 
