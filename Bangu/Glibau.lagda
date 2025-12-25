@@ -293,17 +293,17 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
           bt : Clause s
 \end{code}
 
-\section{ko'a goi la'oi .\AgdaRecord{Selbri}.}
+\section{ko'a goi la'oi .\AgdaRecord{Verb}.}
 ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo pluja selbri co'e be bau le glibau be la .varik.\ gi\ldots
 
 \begin{itemize}
-	\item ko'e goi lo mu'oi zoi.\ \AgdaField{Selbri.verb}\ .zoi.\ be da cu sinxa lo selbri valsi be da gi ga je
-	\item lo mu'oi zoi.\ \AgdaField{Selbri.adv₁}\ .zoi.\ be da cu du la'oi .\IC{nothing}.\ jonai cu me'oi .\IC{just}.\ lo sinxa lo me'oi .adverb.\ co'e poi ke'a lidne lo se sinxa be ko'e gi
-	\item lo mu'oi zoi.\ \AgdaField{Selbri.adv₂}\ .zoi.\ be da cu du la'oi .\IC{nothing}.\ jonai cu me'oi .\IC{just}.\ lo sinxa be lo me'oi .adverb.\ co'e poi ke'a se lidne lo se sinxa be ko'e
+	\item ko'e goi lo mu'oi zoi.\ \AgdaField{Verb.verb}\ .zoi.\ be da cu sinxa lo selbri valsi be da gi ga je
+	\item lo mu'oi zoi.\ \AgdaField{Verb.adv₁}\ .zoi.\ be da cu du la'oi .\IC{nothing}.\ jonai cu me'oi .\IC{just}.\ lo sinxa lo me'oi .adverb.\ co'e poi ke'a lidne lo se sinxa be ko'e gi
+	\item lo mu'oi zoi.\ \AgdaField{Verb.adv₂}\ .zoi.\ be da cu du la'oi .\IC{nothing}.\ jonai cu me'oi .\IC{just}.\ lo sinxa be lo me'oi .adverb.\ co'e poi ke'a se lidne lo se sinxa be ko'e
 \end{itemize}
 
 \begin{code}
-      record Selbri (s : Noun) : Set
+      record Verb (s : Noun) : Set
         where
         field
           adv₁ : Maybe Adverb
@@ -346,7 +346,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo pluja selbri co'e be bau 
       record Clause (x₁ : Noun) : Set
         where
         field
-          verb : Selbri x₁
+          verb : Verb x₁
           x₂ : Maybe Noun
 \end{code}
 
