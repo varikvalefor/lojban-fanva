@@ -339,7 +339,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
       record Clause (x₁ : Noun) : Set
         where
         field
-          brivla : Selbri x₁
+          verb : Selbri x₁
           x₂ : Maybe Noun
 \end{code}
 
