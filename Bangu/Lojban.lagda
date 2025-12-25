@@ -461,6 +461,7 @@ module T where
   record Bridi : Set
   Jek : Set
   Jufra : Set
+  Prenex : Set
 \end{code}
 
 \chapter{zo'e je le fanmo se ctaipe pe lo bridi}
@@ -475,6 +476,14 @@ module T where
 
     Term : {A : Set} → ⦃ BriTerm A ⦄ → A → Set
     Term ⦃ T ⦄ = BriTerm.Term T
+\end{code}
+
+\begin{code}
+  module Prenex where
+    Prenex' : Set
+    Prenex' = {!!}
+
+  Prenex = Prenex.Prenex'
 \end{code}
 
 \begin{code}
