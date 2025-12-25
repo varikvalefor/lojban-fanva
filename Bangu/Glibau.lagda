@@ -300,7 +300,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
         where
         field
           adv₁ : Adverb
-          sbv : VerbWord s
+          verb : VerbWord s
           adv₂ : Adverb
 \end{code}
 
