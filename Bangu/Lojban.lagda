@@ -488,8 +488,8 @@ module T where
 
 \begin{code}
   module Prenex where
-    Prenex' : Set
-    Prenex' = {!!}
+    data Prenex' : Set
+      where
 
   Prenex = Prenex.Prenex'
 \end{code}
