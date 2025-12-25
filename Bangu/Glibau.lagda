@@ -299,7 +299,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
       record Selbri (s : Noun) : Set
         where
         field
-          adv₁ : Adverb
+          adv₁ : Maybe Adverb
           verb : VerbWord s
           adv₂ : Adverb
 \end{code}
