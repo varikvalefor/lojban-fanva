@@ -488,9 +488,13 @@ module T where
 
 \begin{code}
   module Prenex where
-    data Prenex' : Set
-      where
-      SumtiZo'u : Vlapoi 𝕃.[ Sumti , {!!} ] ZOhU → Prenex'
+    mutual
+      data Prenex' : Set
+        where
+        SumtiZo'u : Vlapoi 𝕃.[ Sumti , {!!} ] ZOhU → Prenex'
+
+      valsiBitmuSarcu : Prenex' → Bool
+      valsiBitmuSarcu = {!!}
 
   Prenex = Prenex.Prenex'
 \end{code}
