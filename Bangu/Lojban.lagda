@@ -490,6 +490,7 @@ module T where
   module Prenex where
     data Prenex' : Set
       where
+      SumtiZo'u : Vlapoi 𝕃.[ Sumti , {!!} ] ZOhU → Prenex'
 
   Prenex = Prenex.Prenex'
 \end{code}
