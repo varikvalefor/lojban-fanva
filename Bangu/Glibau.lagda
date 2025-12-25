@@ -301,7 +301,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
         field
           adv₁ : Maybe Adverb
           verb : VerbWord s
-          adv₂ : Adverb
+          adv₂ : Maybe Adverb
 \end{code}
 
 \begin{code}
