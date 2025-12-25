@@ -492,6 +492,7 @@ module T where
       data Prenex' : Set
         where
         SumtiZo'u : Vlapoi 𝕃.[ Sumti , {!!} ] ZOhU → Prenex'
+        Liste : Vlapoi 𝕃.[ Prenex' , valsiBitmuSarcu ] Prenex' → Prenex'
 
       valsiBitmuSarcu : Prenex' → Bool
       valsiBitmuSarcu = {!!}
