@@ -422,12 +422,12 @@ module T where
     mutual
       data NU' : Set
         where
-        NUC : NU'
-        NIC : NU'
-        PU'UC : NU'
-        DU'UC : NU'
-        SU'UC : NU'
-        LI'IC : NU'
+        NuC : NU'
+        NiC : NU'
+        Pu'uC : NU'
+        Du'uC : NU'
+        Su'uC : NU'
+        Li'iC : NU'
 
       instance
         cniTerm : Cnima'o.CniTerm NU'
