@@ -262,8 +262,12 @@ module T where
 
 \begin{code}
   module Cnima'o where
-    Cnima'oCo'e : Set
-    Cnima'oCo'e = {!!}
+    mutual
+      Cnima'oCo'e : Set
+      Cnima'oCo'e = {!!}
+
+      valsiBitmuSarcu : Cnima'oCo'e → Bool
+      valsiBitmuSarcu = {!!}
 
     record CniTerm (Selma'o : Set) : Set₁
       where
