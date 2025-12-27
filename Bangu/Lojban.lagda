@@ -624,7 +624,7 @@ module T where
     data Sumti'
       where
       KOhAC : KOhA → Sumti'
-      LeSelbriC : LE → Selbri → Sumti'
+      LeSelbriC : Vlapoi 𝕃.[ LE , {!!} ] Selbri → Sumti'
       POIC : Poi.PoiCl Sumti'
            → Sumti'
       JekC : (x : Sumti')
@@ -642,7 +642,7 @@ module T where
         T : Sumti' → Set
         T (KOhAC k) = Cnima'o.CniTerm.Term KOhA.cniTerm k
         T (POIC c) = {!!}
-        T (LeSelbriC l s) = {!!}
+        T (LeSelbriC x) = {!!}
         T (JekC x t j x₂) = {!!}
         T (UIC (Cnima'o.CniX s t c)) = {!!}
       briTerm = {!!}
@@ -652,7 +652,7 @@ module T where
         where
         T : Sumti' → Set
         T (KOhAC x) = {!!}
-        T (LeSelbriC x x₁) = {!!}
+        T (LeSelbriC x) = {!!}
         T (POIC x) with 𝕃.last (Poi.PoiCl.cl x)
         ... | ⁇.just x2 = Σ.uncurry Poi.JePoiTerm x2
         ... | ⁇.nothing = {!!}
