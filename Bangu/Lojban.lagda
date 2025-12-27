@@ -423,6 +423,7 @@ module T where
       data NU' : Set
         where
         NUC : NU'
+        PU'UC : NU'
 
       instance
         cniTerm : Cnima'o.CniTerm NU'
