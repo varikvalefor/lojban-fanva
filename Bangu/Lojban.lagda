@@ -418,6 +418,19 @@ module T where
 \end{code}
 
 \begin{code}
+  module NU where
+    mutual
+      data NU' : Set
+        where
+
+      instance
+        cniTerm : Cnima'o.CniTerm NU'
+        cniTerm = {!!}
+
+  NU = NU.NU'
+\end{code}
+
+\begin{code}
   module NA where
     mutual
       data NA' : Set
