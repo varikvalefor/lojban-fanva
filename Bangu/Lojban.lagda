@@ -431,6 +431,19 @@ module T where
 \end{code}
 
 \begin{code}
+  module KEI where
+    mutual
+      data KEI' : Set
+        where
+
+      instance
+        cniTerm : Cnima'o.CniTerm KEI'
+        cniTerm = {!!}
+
+  KEI = KEI.KEI'
+\end{code}
+
+\begin{code}
   module NA where
     mutual
       data NA' : Set
