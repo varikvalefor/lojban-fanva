@@ -665,7 +665,9 @@ ni'o sa'u la'oi .\F{Selbri}.\ se ctaipe zo'e ja lo selbri co'e be bau le jbobau 
     mutual
       data Selbri' : Set
         where
-        NUC : Vlapoi ((NU , {!!}) 𝕃.∷ 𝕃.[ Jufra , {!!} ]) (Maybe KEI)
+        NUC : (Vlapoi
+                ((NU , {!!}) 𝕃.∷ 𝕃.[ Jufra , {!!} ])
+                (Maybe KEI))
             → Selbri'
         GismuC : Gismu → Selbri'
         CmevlaC : Cmevla → Selbri'
