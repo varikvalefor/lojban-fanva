@@ -422,6 +422,7 @@ module T where
     mutual
       data NU' : Set
         where
+        NUC : NU'
 
       instance
         cniTerm : Cnima'o.CniTerm NU'
