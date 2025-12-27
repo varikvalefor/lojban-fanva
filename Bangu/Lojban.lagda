@@ -723,11 +723,10 @@ ni'o la'oi .\AgdaRecord{Bridi}.\ se ctaipe zo'e ja lo ro bridi be bau le jbobau 
 \chapter{zo'e je la'oi .\F{Jufra}.}
 ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .varik.
 
-.i sa'u nai ru'e ro da poi ke'a ctaipe la'oi .\F{Jufra}.\ zo'u ga jonai ga je\ldots
+.i sa'u nai ru'e ro da poi ke'a ctaipe la'oi .\F{Jufra}.\ zo'u\ldots
 
 \begin{itemize}
-	\item da du la'o zoi.\ \IC{BridiC} \B{b}\ .zoi.\ gi da sinxa lo se sinxa be la'oi .\B{b}.\ gi ga je
-	\item da du la'o zoi.\ \IC{UIC} \B{v}\ .zoi.\ gi da sinxa lo se sinxa be la'oi .\B{v}.
+	\item da du la'o zoi.\ \IC{BridiC} \B{b}\ .zoi.\ gi da sinxa lo se sinxa be la'oi .\B{b}.
 \end{itemize}
 
 \begin{code}
