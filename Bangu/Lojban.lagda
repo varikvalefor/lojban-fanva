@@ -733,6 +733,9 @@ ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .var
         where
         BridiC : Bridi → Jufra'
 
+      valsiBitmuSarcu : Jufra' → Bool
+      valsiBitmuSarcu = {!!}
+
       instance
         cniTerm : Cnima'o.CniTerm Jufra'
         cniTerm = {!!}
