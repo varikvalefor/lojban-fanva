@@ -131,7 +131,7 @@ module T where
 
       ,s = Data.String.fromList $ 𝕃.replicate nC ','
       c' = Data.String.fromChar c
-      s = (,s Data.String.++ c')
+      s = ,s Data.String.++ c'
 \end{code}
 
 \begin{code}
