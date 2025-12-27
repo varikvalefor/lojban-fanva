@@ -727,8 +727,7 @@ ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .var
 \end{itemize}
 
 \begin{code}
-  module Jufra
-    where
+  module Jufra where
     mutual
       data Jufra' : Set
         where
