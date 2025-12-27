@@ -426,6 +426,7 @@ module T where
         PU'UC : NU'
         DU'UC : NU'
         SU'UC : NU'
+        LI'IC : NU'
 
       instance
         cniTerm : Cnima'o.CniTerm NU'
