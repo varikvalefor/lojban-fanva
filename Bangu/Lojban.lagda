@@ -424,6 +424,7 @@ module T where
         where
         NUC : NU'
         PU'UC : NU'
+        DU'UC : NU'
         SU'UC : NU'
 
       instance
