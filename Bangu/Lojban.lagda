@@ -737,7 +737,6 @@ ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .var
       data Jufra' : Set
         where
         BridiC : Bridi → Jufra'
-        UIC : Cnima'o.Cni Jufra' → Jufra'
 
       instance
         cniTerm : Cnima'o.CniTerm Jufra'
