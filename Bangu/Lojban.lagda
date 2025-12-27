@@ -423,6 +423,7 @@ module T where
       data NU' : Set
         where
         NUC : NU'
+        NIC : NU'
         PU'UC : NU'
         DU'UC : NU'
         SU'UC : NU'
