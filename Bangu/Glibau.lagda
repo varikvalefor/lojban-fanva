@@ -162,11 +162,11 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
 \end{code}
 
 \subsection{ko'a goi la'oi .\D{Article}.}
-ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo me'oi .article.\ be bau le glibau gi\ldots
+ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo me'oi .article.\ be bau le glibau gi ga jonai\ldots
 
 \begin{itemize}
-	\item ga jonai da du la'oi .\IC{A}.\ je cu sinxa zo'oi .A.\ ja zo'oi .AN.\ gi
-	\item ga da du la'oi .\IC{The}.\ je cu sinxa zo'oi .THE.
+	\item da du la'oi .\IC{A}.\ je cu sinxa zo'oi .A.\ ja zo'oi .AN.\ gi
+	\item da du la'oi .\IC{The}.\ je cu sinxa zo'oi .THE.
 \end{itemize}
 
 \begin{code}
