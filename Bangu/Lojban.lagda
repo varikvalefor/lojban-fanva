@@ -445,6 +445,9 @@ module T where
         cniTerm : Cnima'o.CniTerm NU'
         cniTerm = {!!}
 
+      valsiBitmuSarcu : NU' → Bool
+      valsiBitmuSarcu = {!!}
+
   NU = NU.NU'
 \end{code}
 
@@ -684,7 +687,7 @@ ni'o sa'u la'oi .\F{Selbri}.\ se ctaipe zo'e ja lo selbri co'e be bau le jbobau 
       data Selbri' : Set
         where
         NUC : (Vlapoi
-                ((NU , {!!}) 𝕃.∷ 𝕃.[ Jufra , {!!} ])
+                ((NU , NU.valsiBitmuSarcu) 𝕃.∷ 𝕃.[ Jufra , {!!} ])
                 (Maybe KEI))
             → Selbri'
         GismuC : Gismu → Selbri'
