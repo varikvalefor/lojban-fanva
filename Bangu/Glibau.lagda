@@ -169,6 +169,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{Preposition}.\ zo'u da sinxa lo valsi be fi
         Of : _
         From : _
         Into : _
+        On : _
 
     Preposition = Preposition.Preposition
 \end{code}
