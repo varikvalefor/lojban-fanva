@@ -238,6 +238,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo me'oi .article.\ be bau l
     module RelativeClauseWord where
       data RelativeClauseWord' : Set
         where
+        Which : _
 
     RelativeClauseWord = RelativeClauseWord.RelativeClauseWord'
 \end{code}
