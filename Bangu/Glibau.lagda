@@ -153,10 +153,19 @@ ni'o la .varik.\ cu troci lo nu ko'a goi la'oi .\AgdaFunction{T}.\ cu co'e ja ve
     Conjunction = Conjunction.Conjunction
 \end{code}
 
+\subsection{la'oi .\F{Preposition}.}
+ni'o ro da poi ke'a ctaipe la'oi .\F{Preposition}.\ zo'u da sinxa lo valsi be fi le glibau be'o je se cmene be da
+
 \begin{code}
     module Preposition where
       data Preposition : Set
         where
+        In : _
+        Out : _
+        Within : _
+        At : _
+        To : _
+        With : _
 
     Preposition = Preposition.Preposition
 \end{code}
