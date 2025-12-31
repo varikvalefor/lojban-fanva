@@ -248,14 +248,22 @@ module T where
     valsiBitmu = {!!}
 \end{code}
 
-\chapter{la'oi .\AgdaFunction{Gismu}.}
+\chapter{la'oi .\AgdaRecord{Gismu}.}
 
 \begin{code}
-  Gismu : Set
-  Gismu = (Z × Z × K × Z × K) ⊎ (Z × K × Z × Z × K)
+  record Gismu : Set
     where
     Z = Lerfu.zunsna
     K = Lerfu.karsna
+
+    field
+      v : (Z × Z × K × Z × K) ⊎ (Z × K × Z × Z × K)
+
+    rez : Lerfu.zunsna × Lerfu.zunsna
+    rez = (Data.Sum.[_,_]
+            (λ (x , z , _) →  x , z)
+            (λ (_ , _ , x , z , _) → x , z)
+            v)
 \end{code}
 
 \chapter{le cnima'o co'e}
