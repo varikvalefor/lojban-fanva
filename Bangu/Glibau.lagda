@@ -166,7 +166,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo me'oi .article.\ be bau l
 
 \begin{itemize}
 	\item da du la'oi .\IC{A}.\ je cu sinxa zo'oi .A.\ ja zo'oi .AN.\ gi
-	\item da du la'oi .\IC{The}.\ je cu sinxa zo'oi .THE.
+	\item da sinxa lo valsi je ke co'e ja cmene be da
 \end{itemize}
 
 \begin{code}
