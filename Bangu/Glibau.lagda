@@ -234,6 +234,14 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo me'oi .article.\ be bau l
     Gerund = Gerund.Gerund
 \end{code}
 
+\begin{code}
+    module RelativeClauseWord where
+      data RelativeClauseWord' : Set
+        where
+
+    RelativeClauseWord = RelativeClauseWord.RelativeClauseWord'
+\end{code}
+
 \chapter{le zmadu be le ka ce'u pluja}
 
 \begin{code}
@@ -297,6 +305,7 @@ ni'o ko'a se ctaipe zo'e ja lo ro mu'oi glibau.\ relative clause .glibau.\ be ba
         where
         inductive
         field
+          word : RelativeClauseWord
           restrictive : Bool
           bt : Clause s
 \end{code}
