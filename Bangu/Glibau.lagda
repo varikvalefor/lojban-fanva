@@ -35,12 +35,13 @@ open import Data.Sum
   )
 open import Function
   using (
-    const;
     _∘_;
     _$_;
     id
   )
   renaming (
+    constᵣ to _⊢_;
+    const to _⊣_;
     _|>_ to _▹_
   )
 open import Data.Bool
