@@ -308,7 +308,21 @@ module T where
       where
       F : Voksa l → ⊥
       F (Va a) = Na a
-      F = {!!}
+      F (Vb b) = Nb b
+      F (Vd d) = Nd d
+      F (Ve e) = Ne e
+      F (Vg g) = Ng g
+      F (Vi i) = Ni i
+      F (Vj j) = Nj j
+      F (Vl l) = Nl l
+      F (Vm m) = Nm m
+      F (Vn n) = Nn n
+      F (Vo o) = No o
+      F (Vr r) = Nr r
+      F (Vu u) = Nu u
+      F (Vv v) = Nv v
+      F (Vy y) = Ny y
+      F (Vz z) = Nz z
 
     isVoksa : {c : Char} → tLerfu c → Bool
     isVoksa = {!!}
