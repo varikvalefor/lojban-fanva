@@ -101,6 +101,10 @@ open import Truthbrary.Record.SR
     Read;
     SR
   )
+open import Truthbrary.Record.Eq
+  using (
+    _≟_
+  )
 open import Data.List.Relation.Unary.All
   as LUA
   using (
@@ -268,7 +272,9 @@ module T where
         Vz : c ≡ 'z' → _
 
     Voksa? : {c : Char} → Decidable $ Voksa {c}
-    Voksa? = {!!}
+    Voksa? {c} l with c ≟ 'a'
+    ... | yes d = yes $ Va d
+    ... | no Na = {!!}
 
     isVoksa : {c : Char} → tLerfu c → Bool
     isVoksa = {!!}
