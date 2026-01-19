@@ -274,7 +274,9 @@ module T where
     Voksa? : {c : Char} → Decidable $ Voksa {c}
     Voksa? {c} l with c ≟ 'a'
     ... | yes d = yes $ Va d
-    ... | no Na = {!!}
+    ... | no Na with c ≟ 'b'
+    ... | yes d = yes $ Vb d
+    ... | no Nb = {!!}
 
     isVoksa : {c : Char} → tLerfu c → Bool
     isVoksa = {!!}
