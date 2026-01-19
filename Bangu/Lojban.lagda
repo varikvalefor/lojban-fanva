@@ -244,6 +244,27 @@ module T where
 \end{code}
 
 \begin{code}
+    data Voksa {c : Char} (t : tLerfu c) : Set
+      where
+        Va : c ≡ 'a' → _
+        Vb : c ≡ 'b' → _
+        Vd : c ≡ 'd' → _
+        Ve : c ≡ 'e' → _
+        Vg : c ≡ 'g' → _
+        Vi : c ≡ 'i' → _
+        Vj : c ≡ 'j' → _
+        Vl : c ≡ 'l' → _
+        Vm : c ≡ 'm' → _
+        Vn : c ≡ 'n' → _
+        Vo : c ≡ 'o' → _
+        Vr : c ≡ 'r' → _
+        Vu : c ≡ 'u' → _
+        Vv : c ≡ 'v' → _
+        Vy : c ≡ 'y' → _
+        Vz : c ≡ 'z' → _
+\end{code}
+
+\begin{code}
     valsiBitmu : Set
     valsiBitmu = {!!}
 \end{code}
