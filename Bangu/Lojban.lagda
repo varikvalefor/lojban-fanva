@@ -304,7 +304,10 @@ module T where
     ... | yes d = yes $ Vy d
     ... | no Ny with c ≟ 'z'
     ... | yes d = yes $ Vz d
-    ... | no Nz = no {!!}
+    ... | no Nz = no F
+      where
+      F : Voksa l → ⊥
+      F = {!!}
 
     isVoksa : {c : Char} → tLerfu c → Bool
     isVoksa = {!!}
