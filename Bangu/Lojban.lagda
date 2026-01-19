@@ -269,6 +269,9 @@ module T where
 
     Voksa? : {c : Char} → Decidable $ Voksa {c}
     Voksa? = {!!}
+
+    isVoksa : {c : Char} → tLerfu c → Bool
+    isVoksa = {!!}
 \end{code}
 
 \begin{code}
