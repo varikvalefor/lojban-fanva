@@ -400,8 +400,13 @@ module T where
             (λ (_ , _ , x , z , _) → x , z)
             v)
 
+    private
+      iv : Lerfu.zunsna → Bool
+      iv = Lerfu.isVoksa ∘ Σ.proj₂ ∘ Lerfu.deconstruct
+
     field
       noraplis : ¬_ $ Σ.proj₁ rez ≡ Σ.proj₂ rez
+      vd : (_≡_ Function.on iv) (Σ.proj₁ rez) $ Σ.proj₂ rez
 \end{code}
 
 \chapter{le cnima'o co'e}
