@@ -401,12 +401,15 @@ module T where
             v)
 
     private
+      rez₁ : Lerfu.zunsna
+      rez₁ = Σ.proj₁ rez
+
       iv : Lerfu.zunsna → Bool
       iv = Lerfu.isVoksa ∘ Σ.proj₂ ∘ Lerfu.deconstruct
 
     field
       noraplis : ¬_ $ Σ.proj₁ rez ≡ Σ.proj₂ rez
-      vd : (_≡_ Function.on iv) (Σ.proj₁ rez) $ Σ.proj₂ rez
+      vd : (_≡_ Function.on iv) (rez₁) $ Σ.proj₂ rez
 \end{code}
 
 \chapter{le cnima'o co'e}
