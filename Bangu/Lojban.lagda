@@ -276,7 +276,9 @@ module T where
     ... | yes d = yes $ Va d
     ... | no Na with c ≟ 'b'
     ... | yes d = yes $ Vb d
-    ... | no Nb = {!!}
+    ... | no Nb with c ≟ 'd'
+    ... | yes d = yes $ Vd d
+    ... | no Nd = {!!}
 
     isVoksa : {c : Char} → tLerfu c → Bool
     isVoksa = {!!}
