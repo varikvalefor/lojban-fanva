@@ -294,7 +294,9 @@ module T where
     ... | yes d = yes $ Vn d
     ... | no Nn with c ≟ 'o'
     ... | yes d = yes $ Vo d
-    ... | no No = {!!}
+    ... | no No with c ≟ 'r'
+    ... | yes d = yes $ Vr d
+    ... | no Nr = {!!}
 
     isVoksa : {c : Char} → tLerfu c → Bool
     isVoksa = {!!}
