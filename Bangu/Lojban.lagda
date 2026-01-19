@@ -256,6 +256,52 @@ module T where
 \end{code}
 
 \begin{code}
+    record Deconstructible {a} (A : Set a) : Set a
+      where
+      field
+        selvau : A → Σ Char tLerfu
+
+    deconstruct : ∀ {a} → {A : Set a}
+                → ⦃ Deconstructible A ⦄
+                → A
+                → Σ Char tLerfu
+    deconstruct ⦃ D ⦄ = Deconstructible.selvau D
+
+    instance
+      deconstructibleZunsna : Deconstructible zunsna
+      deconstructibleZunsna = record {selvau = selvau}
+        where
+        selvau : zunsna → Σ Char tLerfu
+        selvau (zunsnaB z) = _ , z
+        selvau (zunsnaC z) = _ , z
+        selvau (zunsnaD z) = _ , z
+        selvau (zunsnaF z) = _ , z
+        selvau (zunsnaG z) = _ , z
+        selvau (zunsnaJ z) = _ , z
+        selvau (zunsnaK z) = _ , z
+        selvau (zunsnaL z) = _ , z
+        selvau (zunsnaM z) = _ , z
+        selvau (zunsnaN z) = _ , z
+        selvau (zunsnaP z) = _ , z
+        selvau (zunsnaR z) = _ , z
+        selvau (zunsnaS z) = _ , z
+        selvau (zunsnaT z) = _ , z
+        selvau (zunsnaV z) = _ , z
+        selvau (zunsnaX z) = _ , z
+        selvau (zunsnaZ z) = _ , z
+
+      deconstructibleKarsna : Deconstructible karsna
+      deconstructibleKarsna = record {selvau = selvau}
+        where
+        selvau : karsna → Σ Char tLerfu
+        selvau (karsnaA z) = _ , z
+        selvau (karsnaE z) = _ , z
+        selvau (karsnaI z) = _ , z
+        selvau (karsnaO z) = _ , z
+        selvau (karsnaU z) = _ , z
+\end{code}
+
+\begin{code}
     data Voksa {c : Char} (t : tLerfu c) : Set
       where
         Va : c ≡ 'a' → _
