@@ -105,6 +105,10 @@ open import Truthbrary.Record.Eq
   using (
     _≟_
   )
+open import Relation.Nullary.Decidable
+  using (
+    isYes
+  )
 open import Data.List.Relation.Unary.All
   as LUA
   using (
@@ -325,7 +329,7 @@ module T where
       F (Vz z) = Nz z
 
     isVoksa : {c : Char} → tLerfu c → Bool
-    isVoksa = {!!}
+    isVoksa = isYes ∘ Voksa?
 \end{code}
 
 \begin{code}
