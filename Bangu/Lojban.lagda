@@ -409,7 +409,7 @@ module T where
 
     field
       noraplis : ¬_ $ Σ.proj₁ rez ≡ Σ.proj₂ rez
-      vd : (_≡_ Function.on iv) (rez₁) $ Σ.proj₂ rez
+      vd : (_≡_ Function.on iv) rez₁ $ Σ.proj₂ rez
 \end{code}
 
 \chapter{le cnima'o co'e}
