@@ -85,6 +85,10 @@ open import Data.Product
     _,_;
     Σ
   )
+open import Relation.Unary
+  using (
+    Decidable
+  )
 open import Relation.Nullary
   using (
     yes;
@@ -262,6 +266,9 @@ module T where
         Vv : c ≡ 'v' → _
         Vy : c ≡ 'y' → _
         Vz : c ≡ 'z' → _
+
+    Voksa? : {c : Char} → Decidable $ Voksa {c}
+    Voksa? = {!!}
 \end{code}
 
 \begin{code}
