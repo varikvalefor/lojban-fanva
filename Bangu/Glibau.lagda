@@ -366,6 +366,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo pluja selbri co'e be bau 
         where
         AdverbAdverbivla : Adverbivla → Adverb
         AdverbP : PrepPh → Adverb
+        AdverbListe :  List Adverb → Adverb
 \end{code}
 
 \begin{code}
