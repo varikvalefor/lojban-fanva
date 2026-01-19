@@ -412,7 +412,7 @@ module T where
 
     field
       noraplis : ¬_ $ rez₁ ≡ rez₂
-      vd : (_≡_ Function.on iv) rez₁ $ rez₂
+      vd : (_≡_ Function.on iv) rez₁ rez₂
 \end{code}
 
 \chapter{le cnima'o co'e}
