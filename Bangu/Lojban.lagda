@@ -278,11 +278,13 @@ module T where
     ... | yes d = yes $ Vb d
     ... | no Nb with c ≟ 'd'
     ... | yes d = yes $ Vd d
-    ... | no Nb with c ≟ 'e'
+    ... | no Nd with c ≟ 'e'
     ... | yes d = yes $ Ve d
-    ... | no Nb with c ≟ 'g'
+    ... | no Ne with c ≟ 'g'
     ... | yes d = yes $ Vg d
-    ... | no Ng = {!!}
+    ... | no Ng with c ≟ 'i'
+    ... | yes d = yes $ Vi d
+    ... | no Ni = {!!}
 
     isVoksa : {c : Char} → tLerfu c → Bool
     isVoksa = {!!}
