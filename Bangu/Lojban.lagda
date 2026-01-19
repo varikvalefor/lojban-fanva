@@ -307,6 +307,7 @@ module T where
     ... | no Nz = no F
       where
       F : Voksa l → ⊥
+      F (Va a) = Na a
       F = {!!}
 
     isVoksa : {c : Char} → tLerfu c → Bool
