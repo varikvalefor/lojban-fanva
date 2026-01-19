@@ -855,7 +855,7 @@ ni'o la'oi .\AgdaRecord{Bridi}.\ se ctaipe zo'e ja lo ro bridi be bau le jbobau 
 \begin{itemize}
 	\item co'e gi ga je
 	\item lo mu'oi zoi.\ \AgdaField{Bridi.selbri}\ .zoi.\ be da cu selbri lo co'e be da gi
-	\item lo mu'oi zoi.\ \AgdaField{Bridi.terbri}\ .zoi.\ be da cu liste lo'i ro co'e joi selbri be lo co'e be da
+	\item lo mu'oi zoi.\ \AgdaField{Bridi.terbri}\ .zoi.\ be da cu liste lo'i ro co'e joi terbri be lo co'e be da
 \end{itemize}
 
 \begin{code}
