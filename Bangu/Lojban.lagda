@@ -358,7 +358,7 @@ module T where
     valsiBitmu = {!!}
 \end{code}
 
-\chapter{zo'e ja le se ctaipe be lo jbovla}
+\chapter{zo'e ja le se ctaipe be lo jbovla je zo'e}
 
 \begin{code}
   module Jbovla where
