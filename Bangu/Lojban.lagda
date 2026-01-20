@@ -534,11 +534,11 @@ module T where
 
 \begin{code}
   module FA where
-    data FA' : Set
+    data FA : Set
       where
-      FAC : Lerfu.f → Lerfu.karsna → FA'
+      FAC : Lerfu.f → Lerfu.karsna → FA
 
-  FA = FA.FA'
+  FA = FA.FA
 \end{code}
 
 \begin{code}
