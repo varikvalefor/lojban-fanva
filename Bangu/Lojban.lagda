@@ -604,7 +604,7 @@ module T where
         Pu'uC : ValsiD "pu'u" → NU'
         Du'uC : ValsiD "du'u" → NU'
         Su'uC : ValsiD "su'u" → NU'
-        Li'iC : NU'
+        Li'iC : ValsiD "li'i" → NU'
 
       instance
         cniTerm : Cnima'o.CniTerm NU'
