@@ -109,6 +109,10 @@ open import Truthbrary.Record.Eq
   using (
     _≟_
   )
+open import Truthbrary.Record.LLC
+  using (
+    _∈_
+  )
 open import Relation.Nullary.Decidable
   using (
     isYes
@@ -240,6 +244,11 @@ module T where
       karsnaI : i → karsna
       karsnaO : o → karsna
       karsnaU : u → karsna
+\end{code}
+
+\begin{code}
+    Zunsna : Lerfu → Set
+    Zunsna (x , _) = x ∈ Data.String.toList "aeiou"
 \end{code}
 
 \begin{code}
