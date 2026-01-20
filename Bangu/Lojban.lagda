@@ -563,8 +563,14 @@ module T where
 \end{code}
 
 \begin{code}
-  ZOI : Set
-  ZOI = {!!}
+  module ZOI where
+    ZOI : Set
+    ZOI = {!!}
+
+    valsiBitmuSarcu : ZOI → Bool
+    valsiBitmuSarcu = {!!}
+
+  ZOI = ZOI.ZOI
 \end{code}
 
 \begin{code}
