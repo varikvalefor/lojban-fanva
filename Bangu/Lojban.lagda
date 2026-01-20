@@ -397,6 +397,11 @@ module T where
       field
         valsi : List Lerfu.Lerfu
 
+    record IsJbovla {a} (A : Set a) : Set a
+      where
+      field
+        t : A → Jbovla
+
   Jbovla = Jbovla.Jbovla
 \end{code}
 
