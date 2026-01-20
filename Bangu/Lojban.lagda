@@ -399,7 +399,7 @@ module T where
         mapti : {!!}
 
     Dunli : Jbovla → Jbovla → Set
-    Dunli = {!!}
+    Dunli = _≡_ Function.on (𝕃.map Σ.proj₁ ∘ Jbovla.valsi)
 
     record IsJbovla {a} (A : Set a) : Set a
       where
