@@ -571,6 +571,7 @@ module T where
   module ZOhU where
     data ZOhU : Set
       where
+      Zo'u : ZOhU
 
   ZOhU = ZOhU.ZOhU
 \end{code}
