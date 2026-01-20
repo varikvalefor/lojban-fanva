@@ -563,6 +563,11 @@ module T where
 \end{code}
 
 \begin{code}
+  ZOI : Set
+  ZOI = {!!}
+\end{code}
+
+\begin{code}
   Cmevla : Set
   Cmevla = {!!}
 \end{code}
