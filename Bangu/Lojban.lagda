@@ -441,10 +441,10 @@ module T where
            → Cnima'oCo'e
            → Cni Selma'o
 
-    -- instance
-    --   -- | ni'o filri'a zo'e je tu'a zo toi'e
-    --   cniTerm : CniTerm Cnima'oCo'e
-    --   cniTerm = {!!}
+    instance
+      -- | ni'o filri'a zo'e je tu'a zo toi'e
+      cniTerm : CniTerm Cnima'oCo'e
+      cniTerm = {!!}
 \end{code}
 
 \chapter{le sampu je selma'o co'e}
