@@ -147,6 +147,11 @@ module T where
 \end{code}
 
 \begin{code}
+    Lerfu : Set
+    Lerfu = Σ.∃ tLerfu
+\end{code}
+
+\begin{code}
     -- | ni'o le cmene be le ctaipe
     -- cu na jai frili
     -- .i la'e di'u xajmi la .varik.
