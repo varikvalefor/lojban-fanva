@@ -283,77 +283,11 @@ module T where
 \end{code}
 
 \begin{code}
-    data Voksa {c : Char} (t : tLerfu c) : Set
-      where
-        Va : c ≡ 'a' → _
-        Vb : c ≡ 'b' → _
-        Vd : c ≡ 'd' → _
-        Ve : c ≡ 'e' → _
-        Vg : c ≡ 'g' → _
-        Vi : c ≡ 'i' → _
-        Vj : c ≡ 'j' → _
-        Vl : c ≡ 'l' → _
-        Vm : c ≡ 'm' → _
-        Vn : c ≡ 'n' → _
-        Vo : c ≡ 'o' → _
-        Vr : c ≡ 'r' → _
-        Vu : c ≡ 'u' → _
-        Vv : c ≡ 'v' → _
-        Vy : c ≡ 'y' → _
-        Vz : c ≡ 'z' → _
+    Voksa : {c : Char} → tLerfu c → Set
+    Voksa {c} t = c ∈ Data.String.toList "abdegijlmnoruvyz"
 
     Voksa? : {c : Char} → Decidable $ Voksa {c}
-    Voksa? {c} l with c ≟ 'a'
-    ... | yes d = yes $ Va d
-    ... | no Na with c ≟ 'b'
-    ... | yes d = yes $ Vb d
-    ... | no Nb with c ≟ 'd'
-    ... | yes d = yes $ Vd d
-    ... | no Nd with c ≟ 'e'
-    ... | yes d = yes $ Ve d
-    ... | no Ne with c ≟ 'g'
-    ... | yes d = yes $ Vg d
-    ... | no Ng with c ≟ 'i'
-    ... | yes d = yes $ Vi d
-    ... | no Ni with c ≟ 'j'
-    ... | yes d = yes $ Vj d
-    ... | no Nj with c ≟ 'l'
-    ... | yes d = yes $ Vl d
-    ... | no Nl with c ≟ 'm'
-    ... | yes d = yes $ Vm d
-    ... | no Nm with c ≟ 'n'
-    ... | yes d = yes $ Vn d
-    ... | no Nn with c ≟ 'o'
-    ... | yes d = yes $ Vo d
-    ... | no No with c ≟ 'r'
-    ... | yes d = yes $ Vr d
-    ... | no Nr with c ≟ 'u'
-    ... | yes d = yes $ Vu d
-    ... | no Nu with c ≟ 'v'
-    ... | yes d = yes $ Vv d
-    ... | no Nv with c ≟ 'y'
-    ... | yes d = yes $ Vy d
-    ... | no Ny with c ≟ 'z'
-    ... | yes d = yes $ Vz d
-    ... | no Nz = no F
-      where
-      F : Voksa l → ⊥
-      F (Va a) = Na a
-      F (Vb b) = Nb b
-      F (Vd d) = Nd d
-      F (Ve e) = Ne e
-      F (Vg g) = Ng g
-      F (Vi i) = Ni i
-      F (Vj j) = Nj j
-      F (Vl l) = Nl l
-      F (Vm m) = Nm m
-      F (Vn n) = Nn n
-      F (Vo o) = No o
-      F (Vr r) = Nr r
-      F (Vu u) = Nu u
-      F (Vv v) = Nv v
-      F (Vy y) = Ny y
-      F (Vz z) = Nz z
+    Voksa? {c} l = _ ≟ _
 
     isVoksa : {c : Char} → tLerfu c → Bool
     isVoksa = isYes ∘ Voksa?
