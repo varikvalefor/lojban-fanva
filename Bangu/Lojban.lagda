@@ -674,7 +674,7 @@ module T where
     vbs = {!!}
 
     field
-      f : Vlapoi ((ZOI , {!!}) 𝕃.∷ (V , vbs) 𝕃.∷ {!!}) V
+      f : Vlapoi ((ZOI , ZOI.valsiBitmuSarcu) 𝕃.∷ (V , vbs) 𝕃.∷ {!!} 𝕃.∷ 𝕃.[]) V
 
     v₁ : V
     v₁ = {!!}
