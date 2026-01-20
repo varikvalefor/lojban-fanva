@@ -599,7 +599,7 @@ module T where
     mutual
       data NU' : Set
         where
-        NuC : NU'
+        NuC : ValsiD "nu" → NU'
         NiC : NU'
         Pu'uC : NU'
         Du'uC : NU'
