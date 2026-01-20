@@ -680,7 +680,7 @@ module T where
     v₁ = Σ.proj₁ $ Σ.proj₁ $ Σ.proj₂ f
 
     v₂ : V
-    v₂ = {!!}
+    v₂ = Σ.proj₂ $ Σ.proj₂ $ Σ.proj₂ f
 
     field
       -- | ni'o ctaipe le su'u jbovla dunli
