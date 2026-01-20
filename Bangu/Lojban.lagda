@@ -548,18 +548,18 @@ module T where
 
 \begin{code}
   module KOhA where
-    data KOhA' : Set
+    data KOhA : Set
 
     instance
-      cniTerm : Cnima'o.CniTerm KOhA'
+      cniTerm : Cnima'o.CniTerm KOhA
 
-    data KOhA'
+    data KOhA
       where
 
     instance
       cniTerm = {!!}
 
-  KOhA = KOhA.KOhA'
+  KOhA = KOhA.KOhA
 \end{code}
 
 \begin{code}
