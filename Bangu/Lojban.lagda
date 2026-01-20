@@ -601,7 +601,7 @@ module T where
         where
         NuC : ValsiD "nu" → NU'
         NiC : ValsiD "ni" → NU'
-        Pu'uC : NU'
+        Pu'uC : ValsiD "pu'u" → NU'
         Du'uC : NU'
         Su'uC : NU'
         Li'iC : NU'
