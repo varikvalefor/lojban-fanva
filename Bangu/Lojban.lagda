@@ -700,7 +700,7 @@ module T where
 
     -- | ni'o ctaipe lo su'u jbovla dunli
     VD : Jbovla → Jbovla → Set
-    VD = {!!}
+    VD = Jbovla.Dunli
 
     field
       f : let Z = ZOI , ZOI.valsiBitmuSarcu in
