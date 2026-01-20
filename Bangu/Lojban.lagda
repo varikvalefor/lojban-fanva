@@ -684,7 +684,7 @@ module T where
   record ZoiX : Set
     where
     V : Set
-    V = {!!}
+    V = Jbovla
 
     vbs : V → Bool
     vbs = {!!}
