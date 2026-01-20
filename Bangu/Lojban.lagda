@@ -239,6 +239,9 @@ module T where
 \begin{code}
     Karsna : Lerfu → Set
     Karsna (x , _) = x ∈ Data.String.toList "aeiou"
+
+    Karsna? : Decidable Karsna
+    Karsna? _ = _ ≟ _
 \end{code}
 
 \begin{code}
