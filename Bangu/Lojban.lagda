@@ -89,6 +89,10 @@ open import Relation.Unary
   using (
     Decidable
   )
+open import Relation.Binary
+  as R₂
+  using (
+  )
 open import Relation.Nullary
   using (
     yes;
@@ -400,6 +404,9 @@ module T where
 
     Dunli : Jbovla → Jbovla → Set
     Dunli = _≡_ Function.on (𝕃.map Σ.proj₁ ∘ Jbovla.valsi)
+
+    Dunli? : R₂.Decidable Dunli
+    Dunli? = {!!}
 
     record IsJbovla {a} (A : Set a) : Set a
       where
