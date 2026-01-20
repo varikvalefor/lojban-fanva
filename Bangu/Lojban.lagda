@@ -398,6 +398,9 @@ module T where
         valsi : List Lerfu.Lerfu
         mapti : {!!}
 
+    Dunli : Jbovla → Jbovla → Set
+    Dunli = {!!}
+
     record IsJbovla {a} (A : Set a) : Set a
       where
       field
