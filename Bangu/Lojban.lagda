@@ -75,6 +75,7 @@ open import Data.Empty
     ⊥
   )
 open import Data.String
+  as 𝕊
   using (
     String
   )
@@ -149,9 +150,9 @@ module T where
       field
         nC : ℕ
 
-      ,s = Data.String.fromList $ 𝕃.replicate nC ','
-      c' = Data.String.fromChar c
-      s = ,s Data.String.++ c'
+      ,s = 𝕊.fromList $ 𝕃.replicate nC ','
+      c' = 𝕊.fromChar c
+      s = ,s 𝕊.++ c'
 \end{code}
 
 \begin{code}
@@ -238,7 +239,7 @@ module T where
 
 \begin{code}
     Karsna : Lerfu → Set
-    Karsna (x , _) = x ∈ Data.String.toList "aeiou"
+    Karsna (x , _) = x ∈ 𝕊.toList "aeiou"
 
     Karsna? : Decidable Karsna
     Karsna? _ = _ ≟ _
@@ -251,7 +252,7 @@ module T where
 
 \begin{code}
     Zunsna : Lerfu → Set
-    Zunsna (x , _) = x ∈ Data.String.toList "bcdfgjklmnprstvxz"
+    Zunsna (x , _) = x ∈ 𝕊.toList "bcdfgjklmnprstvxz"
 
     Zunsna? : Decidable Zunsna
     Zunsna? _ = _ ≟ _
@@ -284,7 +285,7 @@ module T where
 
 \begin{code}
     Voksa : {c : Char} → tLerfu c → Set
-    Voksa {c} t = c ∈ Data.String.toList "abdegijlmnoruvyz"
+    Voksa {c} t = c ∈ 𝕊.toList "abdegijlmnoruvyz"
 
     Voksa? : {c : Char} → Decidable $ Voksa {c}
     Voksa? {c} l = _ ≟ _
@@ -315,7 +316,7 @@ module T where
     Dunli? = {!!}
 
     pShow : Jbovla → String
-    pShow = Data.String.fromList ∘ 𝕃.map Σ.proj₁ ∘ Jbovla.valsi
+    pShow = 𝕊.fromList ∘ 𝕃.map Σ.proj₁ ∘ Jbovla.valsi
 
     record IsJbovla {a} (A : Set a) : Set a
       where
