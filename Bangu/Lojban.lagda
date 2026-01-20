@@ -663,8 +663,22 @@ module T where
     where
     V : Set
     V = {!!}
+
+    vbs : V → Bool
+    vbs = {!!}
+
     field
-      f : Vlapoi ((ZOI , {!!}) 𝕃.∷ (V , {!!}) 𝕃.∷ {!!}) V
+      f : Vlapoi ((ZOI , {!!}) 𝕃.∷ (V , vbs) 𝕃.∷ {!!}) V
+
+    v₁ : V
+    v₁ = {!!}
+
+    v₂ : V
+    v₂ = {!!}
+
+    field
+      -- | ni'o ctaipe le su'u jbovla dunli
+      vd : Set Function.∋ {!!}
 \end{code}
 
 \chapter{le zmadu be fi le ka ce'u pluja}
