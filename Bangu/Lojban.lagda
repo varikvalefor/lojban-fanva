@@ -248,29 +248,13 @@ module T where
 
 \begin{code}
     Zunsna : Lerfu → Set
-    Zunsna (x , _) = x ∈ Data.String.toList "aeiou"
+    Zunsna (x , _) = x ∈ Data.String.toList "bcdfgjklmnprstvxz"
 \end{code}
 
 \begin{code}
     data zunsna : Set
       where
-      zunsnaB : b → zunsna
-      zunsnaC : c → zunsna
-      zunsnaD : d → zunsna
-      zunsnaF : f → zunsna
-      zunsnaG : g → zunsna
-      zunsnaJ : j → zunsna
-      zunsnaK : k → zunsna
-      zunsnaL : l → zunsna
-      zunsnaM : m → zunsna
-      zunsnaN : n → zunsna
-      zunsnaP : p → zunsna
-      zunsnaR : r → zunsna
-      zunsnaS : s → zunsna
-      zunsnaT : t → zunsna
-      zunsnaV : v → zunsna
-      zunsnaX : x → zunsna
-      zunsnaZ : z → zunsna
+      zunsnaC : (c : Lerfu) → Zunsna c → zunsna
 \end{code}
 
 \begin{code}
@@ -290,23 +274,7 @@ module T where
       deconstructibleZunsna = record {selvau = selvau}
         where
         selvau : zunsna → Σ Char tLerfu
-        selvau (zunsnaB z) = _ , z
-        selvau (zunsnaC z) = _ , z
-        selvau (zunsnaD z) = _ , z
-        selvau (zunsnaF z) = _ , z
-        selvau (zunsnaG z) = _ , z
-        selvau (zunsnaJ z) = _ , z
-        selvau (zunsnaK z) = _ , z
-        selvau (zunsnaL z) = _ , z
-        selvau (zunsnaM z) = _ , z
-        selvau (zunsnaN z) = _ , z
-        selvau (zunsnaP z) = _ , z
-        selvau (zunsnaR z) = _ , z
-        selvau (zunsnaS z) = _ , z
-        selvau (zunsnaT z) = _ , z
-        selvau (zunsnaV z) = _ , z
-        selvau (zunsnaX z) = _ , z
-        selvau (zunsnaZ z) = _ , z
+        selvau (zunsnaC l _) = l
 
       deconstructibleKarsna : Deconstructible karsna
       deconstructibleKarsna = record {selvau = selvau}
