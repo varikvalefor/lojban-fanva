@@ -391,10 +391,13 @@ module T where
 \chapter{zo'e ja le se ctaipe be lo jbovla}
 
 \begin{code}
-  record Jbovla : Set
-    where
-    field
-      valsi : List Lerfu.Lerfu
+  module Jbovla where
+    record Jbovla : Set
+      where
+      field
+        valsi : List Lerfu.Lerfu
+
+  Jbovla = Jbovla.Jbovla
 \end{code}
 
 \chapter{la'oi .\AgdaRecord{Gismu}.}
