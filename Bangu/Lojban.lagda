@@ -253,9 +253,8 @@ module T where
 \end{code}
 
 \begin{code}
-    data zunsna : Set
-      where
-      zunsnaC : (c : Lerfu) → Zunsna c → zunsna
+    zunsna : Set
+    zunsna = Σ.∃ Zunsna
 \end{code}
 
 \begin{code}
@@ -272,10 +271,7 @@ module T where
 
     instance
       deconstructibleZunsna : Deconstructible zunsna
-      deconstructibleZunsna = record {selvau = selvau}
-        where
-        selvau : zunsna → Σ Char tLerfu
-        selvau (zunsnaC l _) = l
+      deconstructibleZunsna = record {selvau = Σ.proj₁}
 
       deconstructibleKarsna : Deconstructible karsna
       deconstructibleKarsna = record {selvau = selvau}
