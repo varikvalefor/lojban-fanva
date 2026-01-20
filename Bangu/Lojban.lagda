@@ -388,6 +388,15 @@ module T where
     valsiBitmu = {!!}
 \end{code}
 
+\chapter{zo'e ja le se ctaipe be lo jbovla}
+
+\begin{code}
+  record Jbovla : Set
+    where
+    field
+      valsi : List Lerfu.Lerfu
+\end{code}
+
 \chapter{la'oi .\AgdaRecord{Gismu}.}
 
 \begin{code}
