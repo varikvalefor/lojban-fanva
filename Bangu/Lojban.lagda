@@ -603,7 +603,7 @@ module T where
         NiC : ValsiD "ni" → NU'
         Pu'uC : ValsiD "pu'u" → NU'
         Du'uC : ValsiD "du'u" → NU'
-        Su'uC : NU'
+        Su'uC : ValsiD "su'u" → NU'
         Li'iC : NU'
 
       instance
