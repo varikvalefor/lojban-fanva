@@ -252,6 +252,9 @@ module T where
 \begin{code}
     Zunsna : Lerfu → Set
     Zunsna (x , _) = x ∈ Data.String.toList "bcdfgjklmnprstvxz"
+
+    Zunsna? : Decidable Zunsna
+    Zunsna? _ = _ ≟ _
 \end{code}
 
 \begin{code}
