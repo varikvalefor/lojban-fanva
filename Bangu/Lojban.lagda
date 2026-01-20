@@ -237,13 +237,14 @@ module T where
 \end{code}
 
 \begin{code}
+    Karsna : Lerfu → Set
+    Karsna (x , _) = x ∈ Data.String.toList "aeiou"
+\end{code}
+
+\begin{code}
     data karsna : Set
       where
-      karsnaA : a → karsna
-      karsnaE : e → karsna
-      karsnaI : i → karsna
-      karsnaO : o → karsna
-      karsnaU : u → karsna
+      karsnaC : (c : Lerfu) → Karsna c → karsna
 \end{code}
 
 \begin{code}
@@ -280,11 +281,7 @@ module T where
       deconstructibleKarsna = record {selvau = selvau}
         where
         selvau : karsna → Σ Char tLerfu
-        selvau (karsnaA z) = _ , z
-        selvau (karsnaE z) = _ , z
-        selvau (karsnaI z) = _ , z
-        selvau (karsnaO z) = _ , z
-        selvau (karsnaU z) = _ , z
+        selvau (karsnaC l _) = l
 \end{code}
 
 \begin{code}
