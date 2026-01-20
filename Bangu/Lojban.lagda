@@ -675,6 +675,10 @@ module T where
     vbs : V → Bool
     vbs = {!!}
 
+    -- | ni'o ctaipe lo su'u jbovla dunli
+    VD : V → V → Set
+    VD = {!!}
+
     field
       f : let Z = ZOI , ZOI.valsiBitmuSarcu in
           let S = String , λ _ → 𝔹.true in
@@ -687,8 +691,7 @@ module T where
     v₂ = Σ.proj₂ $ Σ.proj₂ $ Σ.proj₂ f
 
     field
-      -- | ni'o ctaipe le su'u jbovla dunli
-      vd : Set Function.∋ {!!}
+      vd : VD v₁ v₂
 \end{code}
 
 \chapter{le zmadu be fi le ka ce'u pluja}
