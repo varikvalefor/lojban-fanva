@@ -374,12 +374,20 @@ module T where
     Dunli? : R₂.Decidable Dunli
     Dunli? = {!!}
 
+    pShow : Jbovla → String
+    pShow = Data.String.fromList ∘ 𝕃.map Σ.proj₁ ∘ Jbovla.valsi
+
     record IsJbovla {a} (A : Set a) : Set a
       where
       field
         t : A → Jbovla
 
   Jbovla = Jbovla.Jbovla
+\end{code}
+
+\begin{code}
+  ValsiD : String → Set
+  ValsiD s = Σ Jbovla $ λ v → Jbovla.pShow v ≡ s
 \end{code}
 
 \chapter{la'oi .\AgdaRecord{Gismu}.}
