@@ -602,7 +602,7 @@ module T where
         NuC : ValsiD "nu" → NU'
         NiC : ValsiD "ni" → NU'
         Pu'uC : ValsiD "pu'u" → NU'
-        Du'uC : NU'
+        Du'uC : ValsiD "du'u" → NU'
         Su'uC : NU'
         Li'iC : NU'
 
