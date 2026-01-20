@@ -534,7 +534,7 @@ module T where
   module KU where
     data KU' : Set
       where
-        KUC : Lerfu.k → Lerfu.u → KU'
+        KUC : ValsiD "ku" → KU'
 
   KU = KU.KU'
 \end{code}
