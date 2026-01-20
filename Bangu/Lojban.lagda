@@ -658,6 +658,15 @@ module T where
   Vlapoi = Vlapoi.Vlapoi
 \end{code}
 
+\begin{code}
+  record ZoiX : Set
+    where
+    V : Set
+    V = {!!}
+    field
+      f : Vlapoi ((ZOI , {!!}) 𝕃.∷ (V , {!!}) 𝕃.∷ {!!}) V
+\end{code}
+
 \chapter{le zmadu be fi le ka ce'u pluja}
 
 \begin{code}
