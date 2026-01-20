@@ -695,25 +695,22 @@ module T where
 \begin{code}
   record ZoiX : Set
     where
-    V : Set
-    V = Jbovla
-
-    vbs : V → Bool
+    vbs : Jbovla → Bool
     vbs = {!!}
 
     -- | ni'o ctaipe lo su'u jbovla dunli
-    VD : V → V → Set
+    VD : Jbovla → Jbovla → Set
     VD = {!!}
 
     field
       f : let Z = ZOI , ZOI.valsiBitmuSarcu in
           let S = String , λ _ → 𝔹.true in
-          Vlapoi (Z 𝕃.∷ (V , vbs) 𝕃.∷ S 𝕃.∷ 𝕃.[]) V
+          Vlapoi (Z 𝕃.∷ (Jbovla , vbs) 𝕃.∷ S 𝕃.∷ 𝕃.[]) Jbovla
 
-    v₁ : V
+    v₁ : Jbovla
     v₁ = Σ.proj₁ $ Σ.proj₁ $ Σ.proj₂ f
 
-    v₂ : V
+    v₂ : Jbovla
     v₂ = Σ.proj₂ $ Σ.proj₂ $ Σ.proj₂ f
 
     field
