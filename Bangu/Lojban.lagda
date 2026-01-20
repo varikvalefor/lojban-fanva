@@ -677,7 +677,7 @@ module T where
       f : Vlapoi ((ZOI , ZOI.valsiBitmuSarcu) 𝕃.∷ (V , vbs) 𝕃.∷ (String , λ _ → 𝔹.true) 𝕃.∷ 𝕃.[]) V
 
     v₁ : V
-    v₁ = {!!}
+    v₁ = Σ.proj₁ $ Σ.proj₁ $ Σ.proj₂ f
 
     v₂ : V
     v₂ = {!!}
