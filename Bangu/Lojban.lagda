@@ -600,7 +600,7 @@ module T where
       data NU' : Set
         where
         NuC : ValsiD "nu" → NU'
-        NiC : NU'
+        NiC : ValsiD "ni" → NU'
         Pu'uC : NU'
         Du'uC : NU'
         Su'uC : NU'
