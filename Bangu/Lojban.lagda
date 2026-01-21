@@ -933,7 +933,7 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ se ctaipe lo ro te gerna 
              → JufraMapti $ Σ.proj₁ $ Σ.proj₁ v
              → T
       FA'OC : let TX = T , valsiBitmuSarcu in
-              Vlapoi (TX 𝕃.∷ 𝕃.[ FAhO , const 𝔹.true ]) String
+              Vlapoi (TX 𝕃.∷ 𝕃.[ FAhO , const 𝔹.true ]) Strong
             → T
 \end{code}
 
