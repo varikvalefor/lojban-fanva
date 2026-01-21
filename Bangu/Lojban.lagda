@@ -336,7 +336,7 @@ module T where
 
 \begin{code}
   ValsiD : String → Set
-  ValsiD s = Σ Jbovla $ λ v → Jbovla.Jbovla.pShow v ≡ s
+  ValsiD s = Σ Jbovla $ (_≡ s) ∘ Jbovla.Jbovla.pShow
 \end{code}
 
 \chapter{la'oi .\AgdaRecord{Gismu}.}
