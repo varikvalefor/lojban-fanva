@@ -160,9 +160,9 @@ module T where
       field
         nC : ℕ
 
-      ,s = 𝕊₀.fromList $ 𝕃.replicate nC ','
-      c' = 𝕊₀.fromChar c
-      s = ,s 𝕊₀.++ c'
+      ,s = 𝕃.replicate nC ','
+      c' = 𝕃.[ c ]
+      s = ,s 𝕃.++ c'
 \end{code}
 
 \begin{code}
