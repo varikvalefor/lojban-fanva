@@ -319,8 +319,8 @@ module T where
         valsi : List Lerfu.Lerfu
         mapti : {!!}
 
-      pShow : String
-      pShow = 𝕊₀.fromList $ 𝕃.map Σ.proj₁ valsi
+      pShow : Strong
+      pShow = 𝕃.map Σ.proj₁ valsi
 
     Dunli : Jbovla → Jbovla → Set
     Dunli = _≡_ on (𝕃.map Σ.proj₁ ∘ Jbovla.valsi)
@@ -342,7 +342,7 @@ module T where
 
 \begin{code}
   ValsiD : String → Set
-  ValsiD s = Σ Jbovla $ (_≡ s) ∘ Jbovla.Jbovla.pShow
+  ValsiD s = Σ Jbovla $ (_≡ 𝕊₀.toList s) ∘ Jbovla.Jbovla.pShow
 \end{code}
 
 \chapter{la'oi .\AgdaRecord{Gismu}.}
