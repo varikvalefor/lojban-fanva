@@ -313,6 +313,9 @@ module T where
         valsi : List Lerfu.Lerfu
         mapti : {!!}
 
+      pShow : String
+      pShow = 𝕊.fromList $ 𝕃.map Σ.proj₁ valsi
+
     Dunli : Jbovla → Jbovla → Set
     Dunli = _≡_ Function.on (𝕃.map Σ.proj₁ ∘ Jbovla.valsi)
 
@@ -322,9 +325,6 @@ module T where
       instance
         eqChar : Truthbrary.Record.Eq.Eq Char
         eqChar = record {_≟_ = DCP._≟_}
-
-    pShow : Jbovla → String
-    pShow = 𝕊.fromList ∘ 𝕃.map Σ.proj₁ ∘ Jbovla.valsi
 
     record IsJbovla {a} (A : Set a) : Set a
       where
@@ -336,7 +336,7 @@ module T where
 
 \begin{code}
   ValsiD : String → Set
-  ValsiD s = Σ Jbovla $ λ v → Jbovla.pShow v ≡ s
+  ValsiD s = Σ Jbovla $ λ v → Jbovla.Jbovla.pShow v ≡ s
 \end{code}
 
 \chapter{la'oi .\AgdaRecord{Gismu}.}
