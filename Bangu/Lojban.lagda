@@ -106,6 +106,10 @@ open import Truthbrary.Record.SR
     Read;
     SR
   )
+open import Data.Char.Properties
+  as DCP
+  using (
+  )
 open import Truthbrary.Record.Eq
   using (
     _≟_
@@ -317,7 +321,7 @@ module T where
       where
       instance
         eqChar : Truthbrary.Record.Eq.Eq Char
-        eqChar = {!!}
+        eqChar = record {_≟_ = DCP._≟_}
 
     pShow : Jbovla → String
     pShow = 𝕊.fromList ∘ 𝕃.map Σ.proj₁ ∘ Jbovla.valsi
