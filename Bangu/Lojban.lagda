@@ -140,7 +140,7 @@ open import Relation.Binary.PropositionalEquality
 \end{code}
 
 \part{le gerna}
-ni'o la .varik.\ cu troci lo nu la'oi .\AgdaFunction{T}.\ cu co'e ja velcki le gerna be le jbobau be vo'a
+ni'o la .varik.\ cu troci lo nu la'oi .\F{T}.\ cu co'e ja velcki le gerna be le jbobau be vo'a
 
 \begin{code}
 module T where
