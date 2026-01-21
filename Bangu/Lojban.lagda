@@ -317,7 +317,7 @@ module T where
     Dunli = _≡_ Function.on (𝕃.map Σ.proj₁ ∘ Jbovla.valsi)
 
     Dunli? : R₂.Decidable Dunli
-    Dunli? = λ _ _ → _≟_ ⦃ Truthbrary.Record.Eq.EqList ⦃ eqChar ⦄ ⦄ _ _
+    Dunli? _ _ = _≟_ ⦃ Truthbrary.Record.Eq.EqList ⦃ eqChar ⦄ ⦄ _ _
       where
       instance
         eqChar : Truthbrary.Record.Eq.Eq Char
