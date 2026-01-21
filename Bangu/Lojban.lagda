@@ -637,7 +637,7 @@ module T where
 
     field
       f : let Z = ZOI , ZOI.valsiBitmuSarcu in
-          let S = String , λ _ → 𝔹.true in
+          let S = Strong , λ _ → 𝔹.true in
           Vlapoi (Z 𝕃.∷ (Jbovla , vbs) 𝕃.∷ S 𝕃.∷ 𝕃.[]) Jbovla
 
     v₁ : Jbovla
