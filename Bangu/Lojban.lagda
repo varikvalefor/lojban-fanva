@@ -37,6 +37,7 @@ open import Data.Sum
 open import Function
   using (
     const;
+    _on_;
     _∘_;
     _$_;
     id
@@ -317,7 +318,7 @@ module T where
       pShow = 𝕊.fromList $ 𝕃.map Σ.proj₁ valsi
 
     Dunli : Jbovla → Jbovla → Set
-    Dunli = _≡_ Function.on (𝕃.map Σ.proj₁ ∘ Jbovla.valsi)
+    Dunli = _≡_ on (𝕃.map Σ.proj₁ ∘ Jbovla.valsi)
 
     Dunli? : R₂.Decidable Dunli
     Dunli? _ _ = _≟_ ⦃ Truthbrary.Record.Eq.EqList ⦃ eqChar ⦄ ⦄ _ _
