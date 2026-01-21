@@ -76,7 +76,7 @@ open import Data.Empty
     ⊥
   )
 open import Data.String
-  as 𝕊
+  as 𝕊₀
   using (
     String
   )
@@ -119,6 +119,11 @@ open import Truthbrary.Record.LLC
   using (
     _∈_
   )
+open import Truthbrary.Data.Strong
+  as 𝕊
+  using (
+    Strong
+  )
 open import Relation.Nullary.Decidable
   using (
     isYes
@@ -155,9 +160,9 @@ module T where
       field
         nC : ℕ
 
-      ,s = 𝕊.fromList $ 𝕃.replicate nC ','
-      c' = 𝕊.fromChar c
-      s = ,s 𝕊.++ c'
+      ,s = 𝕊₀.fromList $ 𝕃.replicate nC ','
+      c' = 𝕊₀.fromChar c
+      s = ,s 𝕊₀.++ c'
 \end{code}
 
 \begin{code}
@@ -244,7 +249,7 @@ module T where
 
 \begin{code}
     Karsna : Lerfu → Set
-    Karsna (x , _) = x ∈ 𝕊.toList "aeiou"
+    Karsna (x , _) = x ∈ 𝕊₀.toList "aeiou"
 
     Karsna? : Decidable Karsna
     Karsna? _ = _ ≟ _
@@ -257,7 +262,7 @@ module T where
 
 \begin{code}
     Zunsna : Lerfu → Set
-    Zunsna (x , _) = x ∈ 𝕊.toList "bcdfgjklmnprstvxz"
+    Zunsna (x , _) = x ∈ 𝕊₀.toList "bcdfgjklmnprstvxz"
 
     Zunsna? : Decidable Zunsna
     Zunsna? _ = _ ≟ _
@@ -290,7 +295,7 @@ module T where
 
 \begin{code}
     Voksa : {c : Char} → tLerfu c → Set
-    Voksa {c} t = c ∈ 𝕊.toList "abdegijlmnoruvyz"
+    Voksa {c} t = c ∈ 𝕊₀.toList "abdegijlmnoruvyz"
 
     Voksa? : {c : Char} → Decidable $ Voksa {c}
     Voksa? {c} l = _ ≟ _
@@ -315,7 +320,7 @@ module T where
         mapti : {!!}
 
       pShow : String
-      pShow = 𝕊.fromList $ 𝕃.map Σ.proj₁ valsi
+      pShow = 𝕊₀.fromList $ 𝕃.map Σ.proj₁ valsi
 
     Dunli : Jbovla → Jbovla → Set
     Dunli = _≡_ on (𝕃.map Σ.proj₁ ∘ Jbovla.valsi)
