@@ -633,9 +633,6 @@ module T where
 \begin{code}
   record ZoiX : Set
     where
-    vbs : Jbovla → Bool
-    vbs = Jbovla.Jbovla.valsiBitmuSarcu
-
     field
       f : let Z = ZOI , ZOI.valsiBitmuSarcu in
           let S = Strong , λ _ → 𝔹.true in
