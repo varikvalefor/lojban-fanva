@@ -318,6 +318,7 @@ module T where
       field
         valsi : List Lerfu.Lerfu
         mapti : {!!}
+        valsiBitmuSarcu : Bool
 
       pShow : Strong
       pShow = 𝕃.map Σ.proj₁ valsi
