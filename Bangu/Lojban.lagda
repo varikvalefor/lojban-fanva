@@ -634,7 +634,7 @@ module T where
   record ZoiX : Set
     where
     vbs : Jbovla → Bool
-    vbs = {!!}
+    vbs = Jbovla.Jbovla.valsiBitmuSarcu
 
     field
       f : let Z = ZOI , ZOI.valsiBitmuSarcu in
