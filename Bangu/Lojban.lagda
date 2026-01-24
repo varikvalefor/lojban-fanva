@@ -313,6 +313,17 @@ module T where
 
 \begin{code}
   module Jbovla where
+\end{code}
+
+\section{ko'a goi la'oi .\AgdaRecord{Jbovla}.}
+ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be la .varik.\ gi ga je\ldots
+\begin{itemize}
+	\item ko'e goi lo mu'oi zoi.\ \AgdaField{Jbovla.valsi}\ .zoi.\ be da cu du le se sinxa be da gi ga je
+	\item lo mu'oi zoi.\ \AgdaField{Jbovla.mapti}\ .zoi.\ be da cu ctaipe lo su'u ko'a valsi fi le jbobau be la .varik.\ gi
+	\item ga jonai ga je su'o de poi ke'a valsi le jbobau be la .varik.\ zo'u lo konkatena be ko'e bei de cu simlu lo ka ce'u du lo pa valsi gi la'o zoi.\ \IC{𝔹.true}\ .zoi.\ du ko'e goi lo mu'oi zoi.\ \AgdaField{Jbovla.valsiBitmuSarcu}\ .zoi.\ gi ko'e du la'o zoi.\ \IC{𝔹.false}\ .zoi.
+\end{itemize}
+
+\begin{code}
     record Jbovla : Set
       where
       field
