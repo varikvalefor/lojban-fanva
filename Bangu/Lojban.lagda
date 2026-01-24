@@ -360,33 +360,36 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 \chapter{la'oi .\AgdaRecord{Gismu}.}
 
 \begin{code}
-  record Gismu : Set
-    where
-    Z = Lerfu.zunsna
-    K = Lerfu.karsna
+  module Gismu where
+    record Gismu : Set
+      where
+      Z = Lerfu.zunsna
+      K = Lerfu.karsna
 
-    field
-      v : (Z × Z × K × Z × K) ⊎ (Z × K × Z × Z × K)
+      field
+        v : (Z × Z × K × Z × K) ⊎ (Z × K × Z × Z × K)
 
-    rez : Lerfu.zunsna × Lerfu.zunsna
-    rez = (Data.Sum.[_,_]
-            (λ (x , z , _) →  x , z)
-            (λ (_ , _ , x , z , _) → x , z)
-            v)
+      rez : Lerfu.zunsna × Lerfu.zunsna
+      rez = (Data.Sum.[_,_]
+              (λ (x , z , _) →  x , z)
+              (λ (_ , _ , x , z , _) → x , z)
+              v)
 
-    private
-      rez₁ : Lerfu.zunsna
-      rez₁ = Σ.proj₁ rez
+      private
+        rez₁ : Lerfu.zunsna
+        rez₁ = Σ.proj₁ rez
 
-      rez₂ : Lerfu.zunsna
-      rez₂ = Σ.proj₂ rez
+        rez₂ : Lerfu.zunsna
+        rez₂ = Σ.proj₂ rez
 
-      iv : Lerfu.zunsna → Bool
-      iv = Lerfu.isVoksa ∘ Σ.proj₂ ∘ Lerfu.deconstruct
+        iv : Lerfu.zunsna → Bool
+        iv = Lerfu.isVoksa ∘ Σ.proj₂ ∘ Lerfu.deconstruct
 
-    field
-      noraplis : ¬_ $ rez₁ ≡ rez₂
-      vd : iv rez₁ ≡ iv rez₂
+      field
+        noraplis : ¬_ $ rez₁ ≡ rez₂
+        vd : iv rez₁ ≡ iv rez₂
+
+  Gismu = Gismu.Gismu
 \end{code}
 
 \chapter{le cnima'o co'e}
