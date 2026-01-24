@@ -389,6 +389,10 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
         noraplis : ¬_ $ rez₁ ≡ rez₂
         vd : iv rez₁ ≡ iv rez₂
 
+    instance
+      jbovla : Jbovla.IsJbovla Gismu
+      jbovla = {!!}
+
   Gismu = Gismu.Gismu
 \end{code}
 
