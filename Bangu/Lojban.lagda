@@ -454,6 +454,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 
     instance
       cniTerm : Cnima'o.CniTerm NIhO'
+      jbovla : Jbovla.IsJbovla NIhO'
 
     data NIhO'
       where
@@ -462,6 +463,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 
     instance
       cniTerm = {!!}
+      jbovla = {!!}
 
   NIhO = NIhO.NIhO'
 \end{code}
