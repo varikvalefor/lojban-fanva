@@ -519,6 +519,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
   module KUhO where
     data KUhO' : Set
       where
+      KU'OC : ValsiD "ku'o" → KUhO'
 
   KUhO = KUhO.KUhO'
 \end{code}
