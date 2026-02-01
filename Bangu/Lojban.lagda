@@ -516,6 +516,14 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 \end{code}
 
 \begin{code}
+  module KUhO where
+    data KUhO' : Set
+      where
+
+  KUhO = KUhO.KUhO'
+\end{code}
+
+\begin{code}
   module FA where
     data FA : Set
       where
