@@ -579,6 +579,9 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
   ZOhU = ZOhU.ZOhU
 \end{code}
 
+\section{zo'e je la'oi .\F{NU}.}
+ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be la'oi .NU.\ldots be'o no'u lo co'e poi da ctaipe lo fancu be lo me'oi .\F{ValsiD}.\ be ke'a be'o bei la'oi .\F{NU}.
+
 \begin{code}
   module NU where
     mutual
