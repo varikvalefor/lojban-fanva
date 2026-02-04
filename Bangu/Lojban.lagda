@@ -465,7 +465,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 
     data NIhO'
       where
-        Ni'oC : Lerfu.n → Lerfu.i → Lerfu.y'y → Lerfu.o → NIhO'
+        Ni'oC : ValsiD "ni'o" → NIhO'
         UIC : Cnima'o.Cni NIhO' → NIhO'
 
     instance
@@ -982,7 +982,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
     valsiBitmuSarcu NILC = 𝔹.false
     valsiBitmuSarcu (INI'OC (x , inj₁ (I.IC x₁))) = 𝔹.false
     valsiBitmuSarcu (INI'OC (x , inj₁ (I.UIC (Cnima'o.CniX _ _ c)))) = Cnima'o.valsiBitmuSarcu c
-    valsiBitmuSarcu (INI'OC (x , inj₂ (NIhO.Ni'oC _ _ _ _))) = 𝔹.false
+    valsiBitmuSarcu (INI'OC (x , inj₂ (NIhO.Ni'oC _))) = 𝔹.false
     valsiBitmuSarcu (INI'OC (x , inj₂ (NIhO.UIC x₁))) = {!!}
     valsiBitmuSarcu (JufraC (_ , j) _) = Jufra.valsiBitmuSarcu j
     valsiBitmuSarcu (FA'OC _ ) = {!!}
