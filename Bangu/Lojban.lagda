@@ -586,6 +586,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
         where
         NuC : ValsiD "nu" → NU'
         NiC : ValsiD "ni" → NU'
+        KaC : ValsiD "ka" → NU'
         Pu'uC : ValsiD "pu'u" → NU'
         Du'uC : ValsiD "du'u" → NU'
         Su'uC : ValsiD "su'u" → NU'
