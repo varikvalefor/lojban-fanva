@@ -635,7 +635,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
   module POI where
     data POI' : Set
       where
-      poiC : Lerfu.p → Lerfu.o → Lerfu.i → POI'
+      poiC : ValsiD "poi" → POI'
       noiC : Lerfu.n → Lerfu.o → Lerfu.i → POI'
 
   POI = POI.POI'
