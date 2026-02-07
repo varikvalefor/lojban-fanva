@@ -145,10 +145,10 @@ open import Relation.Binary.PropositionalEquality
 \end{code}
 
 \part{le gerna}
-ni'o la .varik.\ cu troci lo nu la'oi .\F{T}.\ cu co'e ja velcki le gerna be le jbobau be vo'a
+ni'o la .varik.\ cu troci lo nu la'oi .\F{ST}.\ cu co'e ja velcki le sucta gerna be le jbobau be vo'a
 
 \begin{code}
-module T where
+module ST where
 \end{code}
 
 \chapter{le lerfu co'e\ldots noi ke'a se vasru pe'a la'oi .\AgdaModule{Lerfu}.}
@@ -157,12 +157,6 @@ module T where
   module Lerfu where
     record tLerfu (c : Char) : Set
       where
-      field
-        nC : ℕ
-
-      ,s = 𝕃.replicate nC ','
-      c' = 𝕃.[ c ]
-      s = ,s 𝕃.++ c'
 \end{code}
 
 \begin{code}
