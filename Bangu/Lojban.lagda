@@ -661,18 +661,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
   record ZoiX : Set
     where
     field
-      f : let Z = ZOI , ZOI.valsiBitmuSarcu in
-          let S = Strong , λ _ → 𝔹.true in
-          Vlapoi (Z 𝕃.∷ (Jbovla , λ _ → 𝔹.true) 𝕃.∷ S 𝕃.∷ 𝕃.[]) Jbovla
-
-    v₁ : Jbovla
-    v₁ = Σ.proj₁ $ Σ.proj₁ $ Σ.proj₂ f
-
-    v₂ : Jbovla
-    v₂ = Σ.proj₂ $ Σ.proj₂ $ Σ.proj₂ f
-
-    field
-      vd : Jbovla.Dunli v₁ v₂
+      z : ZOI
+      v : Jbovla
 \end{code}
 
 \chapter{le zmadu be fi le ka ce'u pluja}
