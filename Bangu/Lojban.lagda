@@ -935,8 +935,6 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ se ctaipe lo ro te gerna 
 	\item da du la'o zoi. \IC{JufraC} \B t \B j \B m\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{t}.\ be'o bei lo se sinxa be la'oi .\B{j}.
 \end{itemize}
 
-% ni'o cadga fa lo nu ningau pe'a le lidne
-
 \begin{code}
     data T : Set
       where
