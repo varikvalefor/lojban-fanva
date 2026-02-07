@@ -504,7 +504,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
   module KU where
     data KU' : Set
       where
-        KUC : ValsiD "ku" → KU'
+        KUC : KU'
 
   KU = KU.KU'
 \end{code}
@@ -513,7 +513,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
   module KUhO where
     data KUhO' : Set
       where
-      KU'OC : ValsiD "ku'o" → KUhO'
+      KU'OC : KUhO'
 
   KUhO = KUhO.KUhO'
 \end{code}
