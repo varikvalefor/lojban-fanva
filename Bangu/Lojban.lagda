@@ -969,6 +969,7 @@ ni'o lo ro co'e se ctaipe cu ctaipe la'oi .\F{Vlapoi}. lo co'e ja sinxa be lo vl
     data Vlapoi : Set
       where
       TC : T → Vlapoi
+      NUC : NU → Vlapoi
       KUhOC : KUhO → Vlapoi
 
   Vlapoi = Vlapoi.Vlapoi
@@ -984,6 +985,7 @@ module TT where
   MF : ST.Vlapoi → Strong → Set
   MF (ST.Vlapoi.TC t) = {!!}
   MF (ST.Vlapoi.KUhOC k) = {!!}
+  MF (ST.Vlapoi.NUC n) = {!!}
 \end{code}
 
 \begin{code}
