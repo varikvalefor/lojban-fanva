@@ -638,23 +638,6 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
   POI = POI.POI'
 \end{code}
 
-\chapter{zo'e je le vlapoi se ctaipe}
-
-\begin{code}
-  module Vlapoi where
-    record ValsiBitmu (b : Bool) : Set
-      where
-      field
-        vl : List Lerfu.valsiBitmu
-        zasti : 𝔹.if b then 𝕃.length vl ℕ.> 0 else ⊤
-
-    Vlapoi : List $ Σ Set (λ A → A → Bool) → Set → Set
-    Vlapoi 𝕃.[] b = b
-    Vlapoi ((x , d) 𝕃.∷ xs) b = Σ x (ValsiBitmu ∘ d) × Vlapoi xs b
-
-  Vlapoi = Vlapoi.Vlapoi
-\end{code}
-
 \chapter{le se sitsku se ctaipe}
 
 \begin{code}
