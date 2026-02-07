@@ -646,6 +646,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
     field
       z : ZOI
       v : Jbovla
+      s : Strong
 \end{code}
 
 \chapter{le zmadu be fi le ka ce'u pluja}
