@@ -966,7 +966,7 @@ module TT where
   data T : Set
     where
 
-  tolsucta : ST.T → T
+  tolsucta : ST.T → String → Set
   tolsucta = {!!}
 \end{code}
 \end{document}
