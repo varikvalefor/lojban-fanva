@@ -971,6 +971,7 @@ ni'o lo ro co'e se ctaipe cu ctaipe la'oi .\F{Vlapoi}. lo co'e ja sinxa be lo vl
       TC : T → Vlapoi
       NUC : NU → Vlapoi
       KUhOC : KUhO → Vlapoi
+      INI'OC : INI'O → Vlapoi
 
   Vlapoi = Vlapoi.Vlapoi
 \end{code}
@@ -986,6 +987,7 @@ module TT where
   MF (ST.Vlapoi.TC t) = {!!}
   MF (ST.Vlapoi.KUhOC k) = {!!}
   MF (ST.Vlapoi.NUC n) = {!!}
+  MF (ST.Vlapoi.INI'OC n) = {!!}
 \end{code}
 
 \begin{code}
