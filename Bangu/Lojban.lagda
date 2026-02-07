@@ -1000,8 +1000,12 @@ module TT where
 \end{code}
 
 \begin{code}
-  data T : Set
+  record T : Set
     where
+    field
+      t : ST.T
+      s : Strong
+      mf : MF (ST.TC t) s
 \end{code}
 
 \begin{code}
