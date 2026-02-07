@@ -981,10 +981,10 @@ module TT where
 \end{code}
 
 \begin{code}
-  record T : Set
+  record T' (t : ST.T) : Set
     where
     field
       s : Strong
-      Mapti : tolsucta s
+      Mapti : MF t s
 \end{code}
 \end{document}
