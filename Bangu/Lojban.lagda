@@ -698,7 +698,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
       data Prenex' : Set
         where
         SumtiZo'u : Sumti → ZOhU → Prenex'
-        Liste : Prenex' → Prenex' → Prenex'
+        Cons : Prenex' → Prenex' → Prenex'
 
       valsiBitmuSarcu : Prenex' → Bool
       valsiBitmuSarcu = {!!}
