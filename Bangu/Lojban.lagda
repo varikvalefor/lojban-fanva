@@ -581,14 +581,14 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
     mutual
       data NU' : Set
         where
-        NuC : ValsiD "nu" → NU'
-        NiC : ValsiD "ni" → NU'
-        KaC : ValsiD "ka" → NU'
-        Pu'uC : ValsiD "pu'u" → NU'
-        Du'uC : ValsiD "du'u" → NU'
-        Su'uC : ValsiD "su'u" → NU'
-        Li'iC : ValsiD "li'i" → NU'
-        Si'oC : ValsiD "si'o" → NU'
+        NuC : NU'
+        NiC : NU'
+        KaC : NU'
+        Pu'uC : NU'
+        Du'uC : NU'
+        Su'uC : NU'
+        Li'iC : NU'
+        Si'oC : NU'
 
       instance
         cniTerm : Cnima'o.CniTerm NU'
