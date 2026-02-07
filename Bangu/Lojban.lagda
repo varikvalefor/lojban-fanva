@@ -144,7 +144,7 @@ open import Relation.Binary.PropositionalEquality
   )
 \end{code}
 
-\part{le gerna}
+\part{le sucta gerna}
 ni'o la .varik.\ cu troci lo nu la'oi .\F{ST}.\ cu co'e ja velcki le sucta gerna be le jbobau be vo'a
 
 \begin{code}
