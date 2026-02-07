@@ -776,8 +776,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
     Term : {A : Set} → ⦃ JekTerm A ⦄ → A → Set
     Term ⦃ T ⦄ = JekTerm.Term T
 
-    Jek' : Set
-    Jek' = Vlapoi 𝕃.[ Na , const 𝔹.false ] $ Cnima'o.Cni JE
+    data Jek' : Set
+      where
+      JekC : Na → Cnima'o.Cni JE → Jek'
 
   Jek = Jek.Jek'
 \end{code}
