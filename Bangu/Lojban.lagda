@@ -632,8 +632,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
   module POI where
     data POI' : Set
       where
-      poiC : ValsiD "poi" → POI'
-      noiC : ValsiD "noi" → POI'
+      poiC : POI'
+      noiC : POI'
 
   POI = POI.POI'
 \end{code}
