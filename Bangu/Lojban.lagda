@@ -967,6 +967,7 @@ ni'o lo ro co'e se ctaipe cu ctaipe la'oi .\D{Vlapoi}. lo co'e ja sinxa be lo vl
 \begin{code}
   data Vlapoi : Set
     where
+    TC : T → Vlapoi
 \end{code}
 
 \part{le te tcidu gerna}
