@@ -642,7 +642,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
 ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa lo me zo zoi vlapoi pe la .lojban. gi sa'u nai ru'e ga je\ldots
 \begin{itemize}
 	\item da me lo konkatena be lo mu'oi zoi.\ \AgdaField{ZoiX.z}\ .zoi.\ be da be'o bei ko'a goi lo mu'oi zoi.\ \AgdaField{ZoiX.v}\ .zoi.\ be da be'o bei ko'e goi lo mu'oi zoi.\ \AgdaField{ZoiX.s}\ .zoi.\ be da ge'u bei ko'a gi
-	\item lo mu'oi zoi.\ \AgdaField{ZoiX.NIИ}\ .zoi.\ be da cu ctaipe lo su'u ko'a na poiklo ko'e
+	\item lo mu'oi zoi.\ \AgdaField{ZoiX.NIИ}\ .zoi.\ be da cu ctaipe lo su'u ko'a na poiklo fi ko'e
 \end{itemize}
 
 \begin{code}
