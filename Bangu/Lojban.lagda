@@ -965,10 +965,14 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
 module TT where
   tolsucta : Strong → Set
   tolsucta = {!!}
+\end{code}
 
+\begin{code}
   tolsucta? : Decidable tolsucta
   tolsucta? = {!!}
+\end{code}
 
+\begin{code}
   record T : Set
     where
     field
