@@ -965,5 +965,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
 module TT where
   data T : Set
     where
+
+  tolsucta : ST.T → T
+  tolsucta = {!!}
 \end{code}
 \end{document}
