@@ -987,4 +987,9 @@ module TT where
       s : Strong
       Mapti : MF t s
 \end{code}
+
+\begin{code}
+  data T : Set
+    where
+\end{code}
 \end{document}
