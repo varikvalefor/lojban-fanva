@@ -778,7 +778,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
 
     data Jek' : Set
       where
-      JekC : Na → Cnima'o.Cni JE → Jek'
+      SC : Cnima'o.Cni JE → Jek'
+      NaC : Na → Jek' → Jek'
 
   Jek = Jek.Jek'
 \end{code}
