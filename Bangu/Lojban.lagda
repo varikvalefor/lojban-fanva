@@ -963,10 +963,13 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
 
 \begin{code}
 module TT where
-  data T : Set
-    where
-
-  tolsucta : ST.T → String → Set
+  tolsucta : Strong → Set
   tolsucta = {!!}
+
+  record T : Set
+    where
+    field
+      s : Strong
+      Mapti : tolsucta s
 \end{code}
 \end{document}
