@@ -981,7 +981,7 @@ module TT where
 
 \begin{code}
   MF : ST.Vlapoi → Strong → Set
-  MF = {!!}
+  MF (ST.Vlapoi.TC t) = {!!}
 \end{code}
 
 \begin{code}
