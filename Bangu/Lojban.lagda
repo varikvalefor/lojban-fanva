@@ -697,7 +697,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
     mutual
       data Prenex' : Set
         where
-        SumtiZo'u : Vlapoi 𝕃.[ Sumti , {!!} ] ZOhU → Prenex'
+        SumtiZo'u : Sumti → ZOhU → Prenex'
         Liste : Vlapoi 𝕃.[ Prenex' , valsiBitmuSarcu ] Prenex' → Prenex'
 
       valsiBitmuSarcu : Prenex' → Bool
