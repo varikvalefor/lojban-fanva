@@ -1020,9 +1020,7 @@ module TT where
 
     rd : (s : String)
        → (j : ⁇.Is-just $ Read.readMaybe R s)
-       → (_≡_
-           (𝕊₀.toList s)
-           (T.s $ ⁇.to-witness j))
+       → 𝕊₀.toList s ≡ T.s (⁇.to-witness j)
     rd = {!!}
 \end{code}
 \end{document}
