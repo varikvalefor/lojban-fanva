@@ -139,7 +139,7 @@ ni'o la .varik.\ cu troci lo nu la'oi .\F{lojban}.\ co'e ja velcki le jbobau be 
 \begin{code}
 lojban : TB
 lojban = record {
-  T = Bangu.Lojban.T.T;
+  T = Bangu.Lojban.TT.T;
   R = {!!};
   S = {!!}
   }

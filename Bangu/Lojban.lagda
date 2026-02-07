@@ -970,4 +970,12 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
     valsiBitmuSarcu (JufraC _ j _) = Jufra.valsiBitmuSarcu j
     valsiBitmuSarcu (FA'OC _ _ _) = {!!}
 \end{code}
+
+\part{le te tcidu gerna}
+
+\begin{code}
+module TT where
+  data T : Set
+    where
+\end{code}
 \end{document}
