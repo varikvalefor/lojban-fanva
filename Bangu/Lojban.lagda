@@ -935,6 +935,8 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ se ctaipe lo ro te gerna 
 	\item da du la'o zoi. \IC{JufraC} \Sym(\Sym(\B{v} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{j}\Sym) \B{m}\ .zoi.\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{v}.\ be'o bei lo se sinxa be la'oi .\B{j}.
 \end{itemize}
 
+% ni'o cadga fa lo nu ningau pe'a le lidne
+
 \begin{code}
     data T : Set
       where
