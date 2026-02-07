@@ -963,6 +963,14 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
 
 \begin{code}
 module TT where
+\end{code}
+
+\begin{code}
+  MF : ST.T → Strong → Set
+  MF = {!!}
+\end{code}
+
+\begin{code}
   tolsucta : Strong → Set
   tolsucta = {!!}
 \end{code}
