@@ -992,14 +992,6 @@ module TT where
 \end{code}
 
 \begin{code}
-  record T' (t : ST.Vlapoi) : Set
-    where
-    field
-      s : Strong
-      Mapti : MF t s
-\end{code}
-
-\begin{code}
   record T : Set
     where
     field
