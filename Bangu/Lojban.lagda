@@ -751,7 +751,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
         cl₀ : T
         clx : List $ Jek × T
         term : All (Σ.uncurry JePoiTerm) $ cl₀ 𝕃.∷ 𝕃.map Σ.proj₂ (¯1↓ clx)
-        ku'o : Maybe KUhO
+        ku'o : Maybe $ KUhO × {!!}
 
       cl : List T
       cl = cl₀ 𝕃.∷ 𝕃.map Σ.proj₂ clx
