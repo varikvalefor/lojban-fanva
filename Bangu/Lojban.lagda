@@ -966,6 +966,9 @@ module TT where
   tolsucta : Strong → Set
   tolsucta = {!!}
 
+  tolsucta? : Decidable tolsucta
+  tolsucta? = {!!}
+
   record T : Set
     where
     field
