@@ -942,10 +942,7 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ se ctaipe lo ro te gerna 
       where
       NILC : T
       INI'OC : T → INI'O → T
-      JufraC : (t : T)
-             → Jufra
-             → JufraMapti t
-             → T
+      JufraC : (t : T) → Jufra → JufraMapti t → T
       FA'OC : let TX = T , valsiBitmuSarcu in
               Vlapoi (TX 𝕃.∷ 𝕃.[ FAhO , const 𝔹.true ]) Strong
             → T
