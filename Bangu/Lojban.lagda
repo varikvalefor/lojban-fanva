@@ -459,8 +459,8 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 
     data NIhO'
       where
-        Ni'oC : ValsiD "ni'o" → NIhO'
-        UIC : Cnima'o.Cni NIhO' → NIhO'
+        Ni'oC : NIhO'
+        UIC : NIhO'
 
     instance
       cniTerm = {!!}
