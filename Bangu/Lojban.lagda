@@ -959,6 +959,16 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
     valsiBitmuSarcu (FA'OC _ _ _) = {!!}
 \end{code}
 
+\chapter{ko'a goi le vlapoi se ctaipe no'u la'oi .\F{Vlapoi}.}
+ni'o lo ro co'e se ctaipe cu ctaipe la'oi .\D{Vlapoi}. lo co'e ja sinxa be lo vlapoi be bau la .lojban.
+
+.i ko'a jai filri'a lo nu sucta cusku tu'a zo'e je lo vlapoi
+
+\begin{code}
+  data Vlapoi : Set
+    where
+\end{code}
+
 \part{le te tcidu gerna}
 
 \begin{code}
@@ -966,7 +976,7 @@ module TT where
 \end{code}
 
 \begin{code}
-  MF : ST.T → Strong → Set
+  MF : ST.Vlapoi → Strong → Set
   MF = {!!}
 \end{code}
 
@@ -981,7 +991,7 @@ module TT where
 \end{code}
 
 \begin{code}
-  record T' (t : ST.T) : Set
+  record T' (t : ST.Vlapoi) : Set
     where
     field
       s : Strong
