@@ -1009,6 +1009,11 @@ module TT where
 \end{code}
 
 \begin{code}
+  R : Read T
+  R = {!!}
+\end{code}
+
+\begin{code}
   module Veritas where
     rol : ST.T → T
     rol = {!!}
