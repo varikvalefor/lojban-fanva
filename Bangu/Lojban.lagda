@@ -1017,5 +1017,12 @@ module TT where
   module Veritas where
     rol : ST.T → T
     rol = {!!}
+
+    rd : (s : String)
+       → (j : ⁇.Is-just $ Read.readMaybe R s)
+       → (_≡_
+           (𝕊₀.toList s)
+           (T.s $ ⁇.to-witness j))
+    rd = {!!}
 \end{code}
 \end{document}
