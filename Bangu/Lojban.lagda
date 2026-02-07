@@ -983,6 +983,11 @@ module TT where
 \end{code}
 
 \begin{code}
+  IsWord : String → Strong → Set
+  IsWord = {!!}
+\end{code}
+
+\begin{code}
   MF : ST.Vlapoi → Strong → Set
   MF (ST.Vlapoi.TC t) = {!!}
   MF (ST.Vlapoi.KUhOC k) = {!!}
