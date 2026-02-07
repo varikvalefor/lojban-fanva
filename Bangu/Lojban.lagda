@@ -931,7 +931,7 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ se ctaipe lo ro te gerna 
 \begin{itemize}
 	\item da du la'oi .\IC{NILC}.\ gi da sinxa lo kunti gi ga jonai ga je
 	\item da du la'o zoi. \IC{INI'OC} \B{t} \B{n}\ .zoi.\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{t}.\ be'o bei lo se sinxa be la'oi .\B{n}.\ gi ga jonai ga je
-	\item da du la'o zoi. \IC{FA'OC} \Sym(\Sym(\B{t} \IC{,} \AgdaUnderscore \Sym) \IC{,} \Sym(\B{f} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{s}\Sym)\ .zoi.\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{t}.\ be'o bei lo se sinxa be la'oi .\B{f}.\ be'o bei la'oi .\B{s}.\ gi ga je
+	\item da du la'o zoi. \IC{FA'OC} \B t \B f\ .zoi.\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{t}.\ be'o bei lo se sinxa be la'oi .\B{f}.\ be'o bei la'oi .\B{s}.\ gi ga je
 	\item da du la'o zoi. \IC{JufraC} \Sym(\Sym(\B{v} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{j}\Sym) \B{m}\ .zoi.\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{v}.\ be'o bei lo se sinxa be la'oi .\B{j}.
 \end{itemize}
 
