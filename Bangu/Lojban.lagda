@@ -939,8 +939,7 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ se ctaipe lo ro te gerna 
     data T : Set
       where
       NILC : T
-      INI'OC : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] INI'O
-             → T
+      INI'OC : T → INI'O → T
       JufraC : (v : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] Jufra)
              → JufraMapti $ Σ.proj₁ $ Σ.proj₁ v
              → T
@@ -956,7 +955,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo ctaipe lo me'oi .\F{JufraMa
     JufraMapti : T → Set
     JufraMapti NILC = ⊤
     JufraMapti (JufraC _ _) = ⊥
-    JufraMapti (INI'OC _) = ⊤
+    JufraMapti (INI'OC _ _) = ⊤
     JufraMapti (FA'OC _) = ⊥
 \end{code}
 
@@ -966,10 +965,10 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
 \begin{code}
     valsiBitmuSarcu : T → Bool
     valsiBitmuSarcu NILC = 𝔹.false
-    valsiBitmuSarcu (INI'OC (x , inj₁ (I.IC x₁))) = 𝔹.false
-    valsiBitmuSarcu (INI'OC (x , inj₁ (I.UIC (Cnima'o.CniX _ _ c)))) = Cnima'o.valsiBitmuSarcu c
-    valsiBitmuSarcu (INI'OC (x , inj₂ (NIhO.Ni'oC _))) = 𝔹.false
-    valsiBitmuSarcu (INI'OC (x , inj₂ (NIhO.UIC x₁))) = {!!}
+    valsiBitmuSarcu (INI'OC _ (inj₁ (I.IC x₁))) = 𝔹.false
+    valsiBitmuSarcu (INI'OC _ (inj₁ (I.UIC (Cnima'o.CniX _ _ c)))) = Cnima'o.valsiBitmuSarcu c
+    valsiBitmuSarcu (INI'OC _ (inj₂ (NIhO.Ni'oC _))) = 𝔹.false
+    valsiBitmuSarcu (INI'OC _ (inj₂ (NIhO.UIC x₁))) = {!!}
     valsiBitmuSarcu (JufraC (_ , j) _) = Jufra.valsiBitmuSarcu j
     valsiBitmuSarcu (FA'OC _ ) = {!!}
 \end{code}
