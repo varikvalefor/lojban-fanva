@@ -992,4 +992,10 @@ module TT where
   data T : Set
     where
 \end{code}
+
+\begin{code}
+  module Veritas where
+    rol : ST.T → T
+    rol = {!!}
+\end{code}
 \end{document}
