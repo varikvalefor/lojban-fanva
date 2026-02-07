@@ -943,9 +943,7 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ se ctaipe lo ro te gerna 
       NILC : T
       INI'OC : T → INI'O → T
       JufraC : (t : T) → Jufra → JufraMapti t → T
-      FA'OC : let TX = T , valsiBitmuSarcu in
-              Vlapoi (TX 𝕃.∷ 𝕃.[ FAhO , const 𝔹.true ]) Strong
-            → T
+      FA'OC : T → FAhO → Strong → T
 \end{code}
 
 \section{la'oi .\F{JufraMapti}.}
@@ -956,7 +954,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo ctaipe lo me'oi .\F{JufraMa
     JufraMapti NILC = ⊤
     JufraMapti (JufraC _ _ _) = ⊥
     JufraMapti (INI'OC _ _) = ⊤
-    JufraMapti (FA'OC _) = ⊥
+    JufraMapti (FA'OC _ _ _) = ⊥
 \end{code}
 
 \section{la'oi .\F{valsiBitmuSarcu}.}
@@ -970,6 +968,6 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
     valsiBitmuSarcu (INI'OC _ (inj₂ (NIhO.Ni'oC _))) = 𝔹.false
     valsiBitmuSarcu (INI'OC _ (inj₂ (NIhO.UIC x₁))) = {!!}
     valsiBitmuSarcu (JufraC _ j _) = Jufra.valsiBitmuSarcu j
-    valsiBitmuSarcu (FA'OC _ ) = {!!}
+    valsiBitmuSarcu (FA'OC _ _ _) = {!!}
 \end{code}
 \end{document}
