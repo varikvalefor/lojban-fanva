@@ -762,7 +762,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       cniTerm = record {Term = λ _ → ⊤}
 
       jbovla : Jbovla.IsJbovla JE
-      jbovla = {!!}
+      jbovla = record {
+        t = {!!}
+        }
 
   JE = JE.JE
 \end{code}
