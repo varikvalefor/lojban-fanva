@@ -710,6 +710,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     JePoiTerm : POI → Jufra → Set
     JePoiTerm = {!!}
 
+    KUhOTerm : POI → Jufra → Set
+    KUhOTerm = {!!}
+
     record PoiCl (Selma'o : Set) : Set
       where
       inductive
@@ -731,6 +734,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 
       clₙ : T
       clₙ = ⁇.maybe Σ.proj₂ cl₀ $ 𝕃.last clx
+
+      field
+        ku'o : Maybe $ KUhO × Σ.uncurry KUhOTerm clₙ
 
     instance
       poiTermPoiCl : {s : Set} → ⦃ PoiTerm s ⦄ → PoiTerm $ PoiCl s
