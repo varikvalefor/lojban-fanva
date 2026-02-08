@@ -783,6 +783,10 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       SC : Cnima'o.Cni JE → Jek'
       NaC : Na → Jek' → Jek'
 
+    instance
+      jbovla : Jbovla.IsJbovla Jek
+      jbovla = {!!}
+
   Jek = Jek.Jek'
 \end{code}
 
