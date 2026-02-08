@@ -763,11 +763,11 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 
       jbovla : Jbovla.IsJbovla JE
       jbovla = record {
-        t = λ x → record {
-          valsi = (_ , Σ.proj₁ x) 𝕃.∷ (Σ.proj₁ $ Σ.proj₂ x) 𝕃.∷ 𝕃.[];
+        t = λ {(j , (x , _)) → record {
+          valsi = (_ , j) 𝕃.∷ x 𝕃.∷ 𝕃.[];
           mapti = {!!};
           valsiBitmuSarcu = {!!}
-          }
+          }}
         }
 
   JE = JE.JE
