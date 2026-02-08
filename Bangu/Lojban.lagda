@@ -729,6 +729,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       cl : List T
       cl = cl₀ 𝕃.∷ 𝕃.map Σ.proj₂ clx
 
+      clₙ : T
+      clₙ = ⁇.maybe Σ.proj₂ cl₀ $ 𝕃.last clx
+
     instance
       poiTermPoiCl : {s : Set} → ⦃ PoiTerm s ⦄ → PoiTerm $ PoiCl s
       poiTermPoiCl = {!!}
