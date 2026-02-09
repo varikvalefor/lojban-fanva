@@ -1005,10 +1005,7 @@ module TT where
 
 \begin{code}
   IsWord : String → Strong → Set
-  IsWord = λ v → (𝕊₀.toList v ≡_) ∘ 𝕃.filter ¬,?
-    where
-    ¬,? : Decidable $ ¬_ ∘ _≡_ ','
-    ¬,? = {!!}
+  IsWord = λ v → (𝕊₀.toList v ≡_) ∘ 𝕃.filter (_≟_ 𝔹.false ∘ 𝕃._==_ ',')
 \end{code}
 
 \begin{code}
