@@ -1,4 +1,3 @@
-
 \include{msx.tex}
 
 \title{le me'oi .Agda.\ velcki be le co'e be le jbobau be la .varik.\ .VALefor.}
@@ -1006,7 +1005,10 @@ module TT where
 
 \begin{code}
   IsWord : String → Strong → Set
-  IsWord = {!!}
+  IsWord = λ v → (𝕊₀.toList v ≡_) ∘ 𝕃.filter ¬,?
+    where
+    ¬,? : Decidable $ ¬_ ∘ _≡_ ','
+    ¬,? = {!!}
 \end{code}
 
 \begin{code}
