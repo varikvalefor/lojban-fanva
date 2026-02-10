@@ -50,7 +50,7 @@ open import Data.Bool
     Bool
   )
 open import Data.Char
-  as 𝕃
+  as Chr
   using (
     Char
   )
@@ -1005,7 +1005,7 @@ module TT where
 
 \begin{code}
   IsWord : String → Strong → Set
-  IsWord v = (𝕊₀.toList v ≡_) ∘ 𝕃.filter (_≟_ 𝔹.false ∘ 𝕃._==_ ',')
+  IsWord v = (𝕊₀.toList v ≡_) ∘ 𝕃.filter (_≟_ 𝔹.false ∘ Chr._==_ ',')
 \end{code}
 
 \begin{code}
