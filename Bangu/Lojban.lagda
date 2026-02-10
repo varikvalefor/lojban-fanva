@@ -1010,7 +1010,7 @@ module TT where
 
 \begin{code}
   IsWord? : R₂.Decidable IsWord
-  IsWord? = λ _ _ → _ ≟ _
+  IsWord? _ _ = _ ≟ _
 \end{code}
 
 \begin{code}
