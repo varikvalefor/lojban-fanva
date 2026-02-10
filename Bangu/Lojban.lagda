@@ -1045,6 +1045,11 @@ module TT where
       mf : MF (ST.Vlapoi.TC t) s
 \end{code}
 
+\begin{code}
+  toSucta : T → ST.T
+  toSucta = {!!}
+\end{code}
+
 \chapter{le me'oi .\AgdaRecord{Read}. co'e}
 
 \begin{code}
