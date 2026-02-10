@@ -1015,7 +1015,10 @@ module TT where
 
 \begin{code}
   MF : ST.Vlapoi → Strong → Set
-  MF (ST.Vlapoi.TC t) = {!!}
+  MF (ST.Vlapoi.TC ST.NILC) = {!!}
+  MF (ST.Vlapoi.TC (ST.INI'OC t x)) = {!!}
+  MF (ST.Vlapoi.TC (ST.JufraC t x x₁)) = {!!}
+  MF (ST.Vlapoi.TC (ST.FA'OC t x x₁)) = {!!}
   MF (ST.Vlapoi.KUhOC k) = {!!}
   MF (ST.Vlapoi.NUC n) = {!!}
   MF (ST.Vlapoi.INI'OC n) = {!!}
