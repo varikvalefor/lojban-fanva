@@ -653,7 +653,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       s : Strong
       NIИ : let v' = 𝕃.map Σ.proj₁ $ Jbovla.Jbovla.valsi $ v in
             ((¬_ ∘ Σ.∃)
-              (λ n → 𝕃.take (𝕃.length v') (𝕃.drop n s) ≡ v'))
+              (λ n → v' ≡ 𝕃.take (𝕃.length v') (𝕃.drop n s)))
 \end{code}
 
 \chapter{le zmadu be fi le ka ce'u pluja}
