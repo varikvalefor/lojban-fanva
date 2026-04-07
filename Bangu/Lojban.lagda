@@ -659,7 +659,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       z : ZOI
       v : Jbovla
       s : Strong
-      NIИ : let v' = 𝕃.map Σ.proj₁ $ Jbovla.Jbovla.valsi $ v in
+      NIИ : let v' = 𝕃.map Σ.proj₁ $ Jbovla.Jbovla.valsi v in
             ((¬_ ∘ Σ.∃)
               (λ n → v' ≡ 𝕃.take (𝕃.length v') (𝕃.drop n s)))
 \end{code}
