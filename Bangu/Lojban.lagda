@@ -343,6 +343,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
       where
       field
         t : A → Jbovla
+        dun : (v₁ v₂ : A) → t v₁ ≡ t v₂ → v₁ ≡ v₂
 
   Jbovla = Jbovla.Jbovla
 \end{code}
@@ -771,7 +772,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         t = λ {(j , (x , _)) → record {
           valsi = (_ , j) 𝕃.∷ x 𝕃.∷ 𝕃.[];
           mapti = {!!}
-          }}
+          }};
+        dun = {!!}
         }
 
   JE = JE.JE
