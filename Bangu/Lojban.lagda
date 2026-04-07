@@ -822,6 +822,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
            → Sumti'
            → Sumti'
       UIC : Cnima'o.Cni Sumti' → Sumti'
+      DoiC : Sumti' → {!!} → Sumti'
 
     instance
       cniTerm = record {
@@ -834,6 +835,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T (LeSelbriC x k) = {!!}
         T (JekC x t j x₂) = {!!}
         T (UIC (Cnima'o.CniX s t c)) = {!!}
+        T (DoiC s d) = {!!}
       briTerm = {!!}
       poiTerm = record {
         Term = T
@@ -847,6 +849,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         ... | ⁇.nothing = {!!}
         T (JekC x x₁ x₂ x₃) = {!!}
         T (UIC x) = {!!}
+        T (DoiC s d) = {!!}
       jekTerm = {!!}
 
   Sumti = Sumti.Sumti'
