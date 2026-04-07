@@ -322,7 +322,9 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
       field
         valsi : List Lerfu.Lerfu
         mapti : {!!}
-        valsiBitmuSarcu : Bool
+
+      valsiBitmuSarcu : Bool
+      valsiBitmuSarcu = {!!}
 
       pShow : Strong
       pShow = 𝕃.map Σ.proj₁ valsi
@@ -768,8 +770,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       jbovla = record {
         t = λ {(j , (x , _)) → record {
           valsi = (_ , j) 𝕃.∷ x 𝕃.∷ 𝕃.[];
-          mapti = {!!};
-          valsiBitmuSarcu = {!!}
+          mapti = {!!}
           }}
         }
 
