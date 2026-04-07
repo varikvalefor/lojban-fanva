@@ -343,7 +343,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
       where
       field
         t : A → Jbovla
-        dun : (v₁ v₂ : A) → t v₁ ≡ t v₂ → v₁ ≡ v₂
+        dun : (_≡_ on t) R₂.⇒ _≡_
 
   Jbovla = Jbovla.Jbovla
 \end{code}
