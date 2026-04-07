@@ -987,7 +987,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
     valsiBitmuSarcu : T → Bool
     valsiBitmuSarcu NILC = 𝔹.false
     valsiBitmuSarcu (INI'OC _ (inj₁ (I.IC x₁))) = 𝔹.false
-    valsiBitmuSarcu (INI'OC _ (inj₁ (I.UIC (Cnima'o.CniX _ _ c)))) = Cnima'o.valsiBitmuSarcu c
+    valsiBitmuSarcu (INI'OC _ (inj₁ (I.UIC (Cnima'o.CniX _ _ c)))) = C
+      where
+      C = Cnima'o.valsiBitmuSarcu c
     valsiBitmuSarcu (INI'OC _ (inj₂ NIhO.Ni'oC)) = 𝔹.false
     valsiBitmuSarcu (INI'OC _ (inj₂ (NIhO.UIC x₁))) = {!!}
     valsiBitmuSarcu (JufraC _ j _) = Jufra.valsiBitmuSarcu j
