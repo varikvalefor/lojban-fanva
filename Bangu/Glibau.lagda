@@ -258,7 +258,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo me'oi .article.\ be bau l
     RelativeClauseWord = RelativeClauseWord.RelativeClauseWord'
 \end{code}
 
-\chapter{le zmadu be le ka ce'u pluja}
+\chapter{le zmadu be fi le ka ce'u pluja}
 
 \begin{code}
     mutual
