@@ -372,8 +372,8 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo pluja selbri co'e be bau 
 \begin{code}
       data IntroPh : Set
         where
-        Adv : Adverb → IntroPh
-        Prep : PrepPh → IntroPh
+        IpAdv : Adverb → IntroPh
+        IpPrep : PrepPh → IntroPh
 \end{code}
 
 \begin{code}
