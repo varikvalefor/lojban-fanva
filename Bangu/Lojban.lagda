@@ -1042,7 +1042,7 @@ module TT where
 
 \begin{code}
   tolsucta : Strong → Set
-  tolsucta = {!!}
+  tolsucta = Σ.∃ ∘ Function.flip MF
 \end{code}
 
 \begin{code}
