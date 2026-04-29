@@ -68,8 +68,8 @@ Is-just? nothing = no $ λ ()
 \end{code}
 
 \begin{code}
-Kleporsi : ∀ {a} → {A : Set a} → List A → List A → Set a
-Kleporsi x z = ∃ $ uncurry Td
+Porkle : ∀ {a} → {A : Set a} → List A → List A → Set a
+Porkle x z = ∃ $ uncurry Td
   where
   Td : _ → _ → Set _
   Td m n = x ≡_ $ 𝕃.take m $ 𝕃.drop n z
