@@ -496,8 +496,8 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
     data LE'
       where
       laC : ValsiD "la" → LE'
-      leC : ValsiD "la" → LE'
-      loC : Lerfu.l → Lerfu.o → LE'
+      leC : ValsiD "le" → LE'
+      loC : ValsiD "lo" → LE'
       UIC : Cnima'o.Cni LE' → LE'
 
     instance
