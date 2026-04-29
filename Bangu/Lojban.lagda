@@ -18,6 +18,11 @@ module Bangu.Lojban where
 \end{code}
 
 \begin{code}
+open import Vrici
+  using (
+    Porkle
+  )
+
 open import Data.Nat
   as ℕ
   using (
@@ -42,7 +47,8 @@ open import Function
     id
   )
   renaming (
-    _|>_ to _▹_
+    _|>_ to _▹_;
+    flip to _⍨
   )
 open import Data.Bool
   as 𝔹
@@ -322,7 +328,9 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
       field
         valsi : List Lerfu.Lerfu
         mapti : {!!}
-        valsiBitmuSarcu : Bool
+
+      valsiBitmuSarcu : Bool
+      valsiBitmuSarcu = {!!}
 
       pShow : Strong
       pShow = 𝕃.map Σ.proj₁ valsi
@@ -341,6 +349,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
       where
       field
         t : A → Jbovla
+        dun : (_≡_ on t) R₂.⇒ _≡_
 
   Jbovla = Jbovla.Jbovla
 \end{code}
@@ -463,7 +472,10 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 
     instance
       cniTerm = {!!}
-      jbovla = {!!}
+      jbovla = record {
+        t = {!!};
+        dun = {!!}
+        }
 
   NIhO = NIhO.NIhO'
 \end{code}
@@ -540,6 +552,8 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 
     data KOhA
       where
+      KOhA1C : Lerfu.k ⊎ Lerfu.f → Lerfu.karsna → KOhA
+      KOhARC : Lerfu.a ⊎ Lerfu.i ⊎ Lerfu.u → KOhA
 
     instance
       cniTerm = {!!}
@@ -651,7 +665,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       z : ZOI
       v : Jbovla
       s : Strong
-      NIИ : {!!}
+      NIИ : let v' = 𝕃.map Σ.proj₁ $ Jbovla.Jbovla.valsi v in
+            ¬ Porkle v' s
 \end{code}
 
 \chapter{le zmadu be fi le ka ce'u pluja}
@@ -764,9 +779,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       jbovla = record {
         t = λ {(j , (x , _)) → record {
           valsi = (_ , j) 𝕃.∷ x 𝕃.∷ 𝕃.[];
-          mapti = {!!};
-          valsiBitmuSarcu = {!!}
-          }}
+          mapti = {!!}
+          }};
+        dun = {!!}
         }
 
   JE = JE.JE
@@ -818,6 +833,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
            → Sumti'
            → Sumti'
       UIC : Cnima'o.Cni Sumti' → Sumti'
+      DoiC : Sumti' → {!!} → Sumti'
 
     instance
       cniTerm = record {
@@ -830,6 +846,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T (LeSelbriC x k) = {!!}
         T (JekC x t j x₂) = {!!}
         T (UIC (Cnima'o.CniX s t c)) = {!!}
+        T (DoiC s d) = {!!}
       briTerm = {!!}
       poiTerm = record {
         Term = T
@@ -843,6 +860,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         ... | ⁇.nothing = {!!}
         T (JekC x x₁ x₂ x₃) = {!!}
         T (UIC x) = {!!}
+        T (DoiC s d) = {!!}
       jekTerm = {!!}
 
   Sumti = Sumti.Sumti'
@@ -860,6 +878,7 @@ ni'o sa'u la'oi .\F{Selbri}.\ se ctaipe zo'e ja lo selbri co'e be bau le jbobau 
         GismuC : Gismu → Selbri'
         CmevlaC : Cmevla → Selbri'
         UIC : Cnima'o.Cni Selbri' → Selbri'
+        DoiC : Selbri' → {!!} → Selbri'
 
       instance
         cniTerm : Cnima'o.CniTerm Selbri'
@@ -973,7 +992,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
     valsiBitmuSarcu : T → Bool
     valsiBitmuSarcu NILC = 𝔹.false
     valsiBitmuSarcu (INI'OC _ (inj₁ (I.IC x₁))) = 𝔹.false
-    valsiBitmuSarcu (INI'OC _ (inj₁ (I.UIC (Cnima'o.CniX _ _ c)))) = Cnima'o.valsiBitmuSarcu c
+    valsiBitmuSarcu (INI'OC _ (inj₁ (I.UIC (Cnima'o.CniX _ _ c)))) = C
+      where
+      C = Cnima'o.valsiBitmuSarcu c
     valsiBitmuSarcu (INI'OC _ (inj₂ NIhO.Ni'oC)) = 𝔹.false
     valsiBitmuSarcu (INI'OC _ (inj₂ (NIhO.UIC x₁))) = {!!}
     valsiBitmuSarcu (JufraC _ j _) = Jufra.valsiBitmuSarcu j
@@ -1016,7 +1037,7 @@ module TT where
 \begin{code}
   MF : ST.Vlapoi → Strong → Set
   MF (ST.Vlapoi.TC ST.NILC) = _≡ 𝕃.[]
-  MF (ST.Vlapoi.TC (ST.INI'OC t x)) = {!!}
+  MF (ST.Vlapoi.TC (ST.INI'OC t x)) = λ s → {!!} × MF (ST.Vlapoi.INI'OC x) {!!}
   MF (ST.Vlapoi.TC (ST.JufraC t x x₁)) = {!!}
   MF (ST.Vlapoi.TC (ST.FA'OC t x x₁)) = {!!}
   MF (ST.Vlapoi.KUhOC k) = {!!}
@@ -1026,7 +1047,7 @@ module TT where
 
 \begin{code}
   tolsucta : Strong → Set
-  tolsucta = {!!}
+  tolsucta = Σ.∃ ∘ _⍨ MF
 \end{code}
 
 \begin{code}
