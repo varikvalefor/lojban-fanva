@@ -18,6 +18,11 @@ module Bangu.Lojban where
 \end{code}
 
 \begin{code}
+open import Vrici
+  using (
+    Porkle
+  )
+
 open import Data.Nat
   as ℕ
   using (
@@ -661,8 +666,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       v : Jbovla
       s : Strong
       NIИ : let v' = 𝕃.map Σ.proj₁ $ Jbovla.Jbovla.valsi v in
-            ((¬_ ∘ Σ.∃)
-              (λ n → v' ≡ 𝕃.take (𝕃.length v') (𝕃.drop n s)))
+            ¬ Porkle v' s
 \end{code}
 
 \chapter{le zmadu be fi le ka ce'u pluja}
