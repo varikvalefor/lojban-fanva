@@ -1,4 +1,3 @@
-
 \include{msx.tex}
 
 \title{le me'oi .Agda.\ velcki be le co'e be le jbobau be la .varik.\ .VALefor.}
@@ -51,7 +50,7 @@ open import Data.Bool
     Bool
   )
 open import Data.Char
-  as 𝕃
+  as Chr
   using (
     Char
   )
@@ -144,11 +143,11 @@ open import Relation.Binary.PropositionalEquality
   )
 \end{code}
 
-\part{le gerna}
-ni'o la .varik.\ cu troci lo nu la'oi .\F{T}.\ cu co'e ja velcki le gerna be le jbobau be vo'a
+\part{le sucta gerna}
+ni'o la .varik.\ cu troci lo nu la'oi .\F{ST}.\ cu co'e ja velcki le sucta gerna be le jbobau be vo'a
 
 \begin{code}
-module T where
+module ST where
 \end{code}
 
 \chapter{le lerfu co'e\ldots noi ke'a se vasru pe'a la'oi .\AgdaModule{Lerfu}.}
@@ -157,12 +156,6 @@ module T where
   module Lerfu where
     record tLerfu (c : Char) : Set
       where
-      field
-        nC : ℕ
-
-      ,s = 𝕃.replicate nC ','
-      c' = 𝕃.[ c ]
-      s = ,s 𝕃.++ c'
 \end{code}
 
 \begin{code}
@@ -465,7 +458,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 
     data NIhO'
       where
-        Ni'oC : ValsiD "ni'o" → NIhO'
+        Ni'oC : NIhO'
         UIC : Cnima'o.Cni NIhO' → NIhO'
 
     instance
@@ -510,7 +503,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
   module KU where
     data KU' : Set
       where
-        KUC : ValsiD "ku" → KU'
+        KUC : KU'
 
   KU = KU.KU'
 \end{code}
@@ -519,7 +512,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
   module KUhO where
     data KUhO' : Set
       where
-      KU'OC : ValsiD "ku'o" → KUhO'
+      KU'OC : KUhO'
 
   KUhO = KUhO.KUhO'
 \end{code}
@@ -587,14 +580,14 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
     mutual
       data NU' : Set
         where
-        NuC : ValsiD "nu" → NU'
-        NiC : ValsiD "ni" → NU'
-        KaC : ValsiD "ka" → NU'
-        Pu'uC : ValsiD "pu'u" → NU'
-        Du'uC : ValsiD "du'u" → NU'
-        Su'uC : ValsiD "su'u" → NU'
-        Li'iC : ValsiD "li'i" → NU'
-        Si'oC : ValsiD "si'o" → NU'
+        NuC : NU'
+        NiC : NU'
+        KaC : NU'
+        Pu'uC : NU'
+        Du'uC : NU'
+        Su'uC : NU'
+        Li'iC : NU'
+        Si'oC : NU'
 
       instance
         cniTerm : Cnima'o.CniTerm NU'
@@ -638,47 +631,27 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
   module POI where
     data POI' : Set
       where
-      poiC : ValsiD "poi" → POI'
-      noiC : ValsiD "noi" → POI'
+      poiC : POI'
+      noiC : POI'
 
   POI = POI.POI'
 \end{code}
 
-\chapter{zo'e je le vlapoi se ctaipe}
-
-\begin{code}
-  module Vlapoi where
-    record ValsiBitmu (b : Bool) : Set
-      where
-      field
-        vl : List Lerfu.valsiBitmu
-        zasti : 𝔹.if b then 𝕃.length vl ℕ.> 0 else ⊤
-
-    Vlapoi : List $ Σ Set (λ A → A → Bool) → Set → Set
-    Vlapoi 𝕃.[] b = b
-    Vlapoi ((x , d) 𝕃.∷ xs) b = Σ x (ValsiBitmu ∘ d) × Vlapoi xs b
-
-  Vlapoi = Vlapoi.Vlapoi
-\end{code}
-
 \chapter{le se sitsku se ctaipe}
+ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa lo me zo zoi vlapoi pe la .lojban. gi sa'u nai ru'e ga je\ldots
+\begin{itemize}
+	\item da me lo konkatena be lo mu'oi zoi.\ \AgdaField{ZoiX.z}\ .zoi.\ be da be'o bei ko'a goi lo mu'oi zoi.\ \AgdaField{ZoiX.v}\ .zoi.\ be da be'o bei ko'e goi lo mu'oi zoi.\ \AgdaField{ZoiX.s}\ .zoi.\ be da ge'u bei ko'a gi
+	\item lo mu'oi zoi.\ \AgdaField{ZoiX.NIИ}\ .zoi.\ be da cu ctaipe lo su'u ko'a na poiklo fi ko'e
+\end{itemize}
 
 \begin{code}
   record ZoiX : Set
     where
     field
-      f : let Z = ZOI , ZOI.valsiBitmuSarcu in
-          let S = Strong , λ _ → 𝔹.true in
-          Vlapoi (Z 𝕃.∷ (Jbovla , λ _ → 𝔹.true) 𝕃.∷ S 𝕃.∷ 𝕃.[]) Jbovla
-
-    v₁ : Jbovla
-    v₁ = Σ.proj₁ $ Σ.proj₁ $ Σ.proj₂ f
-
-    v₂ : Jbovla
-    v₂ = Σ.proj₂ $ Σ.proj₂ $ Σ.proj₂ f
-
-    field
-      vd : Jbovla.Dunli v₁ v₂
+      z : ZOI
+      v : Jbovla
+      s : Strong
+      NIИ : {!!}
 \end{code}
 
 \chapter{le zmadu be fi le ka ce'u pluja}
@@ -713,8 +686,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
     mutual
       data Prenex' : Set
         where
-        SumtiZo'u : Vlapoi 𝕃.[ Sumti , {!!} ] ZOhU → Prenex'
-        Liste : Vlapoi 𝕃.[ Prenex' , valsiBitmuSarcu ] Prenex' → Prenex'
+        SumtiZo'u : Sumti → ZOhU → Prenex'
+        Cons : Prenex' → Prenex' → Prenex'
 
       valsiBitmuSarcu : Prenex' → Bool
       valsiBitmuSarcu = {!!}
@@ -736,6 +709,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
     JePoiTerm : POI → Jufra → Set
     JePoiTerm = {!!}
 
+    KUhOTerm : POI → Jufra → Set
+    KUhOTerm = {!!}
+
     record PoiCl (Selma'o : Set) : Set
       where
       inductive
@@ -754,6 +730,12 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
 
       cl : List T
       cl = cl₀ 𝕃.∷ 𝕃.map Σ.proj₂ clx
+
+      clₙ : T
+      clₙ = ⁇.maybe Σ.proj₂ cl₀ $ 𝕃.last clx
+
+      field
+        ku'o : Maybe $ KUhO × Σ.uncurry KUhOTerm clₙ
 
     instance
       poiTermPoiCl : {s : Set} → ⦃ PoiTerm s ⦄ → PoiTerm $ PoiCl s
@@ -778,6 +760,15 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
       cniTerm : Cnima'o.CniTerm JE
       cniTerm = record {Term = λ _ → ⊤}
 
+      jbovla : Jbovla.IsJbovla JE
+      jbovla = record {
+        t = λ {(j , (x , _)) → record {
+          valsi = (_ , j) 𝕃.∷ x 𝕃.∷ 𝕃.[];
+          mapti = {!!};
+          valsiBitmuSarcu = {!!}
+          }}
+        }
+
   JE = JE.JE
 \end{code}
 
@@ -792,8 +783,14 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
     Term : {A : Set} → ⦃ JekTerm A ⦄ → A → Set
     Term ⦃ T ⦄ = JekTerm.Term T
 
-    Jek' : Set
-    Jek' = Vlapoi 𝕃.[ Na , const 𝔹.false ] $ Cnima'o.Cni JE
+    data Jek' : Set
+      where
+      SC : Cnima'o.Cni JE → Jek'
+      NaC : Na → Jek' → Jek'
+
+    instance
+      jbovla : Jbovla.IsJbovla Jek
+      jbovla = {!!}
 
   Jek = Jek.Jek'
 \end{code}
@@ -812,7 +809,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
     data Sumti'
       where
       KOhAC : KOhA → Sumti'
-      LeSelbriC : Vlapoi 𝕃.[ LE , {!!} ] Selbri → Sumti'
+      LeSelbriC : LE → Selbri → Sumti'
       POIC : Poi.PoiCl Sumti'
            → Sumti'
       JekC : (x : Sumti')
@@ -830,7 +827,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
         T : Sumti' → Set
         T (KOhAC k) = Cnima'o.CniTerm.Term KOhA.cniTerm k
         T (POIC c) = {!!}
-        T (LeSelbriC x) = {!!}
+        T (LeSelbriC x k) = {!!}
         T (JekC x t j x₂) = {!!}
         T (UIC (Cnima'o.CniX s t c)) = {!!}
       briTerm = {!!}
@@ -840,7 +837,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
         where
         T : Sumti' → Set
         T (KOhAC x) = {!!}
-        T (LeSelbriC x) = {!!}
+        T (LeSelbriC x k) = {!!}
         T (POIC x) with 𝕃.last (Poi.PoiCl.cl x)
         ... | ⁇.just x2 = Σ.uncurry Poi.JePoiTerm x2
         ... | ⁇.nothing = {!!}
@@ -859,10 +856,7 @@ ni'o sa'u la'oi .\F{Selbri}.\ se ctaipe zo'e ja lo selbri co'e be bau le jbobau 
     mutual
       data Selbri' : Set
         where
-        NUC : (Vlapoi
-                ((NU , NU.valsiBitmuSarcu) 𝕃.∷ 𝕃.[ Jufra , {!!} ])
-                (Maybe KEI))
-            → Selbri'
+        NUC : NU → Jufra → Maybe KEI → Selbri'
         GismuC : Gismu → Selbri'
         CmevlaC : Cmevla → Selbri'
         UIC : Cnima'o.Cni Selbri' → Selbri'
@@ -947,23 +941,18 @@ ni'o la .varik.\ cu co'e ja troci lo nu la'oi .\D{T}.\ se ctaipe lo ro te gerna 
 
 \begin{itemize}
 	\item da du la'oi .\IC{NILC}.\ gi da sinxa lo kunti gi ga jonai ga je
-	\item da du la'o zoi. \IC{INI'OC} \Sym(\Sym(\B{v} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{n}\Sym)\ .zoi.\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{v}.\ be'o bei lo se sinxa be la'oi .\B{n}.\ gi ga jonai ga je
-	\item da du la'o zoi. \IC{FA'OC} \Sym(\Sym(\B{t} \IC{,} \AgdaUnderscore \Sym) \IC{,} \Sym(\B{f} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{s}\Sym)\ .zoi.\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{t}.\ be'o bei lo se sinxa be la'oi .\B{f}.\ be'o bei la'oi .\B{s}.\ gi ga je
-	\item da du la'o zoi. \IC{JufraC} \Sym(\Sym(\B{v} \IC{,} \AgdaUnderscore \Sym) \IC{,} \B{j}\Sym) \B{m}\ .zoi.\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{v}.\ be'o bei lo se sinxa be la'oi .\B{j}.
+	\item da du la'o zoi. \IC{INI'OC} \B{t} \B{n}\ .zoi.\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{t}.\ be'o bei lo se sinxa be la'oi .\B{n}.\ gi ga jonai ga je
+	\item da du la'o zoi. \IC{FA'OC} \B t \B f\ .zoi.\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{t}.\ be'o bei lo se sinxa be la'oi .\B{f}.\ be'o bei la'oi .\B{s}.\ gi ga je
+	\item da du la'o zoi. \IC{JufraC} \B t \B j \B m\ gi da sinxa lo konkatena be lo se sinxa be la'oi .\B{t}.\ be'o bei lo se sinxa be la'oi .\B{j}.
 \end{itemize}
 
 \begin{code}
     data T : Set
       where
       NILC : T
-      INI'OC : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] INI'O
-             → T
-      JufraC : (v : Vlapoi 𝕃.[ T , valsiBitmuSarcu ] Jufra)
-             → JufraMapti $ Σ.proj₁ $ Σ.proj₁ v
-             → T
-      FA'OC : let TX = T , valsiBitmuSarcu in
-              Vlapoi (TX 𝕃.∷ 𝕃.[ FAhO , const 𝔹.true ]) Strong
-            → T
+      INI'OC : T → INI'O → T
+      JufraC : (t : T) → Jufra → JufraMapti t → T
+      FA'OC : T → FAhO → Strong → T
 \end{code}
 
 \section{la'oi .\F{JufraMapti}.}
@@ -972,9 +961,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo ctaipe lo me'oi .\F{JufraMa
 \begin{code}
     JufraMapti : T → Set
     JufraMapti NILC = ⊤
-    JufraMapti (JufraC _ _) = ⊥
-    JufraMapti (INI'OC _) = ⊤
-    JufraMapti (FA'OC _) = ⊥
+    JufraMapti (JufraC _ _ _) = ⊥
+    JufraMapti (INI'OC _ _) = ⊤
+    JufraMapti (FA'OC _ _ _) = ⊥
 \end{code}
 
 \section{la'oi .\F{valsiBitmuSarcu}.}
@@ -983,11 +972,101 @@ ni'o ro da poi ke'a ctaipe la'oi .\D{T}.\ zo'u ga jo la'o zoi.\ \IC{𝔹.true}\ 
 \begin{code}
     valsiBitmuSarcu : T → Bool
     valsiBitmuSarcu NILC = 𝔹.false
-    valsiBitmuSarcu (INI'OC (x , inj₁ (I.IC x₁))) = 𝔹.false
-    valsiBitmuSarcu (INI'OC (x , inj₁ (I.UIC (Cnima'o.CniX _ _ c)))) = Cnima'o.valsiBitmuSarcu c
-    valsiBitmuSarcu (INI'OC (x , inj₂ (NIhO.Ni'oC _))) = 𝔹.false
-    valsiBitmuSarcu (INI'OC (x , inj₂ (NIhO.UIC x₁))) = {!!}
-    valsiBitmuSarcu (JufraC (_ , j) _) = Jufra.valsiBitmuSarcu j
-    valsiBitmuSarcu (FA'OC _ ) = {!!}
+    valsiBitmuSarcu (INI'OC _ (inj₁ (I.IC x₁))) = 𝔹.false
+    valsiBitmuSarcu (INI'OC _ (inj₁ (I.UIC (Cnima'o.CniX _ _ c)))) = Cnima'o.valsiBitmuSarcu c
+    valsiBitmuSarcu (INI'OC _ (inj₂ NIhO.Ni'oC)) = 𝔹.false
+    valsiBitmuSarcu (INI'OC _ (inj₂ (NIhO.UIC x₁))) = {!!}
+    valsiBitmuSarcu (JufraC _ j _) = Jufra.valsiBitmuSarcu j
+    valsiBitmuSarcu (FA'OC _ _ _) = {!!}
+\end{code}
+
+\chapter{ko'a goi le vlapoi se ctaipe no'u la'oi .\F{Vlapoi}.}
+ni'o lo ro co'e se ctaipe cu ctaipe la'oi .\F{Vlapoi}. lo co'e ja sinxa be lo vlapoi be bau la .lojban.
+
+.i ko'a jai filri'a lo nu sucta cusku tu'a zo'e je lo vlapoi
+
+\begin{code}
+  module Vlapoi where
+    data Vlapoi : Set
+      where
+      TC : T → Vlapoi
+      NUC : NU → Vlapoi
+      KUhOC : KUhO → Vlapoi
+      INI'OC : INI'O → Vlapoi
+
+  Vlapoi = Vlapoi.Vlapoi
+\end{code}
+
+\part{le te tcidu gerna}
+
+\begin{code}
+module TT where
+\end{code}
+
+\begin{code}
+  IsWord : String → Strong → Set
+  IsWord v = (𝕊₀.toList v ≡_) ∘ 𝕃.filter (_≟_ 𝔹.false ∘ Chr._==_ ',')
+\end{code}
+
+\begin{code}
+  IsWord? : R₂.Decidable IsWord
+  IsWord? _ _ = _ ≟ _
+\end{code}
+
+\begin{code}
+  MF : ST.Vlapoi → Strong → Set
+  MF (ST.Vlapoi.TC ST.NILC) = _≡ 𝕃.[]
+  MF (ST.Vlapoi.TC (ST.INI'OC t x)) = {!!}
+  MF (ST.Vlapoi.TC (ST.JufraC t x x₁)) = {!!}
+  MF (ST.Vlapoi.TC (ST.FA'OC t x x₁)) = {!!}
+  MF (ST.Vlapoi.KUhOC k) = {!!}
+  MF (ST.Vlapoi.NUC n) = {!!}
+  MF (ST.Vlapoi.INI'OC n) = {!!}
+\end{code}
+
+\begin{code}
+  tolsucta : Strong → Set
+  tolsucta = {!!}
+\end{code}
+
+\begin{code}
+  tolsucta? : Decidable tolsucta
+  tolsucta? = {!!}
+\end{code}
+
+\chapter{le te tcidu gerna se ctaipe}
+
+\begin{code}
+  record T : Set
+    where
+    field
+      t : ST.T
+      s : Strong
+      mf : MF (ST.Vlapoi.TC t) s
+\end{code}
+
+\begin{code}
+  toSucta : T → ST.T
+  toSucta = {!!}
+\end{code}
+
+\chapter{le me'oi .\AgdaRecord{Read}. co'e}
+
+\begin{code}
+  R : Read T
+  R = {!!}
+\end{code}
+
+\chapter{le ctaipe be le su'u mapti}
+
+\begin{code}
+  module Veritas where
+    rol : ST.T → T
+    rol = {!!}
+
+    rd : (s : String)
+       → (j : ⁇.Is-just $ Read.readMaybe R s)
+       → 𝕊₀.toList s ≡ T.s (⁇.to-witness j)
+    rd = {!!}
 \end{code}
 \end{document}
