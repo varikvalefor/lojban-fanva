@@ -507,6 +507,24 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 \end{code}
 
 \begin{code}
+  module DOI
+    where
+    data DOI' : Set
+
+    instance
+      cniTerm : Cnima'o.CniTerm DOI'
+
+    data DOI'
+      where
+      doiC : ValsiD "doi" → DOI'
+
+    instance
+      cniTerm = {!!}
+
+  DOI = DOI.DOI'
+\end{code}
+
+\begin{code}
   FAhO : Set
   FAhO = {!!}
 \end{code}
