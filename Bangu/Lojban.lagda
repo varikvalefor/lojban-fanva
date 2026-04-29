@@ -909,8 +909,9 @@ ni'o la'oi .\AgdaRecord{Bridi}.\ se ctaipe zo'e ja lo ro bridi be bau le jbobau 
 
 \begin{itemize}
 	\item co'e gi ga je
-	\item lo mu'oi zoi.\ \AgdaField{Bridi.selbri}\ .zoi.\ be da cu selbri lo co'e be da gi
-	\item lo mu'oi zoi.\ \AgdaField{Bridi.terbri}\ .zoi.\ be da cu liste lo'i ro co'e joi terbri be lo co'e be da
+	\item lo mu'oi zoi.\ \AgdaField{Bridi.selbri}\ .zoi.\ be da cu selbri lo co'e be da gi ga je
+	\item lo mu'oi zoi.\ \AgdaField{Bridi.terbri₁}\ .zoi.\ be da cu liste lo'i ro co'e joi ke lidne je terbri be lo co'e be da
+	\item lo mu'oi zoi.\ \AgdaField{Bridi.terbri₂}\ .zoi.\ be da cu liste lo'i ro co'e joi ke se lidne je terbri be lo co'e be da
 \end{itemize}
 
 \begin{code}
@@ -932,8 +933,8 @@ ni'o la'oi .\AgdaRecord{Bridi}.\ se ctaipe zo'e ja lo ro bridi be bau le jbobau 
 
     field
       selbri : Selbri
-      terbri : List $ ST
-      term : All Bri.Term $ ¯1↓ terbri
+      terbri₁ terbri₂ : List $ ST
+      term : All Bri.Term $ ¯1↓ terbri₁
 \end{code}
 
 \chapter{zo'e je la'oi .\F{Jufra}.}
