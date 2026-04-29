@@ -511,12 +511,17 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
     where
 
     data DOI' : Set
-      where
-      doiC : ValsiD "doi" → DOI'
 
     instance
       cniTerm : Cnima'o.CniTerm DOI'
-      cniTerm = record {Term = λ _ → ⊤}
+
+    data DOI'
+      where
+      doiC : ValsiD "doi" → DOI'
+      UIC : Cnima'o.Cni DOI' → DOI'
+
+    instance
+      cniTerm = {!!}
 
   DOI = DOI.DOI'
 \end{code}
