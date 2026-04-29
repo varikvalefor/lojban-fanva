@@ -519,7 +519,10 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
       doiC : ValsiD "doi" → DOI'
 
     instance
-      cniTerm = {!!}
+      cniTerm = record {Term = T}
+        where
+        T : DOI' → Set
+        T (doiC _) = ⊤
 
   DOI = DOI.DOI'
 \end{code}
