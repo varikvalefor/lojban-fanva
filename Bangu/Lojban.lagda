@@ -42,7 +42,8 @@ open import Function
     id
   )
   renaming (
-    _|>_ to _▹_
+    _|>_ to _▹_;
+    flip to _⍨
   )
 open import Data.Bool
   as 𝔹
@@ -1042,7 +1043,7 @@ module TT where
 
 \begin{code}
   tolsucta : Strong → Set
-  tolsucta = Σ.∃ ∘ Function.flip MF
+  tolsucta = Σ.∃ ∘ _⍨ MF
 \end{code}
 
 \begin{code}
