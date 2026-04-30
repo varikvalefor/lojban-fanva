@@ -726,6 +726,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
   Jek : Set
   Jufra : Set
   Prenex : Set
+  DoiCl : Set
 \end{code}
 
 \chapter{zo'e je le fanmo se ctaipe pe lo bridi}
@@ -918,6 +919,16 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T (DoiC x x₁) = {!!}
 
   Sumti = Sumti.Sumti'
+\end{code}
+
+\chapter{zo'e je la'oi .\F{DoiCl}.}
+
+\begin{code}
+  module Doi where
+    Cl : Set
+    Cl = {!!}
+
+  DoiCl = Doi.Cl
 \end{code}
 
 \chapter{zo'e je la'oi .\F{Selbri}.}
