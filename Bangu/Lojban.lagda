@@ -432,9 +432,6 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
       Cnima'oCo'e : Set
       Cnima'oCo'e = {!!}
 
-      valsiBitmuSarcu : Cnima'oCo'e → Bool
-      valsiBitmuSarcu = {!!}
-
     record CniTerm (Selma'o : Set) : Set₁
       where
       field
