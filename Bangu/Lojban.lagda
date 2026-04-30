@@ -401,13 +401,13 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
         dun = {!!}
         }
         where
+        d : ∀ {a}
+          → Σ (Set a) (λ A → A × Lerfu.Deconstructible A)
+          → Lerfu.Lerfu
+        d (A , x , d) = Lerfu.deconstruct ⦃ d ⦄ x
         v : _ → List Lerfu.Lerfu
         v (inj₁ (z₁ , z₂ , k₁ , z₃ , k₂)) = 𝕃.map d l
           where
-          d : ∀ {a}
-            → Σ (Set a) (λ A → A × Lerfu.Deconstructible A)
-            → Lerfu.Lerfu
-          d (A , x , d) = Lerfu.deconstruct ⦃ d ⦄ x
           l : List $ Σ Set $ λ A → A × Lerfu.Deconstructible A
           l = (_ , z₁ , _) 𝕃.∷
               (_ , z₂ , _) 𝕃.∷
@@ -417,10 +417,6 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
               𝕃.[]
         v (inj₂ (z₁ , k₁ , z₂ , z₃ , k₂)) = 𝕃.map d l
           where
-          d : ∀ {a}
-            → Σ (Set a) (λ A → A × Lerfu.Deconstructible A)
-            → Lerfu.Lerfu
-          d (A , x , d) = Lerfu.deconstruct ⦃ d ⦄ x
           l : List $ Σ Set $ λ A → A × Lerfu.Deconstructible A
           l = (_ , z₁ , _) 𝕃.∷
               (_ , k₁ , _) 𝕃.∷
