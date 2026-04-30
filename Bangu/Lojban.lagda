@@ -609,8 +609,9 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 
 \begin{code}
   module ZOI where
-    ZOI : Set
-    ZOI = {!!}
+    data ZOI : Set
+      where
+      zoiC : ValsiD "zoi" → ZOI
 
     valsiBitmuSarcu : ZOI → Bool
     valsiBitmuSarcu = {!!}
