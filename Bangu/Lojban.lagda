@@ -900,13 +900,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T (POIC x) with f x | _≡_.inspect f x
           where f = 𝕃.last ∘ Poi.PoiCl.cl
         ... | ⁇.just x2 | _ = Σ.uncurry Poi.JePoiTerm x2
-        ... | ⁇.nothing | _≡_.[ d ] = ⊥-elim $ nn _ _ d
-          where
-          nn : ∀ {a} → {A : Set a}
-             → (x : A)
-             → (xs : List A)
-             → ¬_ $ 𝕃.last (x 𝕃.∷ xs) ≡ ⁇.nothing
-          nn _ _ ()
+        ... | ⁇.nothing | _≡_.[ d ] = ⊥-elim $ (λ ()) d
         T (JekC x x₁ x₂ x₃) = {!!}
         T (UIC x) = {!!}
         T (DoiC s d) = {!!}
