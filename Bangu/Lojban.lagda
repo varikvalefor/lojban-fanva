@@ -602,6 +602,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
       where
       KOhA1C : Lerfu.k ⊎ Lerfu.f → Lerfu.karsna → KOhA
       KOhARC : Lerfu.a ⊎ Lerfu.i ⊎ Lerfu.u → KOhA
+      ce'uC : ValsiD "ce'u" → KOhA
 
     instance
       cniTerm = {!!}
