@@ -276,7 +276,7 @@ module ST where
     record Deconstructible {a} (A : Set a) : Set a
       where
       field
-        selvau : A → Σ Char tLerfu
+        selvau : A → Lerfu
 
     deconstruct : ∀ {a} → {A : Set a}
                 → ⦃ Deconstructible A ⦄
