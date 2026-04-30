@@ -880,7 +880,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
            → Sumti'
            → Sumti'
       UIC : Cnima'o.Cni Sumti' → Sumti'
-      DoiC : Sumti' → {!!} → Sumti'
+      DoiC : Sumti' → DoiCl → Sumti'
 
     instance
       cniTerm = record {
