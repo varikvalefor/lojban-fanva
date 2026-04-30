@@ -401,7 +401,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
         dun = {!!}
         }
         where
-        DLerfu = λ a → Σ (Set a) (λ A → A × Lerfu.Deconstructible A)
+        DLerfu = λ a → Σ (Set a) $ λ A → A × Lerfu.Deconstructible A
         d : ∀ {a} → DLerfu a → Lerfu.Lerfu
         d (A , x , d) = Lerfu.deconstruct ⦃ d ⦄ x
         v : _ → List Lerfu.Lerfu
