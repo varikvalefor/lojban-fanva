@@ -914,7 +914,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T (LeSelbriC x x₁) = {!!}
         T (POIC x) = {!!}
         T (JekC x x₁ x₂ x₃) = T x₃
-        T (UIC x) = {!!}
+        T (UIC (Cnima'o.CniX x x₁ x₂)) = {!!}
         T (DoiC x x₁) = {!!}
 
   Sumti = Sumti.Sumti'
