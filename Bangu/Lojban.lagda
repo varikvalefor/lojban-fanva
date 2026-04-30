@@ -281,7 +281,7 @@ module ST where
     deconstruct : ∀ {a} → {A : Set a}
                 → ⦃ Deconstructible A ⦄
                 → A
-                → Σ Char tLerfu
+                → Lerfu
     deconstruct ⦃ D ⦄ = Deconstructible.selvau D
 
     instance
