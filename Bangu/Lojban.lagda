@@ -404,24 +404,26 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
         DLerfu = λ a → Σ (Set a) $ λ A → A × Lerfu.Deconstructible A
         d : ∀ {a} → DLerfu a → Lerfu.Lerfu
         d (_ , x , d) = Lerfu.deconstruct ⦃ d ⦄ x
+        dz = Lerfu.deconstructibleZunsna
+        dk = Lerfu.deconstructibleKarsna
         v : _ → List Lerfu.Lerfu
         v (inj₁ (z₁ , z₂ , k₁ , z₃ , k₂)) = 𝕃.map d l
           where
           l : List $ DLerfu _
-          l = (_ , z₁ , _) 𝕃.∷
-              (_ , z₂ , _) 𝕃.∷
-              (_ , k₁ , _) 𝕃.∷
-              (_ , z₃ , _) 𝕃.∷
-              (_ , k₂ , _) 𝕃.∷
+          l = (_ , z₁ , dz) 𝕃.∷
+              (_ , z₂ , dz) 𝕃.∷
+              (_ , k₁ , dk) 𝕃.∷
+              (_ , z₃ , dz) 𝕃.∷
+              (_ , k₂ , dk) 𝕃.∷
               𝕃.[]
         v (inj₂ (z₁ , k₁ , z₂ , z₃ , k₂)) = 𝕃.map d l
           where
           l : List $ DLerfu _
-          l = (_ , z₁ , _) 𝕃.∷
-              (_ , k₁ , _) 𝕃.∷
-              (_ , z₂ , _) 𝕃.∷
-              (_ , z₃ , _) 𝕃.∷
-              (_ , k₂ , _) 𝕃.∷
+          l = (_ , z₁ , dz) 𝕃.∷
+              (_ , k₁ , dk) 𝕃.∷
+              (_ , z₂ , dz) 𝕃.∷
+              (_ , z₃ , dz) 𝕃.∷
+              (_ , k₂ , dk) 𝕃.∷
               𝕃.[]
 
   Gismu = Gismu.Gismu
