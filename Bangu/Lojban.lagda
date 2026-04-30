@@ -744,9 +744,6 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         SumtiZo'u : Sumti → ZOhU → Prenex'
         Cons : Prenex' → Prenex' → Prenex'
 
-      valsiBitmuSarcu : Prenex' → Bool
-      valsiBitmuSarcu = {!!}
-
   Prenex = Prenex.Prenex'
 \end{code}
 
