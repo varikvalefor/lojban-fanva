@@ -297,7 +297,7 @@ module ST where
     Voksa {c} t = c ∈ 𝕊₀.toList "abdegijlmnoruvyz"
 
     Voksa? : {c : Char} → Decidable $ Voksa {c}
-    Voksa? l = _ ≟ _
+    Voksa? _ = _ ≟ _
 
     isVoksa : {c : Char} → tLerfu c → Bool
     isVoksa = isYes ∘ Voksa?
