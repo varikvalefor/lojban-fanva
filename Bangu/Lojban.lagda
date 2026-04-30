@@ -394,7 +394,10 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
     instance
       jbovla : Jbovla.IsJbovla Gismu
       jbovla = record {
-        t = {!!};
+        t = λ x → record {
+          valsi = {!!};
+          mapti = {!!}
+          };
         dun = {!!}
         }
 
