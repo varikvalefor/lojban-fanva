@@ -910,7 +910,12 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       jekTerm = record {Term = T}
         where
         T : Sumti' → Set
-        T = {!!}
+        T (KOhAC x) = ?
+        T (LeSelbriC x x₁) = ?
+        T (POIC x) = ?
+        T (JekC x x₁ x₂ x₃) = ?
+        T (UIC x) = ?
+        T (DoiC x x₁) = ?
 
   Sumti = Sumti.Sumti'
 \end{code}
