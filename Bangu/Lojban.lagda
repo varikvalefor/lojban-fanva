@@ -403,7 +403,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
         where
         v : _ → List Lerfu.Lerfu
         v (inj₁ (z₁ , z₂ , k₁ , z₃ , k₂)) = {!!}
-        v (inj₂ y) = {!!}
+        v (inj₂ (z₁ , k₁ , z₂ , z₃ , k₂)) = {!!}
 
   Gismu = Gismu.Gismu
 \end{code}
