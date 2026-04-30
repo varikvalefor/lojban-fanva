@@ -162,6 +162,8 @@ module ST where
   module Lerfu where
     record tLerfu (c : Char) : Set
       where
+      field
+        ,n₁ ,n₂ : ℕ
 \end{code}
 
 \begin{code}
