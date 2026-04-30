@@ -393,7 +393,10 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 
     instance
       jbovla : Jbovla.IsJbovla Gismu
-      jbovla = {!!}
+      jbovla = record {
+        t = {!!};
+        dun = {!!}
+        }
 
   Gismu = Gismu.Gismu
 \end{code}
