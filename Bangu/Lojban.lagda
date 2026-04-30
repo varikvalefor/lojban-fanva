@@ -611,9 +611,6 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
       zoiC : ValsiD "zoi" → ZOI
       la'oC : ValsiD "la'o" → ZOI
 
-    valsiBitmuSarcu : ZOI → Bool
-    valsiBitmuSarcu = {!!}
-
   ZOI = ZOI.ZOI
 \end{code}
 
