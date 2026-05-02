@@ -545,7 +545,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 
     data DOI'
       where
-      doiC : ValsiD "doi" → DOI'
+      doiC : DOI'
       UIC : Cnima'o.Cni DOI' → DOI'
 
     instance
@@ -1114,7 +1114,7 @@ module TT where
   MF (ST.Vlapoi.NUC ST.NU.Li'iC) = IsWord "lili"
   MF (ST.Vlapoi.NUC ST.NU.Si'oC) = IsWord "si'o"
   MF (ST.Vlapoi.INI'OC n) = {!!}
-  MF (ST.Vlapoi.DOIC (ST.DOI.doiC x)) = ?
+  MF (ST.Vlapoi.DOIC ST.DOI.doiC) = ?
   MF (ST.Vlapoi.DOIC (ST.DOI.UIC x)) = ?
 \end{code}
 
