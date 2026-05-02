@@ -1114,7 +1114,8 @@ module TT where
   MF (ST.Vlapoi.NUC ST.NU.Li'iC) = IsWord "lili"
   MF (ST.Vlapoi.NUC ST.NU.Si'oC) = IsWord "si'o"
   MF (ST.Vlapoi.INI'OC n) = {!!}
-  MF (ST.Vlapoi.DOIC d) = {!!}
+  MF (ST.Vlapoi.DOIC (ST.DOI.doiC x)) = ?
+  MF (ST.Vlapoi.DOIC (ST.DOI.UIC x)) = ?
 \end{code}
 
 \begin{code}
