@@ -1103,7 +1103,7 @@ module TT where
   MF (ST.Vlapoi.TC (ST.INI'OC t x)) = λ s → {!!} × MF (ST.Vlapoi.INI'OC x) {!!}
   MF (ST.Vlapoi.TC (ST.JufraC t x x₁)) = {!!}
   MF (ST.Vlapoi.TC (ST.FA'OC t x x₁)) = {!!}
-  MF (ST.Vlapoi.KUhOC k) = {!!}
+  MF (ST.Vlapoi.KUhOC ST.KUhO.KU'OC) = IsWord "ku'o"
   MF (ST.Vlapoi.NUC n) = {!!}
   MF (ST.Vlapoi.INI'OC n) = {!!}
 \end{code}
