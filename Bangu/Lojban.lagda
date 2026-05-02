@@ -1145,8 +1145,8 @@ module TT where
 
 \begin{code}
   module Veritas where
-    rol : ST.T → T
-    rol = {!!}
+    tTcid : ST.T → T
+    tTcid = {!!}
 
     rd : (s : String)
        → (j : ⁇.Is-just $ Read.readMaybe R s)
