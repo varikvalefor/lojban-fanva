@@ -1077,6 +1077,7 @@ ni'o lo ro co'e se ctaipe cu ctaipe la'oi .\F{Vlapoi}. lo co'e ja sinxa be lo vl
       NUC : NU → Vlapoi
       KUhOC : KUhO → Vlapoi
       INI'OC : INI'O → Vlapoi
+      DOIC : DOI → Vlapoi
 
   Vlapoi = Vlapoi.Vlapoi
 \end{code}
@@ -1113,6 +1114,7 @@ module TT where
   MF (ST.Vlapoi.NUC ST.NU.Li'iC) = IsWord "lili"
   MF (ST.Vlapoi.NUC ST.NU.Si'oC) = IsWord "si'o"
   MF (ST.Vlapoi.INI'OC n) = {!!}
+  MF (ST.Vlapoi.DOIC d) = {!!}
 \end{code}
 
 \begin{code}
