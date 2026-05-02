@@ -1104,7 +1104,14 @@ module TT where
   MF (ST.Vlapoi.TC (ST.JufraC t x x₁)) = {!!}
   MF (ST.Vlapoi.TC (ST.FA'OC t x x₁)) = {!!}
   MF (ST.Vlapoi.KUhOC ST.KUhO.KU'OC) = IsWord "ku'o"
-  MF (ST.Vlapoi.NUC n) = {!!}
+  MF (ST.Vlapoi.NUC ST.NU.NuC) = {!!}
+  MF (ST.Vlapoi.NUC ST.NU.NiC) = {!!}
+  MF (ST.Vlapoi.NUC ST.NU.KaC) = {!!}
+  MF (ST.Vlapoi.NUC ST.NU.Pu'uC) = {!!}
+  MF (ST.Vlapoi.NUC ST.NU.Du'uC) = {!!}
+  MF (ST.Vlapoi.NUC ST.NU.Su'uC) = {!!}
+  MF (ST.Vlapoi.NUC ST.NU.Li'iC) = {!!}
+  MF (ST.Vlapoi.NUC ST.NU.Si'oC) = {!!}
   MF (ST.Vlapoi.INI'OC n) = {!!}
 \end{code}
 
