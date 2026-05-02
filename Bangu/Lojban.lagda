@@ -1152,5 +1152,13 @@ module TT where
        → (j : ⁇.Is-just $ Read.readMaybe R s)
        → 𝕊₀.toList s ≡ T.s (⁇.to-witness j)
     rd = {!!}
+
+    f∘t : (t : ST.T)
+        → (let fx = ⁇.map toSucta ∘ Read.readMaybe R in
+           let tx = 𝕊₀.fromList ∘ T.s in
+           (_≡_
+            (⁇.just t)
+            (fx $ tx $ tTcid t)))
+    f∘t = {!!}
 \end{code}
 \end{document}
