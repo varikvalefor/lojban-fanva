@@ -940,7 +940,15 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 \begin{code}
   module Doi where
     data Cl : Set
+
+    instance
+      jbopoi : Jbopoi Cl
+      
+    data Cl
       where
+
+    instance
+      jbopoi = {!!}
 
   DoiCl = Doi.Cl
 \end{code}
