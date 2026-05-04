@@ -572,6 +572,16 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 \end{code}
 
 \begin{code}
+  module DOhU
+    where
+
+    data DOhU' : Set
+      where
+
+  DOhU = DOhU.DOhU'
+\end{code}
+
+\begin{code}
   FAhO : Set
   FAhO = {!!}
 \end{code}
