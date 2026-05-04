@@ -961,7 +961,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       
     data Cl
       where
-      sC : (d : DOI) → (s : Sumti) → T s → Cl
+      sC : DOI → (s : Sumti) → T s → Cl
 
     instance
       jbopoi = {!!}
