@@ -954,14 +954,14 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     instance
       jbopoi : Jbopoi Cl
 
-    data T (d : DOI) (s : Sumti) : Set
+    data T (s : Sumti) : Set
       where
-      nilC : T d s
-      do'uC : {!!} → DOhU → T d s
+      nilC : T s
+      do'uC : {!!} → DOhU → T s
       
     data Cl
       where
-      sC : (d : DOI) → (s : Sumti) → T d s → Cl
+      sC : (d : DOI) → (s : Sumti) → T s → Cl
 
     instance
       jbopoi = {!!}
