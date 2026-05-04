@@ -881,6 +881,18 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 \end{code}
 
 \begin{code}
+  module Ko'a
+    where
+
+    data Ko'a' : Set
+      where
+      KOhAC : KOhA → Ko'a'
+      DoiC : KOhA → DoiCl → Ko'a'
+
+  Ko'a = Ko'a.Ko'a'
+\end{code}
+
+\begin{code}
   module Sumti
     where
     data Sumti' : Set
