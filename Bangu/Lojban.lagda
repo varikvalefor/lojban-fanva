@@ -955,7 +955,12 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       jbopoi : Jbopoi Cl
 
     DOhUTermd : Sumti → Set
-    DOhUTermd = {!!}
+    DOhUTermd (Sumti.KOhAC x) = {!!}
+    DOhUTermd (Sumti.LeSelbriC x x₁) = {!!}
+    DOhUTermd (Sumti.POIC x) = {!!}
+    DOhUTermd (Sumti.JekC x x₁ x₂ x₃) = {!!}
+    DOhUTermd (Sumti.UIC x) = {!!}
+    DOhUTermd (Sumti.DoiC x x₁) = {!!}
 
     data T (s : Sumti) : Set
       where
