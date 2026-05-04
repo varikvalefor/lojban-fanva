@@ -939,8 +939,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 
 \begin{code}
   module Doi where
-    Cl : Set
-    Cl = {!!}
+    data Cl : Set
+      where
 
   DoiCl = Doi.Cl
 \end{code}
@@ -1131,8 +1131,8 @@ module TT where
   MF (ST.Vlapoi.NUC ST.NU.Li'iC) = IsWord "lili"
   MF (ST.Vlapoi.NUC ST.NU.Si'oC) = IsWord "si'o"
   MF (ST.Vlapoi.INI'OC n) = {!!}
-  MF (ST.Vlapoi.DOIC ST.DOI.doiC) = ?
-  MF (ST.Vlapoi.DOIC (ST.DOI.UIC x)) = ?
+  MF (ST.Vlapoi.DOIC ST.DOI.doiC) = {!!}
+  MF (ST.Vlapoi.DOIC (ST.DOI.UIC x)) = {!!}
 \end{code}
 
 \begin{code}
