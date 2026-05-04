@@ -944,8 +944,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     instance
       jbopoi : Jbopoi Cl
 
-    T : DOI → Sumti → Set
-    T = {!!}
+    data T (d : DOI) (s : Sumti) : Set
+      where
       
     data Cl
       where
