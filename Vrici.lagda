@@ -71,7 +71,6 @@ Is-just? nothing = no $ λ ()
 Porkle : ∀ {a} → {A : Set a} → List A → List A → Set a
 Porkle x z = ∃ $ uncurry Td
   where
-  Td : _ → _ → Set _
   Td = λ m n → x ≡_ $ 𝕃.take m $ 𝕃.drop n z
 \end{code}
 \end{document}
