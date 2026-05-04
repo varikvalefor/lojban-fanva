@@ -361,6 +361,23 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
   ValsiD s = Σ Jbovla $ (_≡ 𝕊₀.toList s) ∘ Jbovla.Jbovla.pShow
 \end{code}
 
+\chapter{la'oi .\AgdaRecord{Jbopoi}.}
+
+\begin{code}
+  module Jbopoi
+    where
+
+    record Jbopoi {a} (A : Set a) : Set _
+      where
+      field
+        Term : A → Set a
+
+    Term : ∀ {a} → {A : Set a} → ⦃ Jbopoi A ⦄ → A → Set a
+    Term ⦃ J ⦄ = Jbopoi.Term J
+
+  Jbopoi = Jbopoi.Jbopoi
+\end{code}
+
 \chapter{la'oi .\AgdaRecord{Gismu}.}
 
 \begin{code}
