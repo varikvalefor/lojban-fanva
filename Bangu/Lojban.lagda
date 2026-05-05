@@ -905,9 +905,17 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     where
 
     data Ko'a' : Set
+
+    instance
+      doiMapti : DoiMapti Ko'a'
+
+    data Ko'a'
       where
       KOhAC : KOhA → Ko'a'
-      DoiC : KOhA → DoiCl → Ko'a'
+      DoiC : (k : Ko'a') → DoiMapti.Term k → DoiCl → Ko'a'
+
+    instance
+      doiMapti = {!!}
 
   Ko'a = Ko'a.Ko'a'
 \end{code}
