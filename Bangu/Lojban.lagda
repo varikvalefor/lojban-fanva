@@ -23,6 +23,10 @@ open import Vrici
     Porkle
   )
 
+open import Level
+  using (
+    Level
+  )
 open import Data.Nat
   as ℕ
   using (
@@ -475,6 +479,22 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
     --   cniTerm = {!!}
 \end{code}
 
+\chapter{DoiMapti}
+
+\begin{code}
+  module DoiMapti
+    where
+    record DoiMapti {a} (A : Set a) : Set (Level.suc a)
+      where
+      field
+        Term : A → Set a
+
+    Term : ∀ {a} → {A : Set a} → ⦃ DoiMapti A ⦄ → A → Set a
+    Term ⦃ D ⦄ = DoiMapti.Term D
+
+  DoiMapti = DoiMapti.DoiMapti
+\end{code}
+
 \chapter{le sampu je selma'o co'e}
 
 \begin{code}
@@ -902,6 +922,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       briTerm : Bri.BriTerm Sumti'
       poiTerm : Poi.PoiTerm Sumti'
       jekTerm : Jek.JekTerm Sumti'
+      doiMapti : DoiMapti Sumti'
 
     data Sumti'
       where
@@ -915,7 +936,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
            → Sumti'
            → Sumti'
       UIC : Cnima'o.Cni Sumti' → Sumti'
-      DoiC : Sumti' → DoiCl → Sumti'
+      DoiC : (s : Sumti') → DoiMapti.Term s → DoiCl → Sumti'
 
     instance
       cniTerm = record {
@@ -928,7 +949,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T (LeSelbriC x k) = {!!}
         T (JekC x t j x₂) = {!!}
         T (UIC (Cnima'o.CniX s t c)) = {!!}
-        T (DoiC s d) = {!!}
+        T (DoiC s m d) = {!!}
       briTerm = {!!}
       poiTerm = record {
         Term = T
@@ -943,7 +964,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         ... | ⁇.nothing | _≡_.[ d ] = ⊥-elim $ (λ ()) d
         T (JekC x x₁ x₂ x₃) = {!!}
         T (UIC x) = {!!}
-        T (DoiC s d) = {!!}
+        T (DoiC s m d) = {!!}
       jekTerm = record {Term = T}
         where
         T : Sumti' → Set
@@ -952,7 +973,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T (POIC x) = {!!}
         T (JekC x x₁ x₂ x₃) = T x₃
         T (UIC (Cnima'o.CniX x x₁ x₂)) = T x × {!!}
-        T (DoiC x x₁) = {!!}
+        T (DoiC s m d) = {!!}
+      doiMapti = {!!}
 
   Sumti = Sumti.Sumti'
 \end{code}
@@ -972,7 +994,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     DOhUTermd (Sumti.POIC x) = {!!}
     DOhUTermd (Sumti.JekC x x₁ x₂ x₃) = {!!}
     DOhUTermd (Sumti.UIC x) = {!!}
-    DOhUTermd (Sumti.DoiC x x₁) = {!!}
+    DOhUTermd (Sumti.DoiC s m d) = {!!}
 
     data T (s : Sumti) : Set
       where
