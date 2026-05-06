@@ -1127,7 +1127,7 @@ ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .var
 .i sa'u nai ru'e ro da poi ke'a ctaipe la'oi .\F{Jufra}.\ zo'u\ldots
 
 \begin{itemize}
-	\item da du la'o zoi.\ \IC{BridiC} \B{b}\ .zoi.\ gi da sinxa lo se sinxa be la'oi .\B{b}.
+	\item ga jo da du la'o zoi.\ \IC{BridiC} \B{b}\ .zoi.\ gi da sinxa lo se sinxa be la'oi .\B{b}.
 \end{itemize}
 
 \begin{code}
