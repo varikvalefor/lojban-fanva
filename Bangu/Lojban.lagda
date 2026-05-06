@@ -936,8 +936,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       where
       KOhAC : KOhA → Sumti'
       LeSelbriC : LE → Selbri → Sumti'
-      POIC : Poi.PoiCl Sumti'
-           → Sumti'
+      POIC : Poi.PoiCl Sumti' → Sumti'
       JekC : (x : Sumti')
            → Jek.Term x
            → Jek
