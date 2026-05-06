@@ -1064,15 +1064,15 @@ ni'o la'oi .\AgdaRecord{Bridi}.\ se ctaipe zo'e ja lo ro bridi be bau le jbobau 
     ST = Maybe (FA ⊎ BAI) × Sumti
 
     instance
-      briTerm⊎ : Bri.BriTerm ST
-      briTerm⊎ = record {
+      cniTerm⊎ : Bri.BriTerm ST
+      cniTerm⊎ = record {
         Term = Bri.BriTerm.Term Sumti.briTerm ∘ Σ.proj₂
         }
 
     field
       selbri : Selbri
       terbri₁ terbri₂ : List $ ST
-      term : All (Bri.Term ⦃ briTerm⊎ ⦄) $ ¯1↓ terbri₁
+      term : All Bri.Term $ ¯1↓ terbri₁
 \end{code}
 
 \chapter{zo'e je la'oi .\F{Jufra}.}
