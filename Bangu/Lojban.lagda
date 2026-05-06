@@ -773,8 +773,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
   Jufra : Set
   Prenex : Set
   DoiCl : Set
-
-
+  XDoi : ∀ {a} → (A : Set a) → ⦃ DoiMapti A ⦄ → Set a
 \end{code}
 
 \chapter{zo'e je le fanmo se ctaipe pe lo bridi}
@@ -914,7 +913,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     data Ko'a'
       where
       KOhAC : KOhA → Ko'a'
-      DoiC : (k : Ko'a') → DoiMapti.Term k → DoiCl → Ko'a'
+      DoiC : XDoi Ko'a' → Ko'a'
 
     instance
       doiMapti = {!!}
