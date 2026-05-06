@@ -994,6 +994,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 
     instance
       jbopoi : Jbopoi Cl
+      doiMapti : DoiMapti Cl
 
     DOhUTermd : Sumti → Set
     DOhUTermd (Sumti.KOhAC x) = {!!}
@@ -1014,6 +1015,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 
     instance
       jbopoi = {!!}
+      doiMapti = {!!}
 
   DoiCl = Doi.Cl
 \end{code}
