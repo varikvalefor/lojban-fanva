@@ -773,7 +773,12 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
   Jufra : Set
   Prenex : Set
   DoiCl : Set
+
   XDoi : ∀ {a} → (A : Set a) → ⦃ DoiMapti A ⦄ → Set a
+  xDoiCl : ∀ {a} → {A : Set a}
+         → ⦃ _ : DoiMapti A ⦄
+         → XDoi A
+         → DoiCl
 \end{code}
 
 \chapter{zo'e je le fanmo se ctaipe pe lo bridi}
@@ -996,6 +1001,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     instance
       jbopoi : Jbopoi Cl
       doiMapti : DoiMapti Cl
+      doiMapti' : DoiMapti DoiCl
 
     DOhUTermd : Sumti → Set
     DOhUTermd (Sumti.KOhAC x) = {!!}
@@ -1003,7 +1009,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     DOhUTermd (Sumti.POIC x) = {!!}
     DOhUTermd (Sumti.JekC x x₁ x₂ x₃) = {!!}
     DOhUTermd (Sumti.UIC x) = {!!}
-    DOhUTermd (Sumti.DoiC d) = {!!}
+    DOhUTermd (Sumti.DoiC d) = DoiMapti.Term $ xDoiCl d
 
     data T (s : Sumti) : Set
       where
@@ -1022,6 +1028,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         f (sC d s t) with t
         ... | do'uC t d = ⊤
         ... | nilC = ⊥
+      doiMapti' = {!!}
 
     record X {a} (A : Set a) ⦃ M : DoiMapti A ⦄ : Set a
       where
@@ -1033,6 +1040,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 
   DoiCl = Doi.Cl
   XDoi = Doi.X
+  xDoiCl = Doi.X.cl
 \end{code}
 
 \chapter{zo'e je la'oi .\F{Selbri}.}
