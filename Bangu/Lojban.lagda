@@ -782,6 +782,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 
   instance
     doiMaptiSelbri : DoiMapti Selbri
+    doiMaptiDoiCl : DoiMapti DoiCl
 \end{code}
 
 \chapter{zo'e je le fanmo se ctaipe pe lo bridi}
@@ -978,7 +979,15 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T (JekC x x₁ x₂ x₃) = T x₃
         T (UIC (Cnima'o.CniX x x₁ x₂)) = T x × {!!}
         T (DoiC d) = {!!}
-      doiMapti = {!!}
+      doiMapti = record {Term = f}
+        where
+        f : Sumti' → Set
+        f (KOhAC x) = {!!}
+        f (LeSelbriC x s mk) = ⁇.Is-just mk ⊎ DoiMapti.Term s
+        f (POIC x) = {!!}
+        f (JekC s x x₁ s₁) = {!!}
+        f (UIC (Cnima'o.CniX x x₁ x₂)) = f x
+        f (DoiC d) = {!!}
 
   Sumti = Sumti.Sumti'
 \end{code}
@@ -986,9 +995,6 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 \chapter{zo'e je la'oi .\F{DoiCl}.}
 
 \begin{code}
-  instance
-    doiMaptiDoiCl : DoiMapti DoiCl
-
   module Doi where
     data Cl : Set
 
@@ -998,11 +1004,10 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 
     DOhUTermd : Sumti → Set
     DOhUTermd (Sumti.KOhAC x) = {!!}
-    DOhUTermd (Sumti.LeSelbriC x x₁ mk) = ⁇.Is-just mk ⊎ DoiMapti.Term x₁
+    DOhUTermd (Sumti.LeSelbriC x x₁ mk) = {!!}
     DOhUTermd (Sumti.POIC x) = {!!}
     DOhUTermd (Sumti.JekC x x₁ x₂ x₃) = {!!}
-    DOhUTermd (Sumti.UIC (Cnima'o.CniX x x₁ x₂)) =
-      DoiMapti.Term ⦃ Sumti.doiMapti ⦄ x
+    DOhUTermd (Sumti.UIC (Cnima'o.CniX x x₁ x₂)) = {!!}
     DOhUTermd (Sumti.DoiC d) = DoiMapti.Term $ xDoiCl d
 
     data T (s : Sumti) : Set
