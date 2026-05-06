@@ -484,12 +484,12 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
 \begin{code}
   module DoiMapti
     where
-    record DoiMapti {a} (A : Set a) : Set (Level.suc a)
+    record DoiMapti {a} (A : Set a) : Set (Level.suc Level.zero Level.⊔ a)
       where
       field
-        Term : A → Set a
+        Term : A → Set
 
-    Term : ∀ {a} → {A : Set a} → ⦃ DoiMapti A ⦄ → A → Set a
+    Term : ∀ {a} → {A : Set a} → ⦃ DoiMapti A ⦄ → A → Set
     Term ⦃ D ⦄ = DoiMapti.Term D
 
   DoiMapti = DoiMapti.DoiMapti
@@ -1042,7 +1042,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         cl : Cl
 
     XDM : ∀ {a} → {A : Set a} → ⦃ _ : DoiMapti A ⦄ → DoiMapti $ X A
-    XDM = {!!}
+    XDM = record {Term = DoiMapti.Term ∘ X.cl}
 
 
   DoiCl = Doi.Cl
