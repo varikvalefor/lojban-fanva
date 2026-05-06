@@ -1140,8 +1140,8 @@ ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .var
       valsiBitmuSarcu : Jufra' → Bool
       valsiBitmuSarcu = {!!}
 
-      KeiTerm : Jufra → Set
-      KeiTerm = {!!}
+      KeiTerm : Jufra' → Set
+      KeiTerm (BridiC x) = ?
 
       instance
         cniTerm : Cnima'o.CniTerm Jufra'
