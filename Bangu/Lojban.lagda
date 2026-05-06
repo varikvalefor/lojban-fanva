@@ -995,13 +995,15 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 \chapter{zo'e je la'oi .\F{DoiCl}.}
 
 \begin{code}
+  instance
+    doiMaptiDoiCl : DoiMapti DoiCl
+
   module Doi where
     data Cl : Set
 
     instance
       jbopoi : Jbopoi Cl
       doiMapti : DoiMapti Cl
-      doiMapti' : DoiMapti DoiCl
 
     DOhUTermd : Sumti → Set
     DOhUTermd (Sumti.KOhAC x) = {!!}
@@ -1028,7 +1030,6 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         f (sC d s t) with t
         ... | do'uC t d = ⊤
         ... | nilC = ⊥
-      doiMapti' = {!!}
 
     record X {a} (A : Set a) ⦃ M : DoiMapti A ⦄ : Set a
       where
@@ -1038,9 +1039,13 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         term : DoiMapti.Term x
         cl : Cl
 
+
   DoiCl = Doi.Cl
   XDoi = Doi.X
   xDoiCl = Doi.X.cl
+
+  instance
+    doiMaptiDoiCl = Doi.doiMapti
 \end{code}
 
 \chapter{zo'e je la'oi .\F{Selbri}.}
