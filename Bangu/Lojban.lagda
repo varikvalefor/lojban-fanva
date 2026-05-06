@@ -911,6 +911,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     where
     data Sumti' : Set
 
+    SelbriKuTerm : Selbri → Set
+    SelbriKuTerm = {!!}
+
     instance
       cniTerm : Cnima'o.CniTerm Sumti'
       briTerm : Bri.BriTerm Sumti'
@@ -921,7 +924,10 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     data Sumti'
       where
       KOhAC : KOhA → Sumti'
-      LeSelbriC : LE → Selbri → Sumti'
+      LeSelbriC : LE
+                → (s : Selbri)
+                → Maybe $ SelbriKuTerm s × KU
+                → Sumti'
       POIC : Poi.PoiCl Sumti' → Sumti'
       JekC : (x : Sumti')
            → Jek.Term x
@@ -939,7 +945,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T : Sumti' → Set
         T (KOhAC k) = Cnima'o.CniTerm.Term KOhA.cniTerm k
         T (POIC c) = {!!}
-        T (LeSelbriC x k) = {!!}
+        T (LeSelbriC x k mk) = {!!}
         T (JekC x t j x₂) = {!!}
         T (UIC (Cnima'o.CniX s t c)) = {!!}
         T (DoiC d) = {!!}
@@ -952,7 +958,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T (KOhAC (KOhA.KOhA1C x x₁)) = ⊤
         T (KOhAC (KOhA.KOhARC x)) = ⊤
         T (KOhAC (KOhA.ce'uC x)) = ⊤
-        T (LeSelbriC x k) = {!!}
+        T (LeSelbriC x k mk) = {!!}
         T (POIC x) with f x | _≡_.inspect f x
           where f = 𝕃.last ∘ Poi.PoiCl.cl
         ... | ⁇.just x2 | _ = Σ.uncurry Poi.JePoiTerm x2
@@ -964,7 +970,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         where
         T : Sumti' → Set
         T (KOhAC x) = ⊤
-        T (LeSelbriC x x₁) = {!!}
+        T (LeSelbriC x x₁ mk) = {!!}
         T (POIC x) = {!!}
         T (JekC x x₁ x₂ x₃) = T x₃
         T (UIC (Cnima'o.CniX x x₁ x₂)) = T x × {!!}
@@ -989,7 +995,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 
     DOhUTermd : Sumti → Set
     DOhUTermd (Sumti.KOhAC x) = {!!}
-    DOhUTermd (Sumti.LeSelbriC x x₁) = {!!}
+    DOhUTermd (Sumti.LeSelbriC x x₁ mk) = {!!}
     DOhUTermd (Sumti.POIC x) = {!!}
     DOhUTermd (Sumti.JekC x x₁ x₂ x₃) = {!!}
     DOhUTermd (Sumti.UIC x) = {!!}
