@@ -1023,8 +1023,13 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         ... | do'uC t d = ⊤
         ... | nilC = ⊥
 
-    X : ∀ {a} → (A : Set a) → ⦃ M : DoiMapti A ⦄ → Set a
-    X A = Σ A $ λ n → DoiMapti.Term n × Cl
+    record X {a} (A : Set a) ⦃ M : DoiMapti A ⦄ : Set a
+      where
+      inductive
+      field
+        x : A
+        term : DoiMapti.Term x
+        cl : Cl
 
   DoiCl = Doi.Cl
   XDoi = Doi.X
