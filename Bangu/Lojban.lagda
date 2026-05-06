@@ -1001,7 +1001,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     DOhUTermd (Sumti.LeSelbriC x x₁ mk) = ⁇.Is-just mk ⊎ DoiMapti.Term x₁
     DOhUTermd (Sumti.POIC x) = {!!}
     DOhUTermd (Sumti.JekC x x₁ x₂ x₃) = {!!}
-    DOhUTermd (Sumti.UIC x) = {!!}
+    DOhUTermd (Sumti.UIC (Cnima'o.CniX x x₁ x₂)) = DoiMapti.Term x
     DOhUTermd (Sumti.DoiC d) = DoiMapti.Term $ xDoiCl d
 
     data T (s : Sumti) : Set
