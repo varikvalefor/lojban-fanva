@@ -779,6 +779,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
          → ⦃ _ : DoiMapti A ⦄
          → XDoi A
          → DoiCl
+
+  instance
+    doiMaptiSelbri : DoiMapti Selbri
 \end{code}
 
 \chapter{zo'e je le fanmo se ctaipe pe lo bridi}
@@ -995,7 +998,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 
     DOhUTermd : Sumti → Set
     DOhUTermd (Sumti.KOhAC x) = {!!}
-    DOhUTermd (Sumti.LeSelbriC x x₁ mk) = {!!}
+    DOhUTermd (Sumti.LeSelbriC x x₁ mk) = ⁇.Is-just mk ⊎ DoiMapti.Term x₁
     DOhUTermd (Sumti.POIC x) = {!!}
     DOhUTermd (Sumti.JekC x x₁ x₂ x₃) = {!!}
     DOhUTermd (Sumti.UIC x) = {!!}
@@ -1058,6 +1061,9 @@ ni'o sa'u la'oi .\F{Selbri}.\ se ctaipe zo'e ja lo selbri co'e be bau le jbobau 
         doiMapti = {!!}
 
   Selbri = Selbri.Selbri'
+
+  instance
+    doiMaptiSelbri = Selbri.doiMapti
 \end{code}
 
 \chapter{zo'e je la'oi .\AgdaRecord{Bridi}.}
