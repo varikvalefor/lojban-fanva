@@ -982,9 +982,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       doiMapti = record {Term = f}
         where
         f : Sumti' → Set
-        f (KOhAC (KOhA.KOhA1C x x₁)) = ?
-        f (KOhAC (KOhA.KOhARC x)) = ?
-        f (KOhAC (KOhA.ce'uC x)) = ?
+        f (KOhAC (KOhA.KOhA1C x x₁)) = ⊤
+        f (KOhAC (KOhA.KOhARC x)) = {!!}
+        f (KOhAC (KOhA.ce'uC x)) = {!!}
         f (LeSelbriC x s mk) = ⁇.Is-just mk ⊎ DoiMapti.Term s
         f (POIC x) = {!!}
         f (JekC s x x₁ s₁) = {!!}
