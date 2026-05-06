@@ -907,26 +907,6 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
 \end{code}
 
 \begin{code}
-  module Ko'a
-    where
-
-    data Ko'a' : Set
-
-    instance
-      doiMapti : DoiMapti Ko'a'
-
-    data Ko'a'
-      where
-      KOhAC : KOhA → Ko'a'
-      DoiC : XDoi Ko'a' → Ko'a'
-
-    instance
-      doiMapti = {!!}
-
-  Ko'a = Ko'a.Ko'a'
-\end{code}
-
-\begin{code}
   module Sumti
     where
     data Sumti' : Set
