@@ -949,7 +949,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         }
         where
         T : Sumti' → Set
-        T (KOhAC x) = {!!}
+        T (KOhAC (KOhA.KOhA1C x x₁)) = ?
+        T (KOhAC (KOhA.KOhARC x)) = ?
+        T (KOhAC (KOhA.ce'uC x)) = ?
         T (LeSelbriC x k) = {!!}
         T (POIC x) with f x | _≡_.inspect f x
           where f = 𝕃.last ∘ Poi.PoiCl.cl
