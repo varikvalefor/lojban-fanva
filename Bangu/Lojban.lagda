@@ -1146,7 +1146,8 @@ ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .var
       KeiTermSumti (Sumti.POIC x) = {!!}
       KeiTermSumti (Sumti.JekC x x₁ x₂ x₃) = {!!}
       KeiTermSumti (Sumti.UIC x) = {!!}
-      KeiTermSumti (Sumti.DoiC x) = {!!}
+      KeiTermSumti (Sumti.DoiC x) with Doi.X.cl x
+      ... | Doi.sC x₁ s x₂ = {!!}
 
       KeiTerm : Jufra' → Set
       KeiTerm (BridiC x) with 𝕃.last $ Bridi.terbri₂ x
