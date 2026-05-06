@@ -11,6 +11,8 @@ ni'o zu'edji lo ka ce'u vimcu pe'a\sds  .i ku'i lo nu vasru pe'a cu filri'a lo n
 
 \begin{code}
 {-# OPTIONS --allow-unsolved-metas #-}
+{-# OPTIONS --backtracking-instance-search #-}
+{-# OPTIONS --instance-search-depth=5 #-}
 \end{code}
 
 \begin{code}
@@ -374,12 +376,46 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
     record Jbopoi {a} (A : Set a) : Set (Level.suc a)
       where
       field
-        Term : A → Set a
+        Term : A → Set
 
-    Term : ∀ {a} → {A : Set a} → ⦃ Jbopoi A ⦄ → A → Set a
+    Term : ∀ {a} → {A : Set a} → ⦃ Jbopoi A ⦄ → A → Set
     Term ⦃ J ⦄ = Jbopoi.Term J
 
   Jbopoi = Jbopoi.Jbopoi
+\end{code}
+
+\chapter{le mutce be le ka ce'u vrici}
+
+\begin{code}
+  record Terminable {a b} (Terminator : Set a) (B : Set b) :
+                    Set (Level.suc a Level.⊔ b)
+    where
+    field
+      jbopoiT : Jbopoi Terminator
+      Term : B → Set
+
+  TermS : ∀ {a b}
+        → {B : Set b}
+        → (Terminator : Set a)
+        → ⦃ _ : Terminable Terminator B ⦄
+        → B
+        → Set
+  TermS _ ⦃ T ⦄ = Terminable.Term T
+\end{code}
+
+\begin{code}
+  instance
+    ⊥-pseudo-jbopoi : Jbopoi ⊥
+    ⊥-pseudo-jbopoi = record {Term = λ ()}
+
+    ⊥Terminable : ∀ {a}
+                 → {A : Set a}
+                 → ⦃ Jbopoi A ⦄
+                 → Terminable ⊥ A
+    ⊥Terminable ⦃ J ⦄ = record {
+      jbopoiT = ⊥-pseudo-jbopoi;
+      Term = Jbopoi.Jbopoi.Term J
+      }
 \end{code}
 
 \chapter{la'oi .\AgdaRecord{Gismu}.}
@@ -473,26 +509,16 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
            → Cnima'oCo'e
            → Cni Selma'o
 
+    instance
+      cniTerminable : {A : Set}
+                    → ⦃ CniTerm A ⦄
+                    → Terminable Cnima'oCo'e A
+      cniTerminable = {!!}
+
     -- instance
     --   -- | ni'o filri'a zo'e je tu'a zo toi'e
     --   cniTerm : CniTerm Cnima'oCo'e
     --   cniTerm = {!!}
-\end{code}
-
-\chapter{DoiMapti}
-
-\begin{code}
-  module DoiMapti
-    where
-    record DoiMapti {a} (A : Set a) : Set (Level.suc Level.zero Level.⊔ a)
-      where
-      field
-        Term : A → Set
-
-    Term : ∀ {a} → {A : Set a} → ⦃ DoiMapti A ⦄ → A → Set
-    Term ⦃ D ⦄ = DoiMapti.Term D
-
-  DoiMapti = DoiMapti.DoiMapti
 \end{code}
 
 \chapter{le sampu je selma'o co'e}
@@ -774,14 +800,44 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
   Prenex : Set
   DoiCl : Set
 
+  JufraKeiTerm : Jufra → Set
+
+  DoiMapti : ∀ {a} → Set a → Set (Level.suc Level.zero Level.⊔ a)
+
   XDoi : ∀ {a} → (A : Set a) → ⦃ DoiMapti A ⦄ → Set a
   xDoiCl : ∀ {a} → {A : Set a}
          → ⦃ _ : DoiMapti A ⦄
          → XDoi A
          → DoiCl
+\end{code}
 
-  JufraKeiTerm : Jufra → Set
+\chapter{DoiMapti}
 
+\begin{code}
+  module DoiMapti
+    where
+    record DoiMapti' {a} (A : Set a) : Set (Level.suc Level.zero Level.⊔ a)
+      where
+      field
+        Term : A → Set
+
+    Term : ∀ {a} → {A : Set a} → ⦃ DoiMapti' A ⦄ → A → Set
+    Term ⦃ D ⦄ = DoiMapti'.Term D
+
+    instance
+      doiTerminable : ∀ {a}
+                    → {A : Set a}
+                    → ⦃ _ : DoiMapti' A ⦄
+                    → Terminable DoiCl A
+      doiTerminable = record {
+        jbopoiT = {!!};
+        Term = Term
+        }
+
+  DoiMapti = DoiMapti.DoiMapti'
+\end{code}
+
+\begin{code}
   instance
     doiMaptiSelbri : DoiMapti Selbri
     doiMaptiDoiCl : DoiMapti DoiCl
@@ -789,6 +845,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
                  → ⦃ _ : DoiMapti A ⦄
                  → DoiMapti $ XDoi A
 \end{code}
+
 
 \chapter{zo'e je le fanmo se ctaipe pe lo bridi}
 
@@ -911,6 +968,13 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     instance
       jbovla : Jbovla.IsJbovla Jek
       jbovla = {!!}
+      jekTerminable : {A : Set}
+                    → ⦃ JekTerm A ⦄
+                    → Terminable Jek A
+      jekTerminable = record {
+        jbopoiT = {!!};
+        Term = Term
+        }
 
   Jek = Jek.Jek'
 \end{code}
@@ -929,6 +993,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       poiTerm : Poi.PoiTerm Sumti'
       jekTerm : Jek.JekTerm Sumti'
       doiMapti : DoiMapti Sumti'
+      selbriKuTerminable : Terminable KU Selbri
 
     data Sumti'
       where
@@ -995,6 +1060,10 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         f (JekC s x x₁ s₁) = {!!}
         f (UIC (Cnima'o.CniX x x₁ x₂)) = f x
         f (DoiC d) = {!!}
+      selbriKuTerminable = record {
+        jbopoiT = {!!};
+        Term = SelbriKuTerm
+        }
 
   Sumti = Sumti.Sumti'
 \end{code}
@@ -1034,6 +1103,14 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         f (sC d s t) with t
         ... | do'uC t d = ⊤
         ... | nilC = ⊥
+      do'uTerm : Terminable DOhU Cl
+      do'uTerm = record {
+        jbopoiT = {!!};
+        Term = f
+        }
+        where
+        f : Cl → Set
+        f (sC x s x₁) = DOhUTermd s
 
     record X {a} (A : Set a) ⦃ M : DoiMapti A ⦄ : Set a
       where
@@ -1044,7 +1121,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         cl : Cl
 
     XDM : ∀ {a} → {A : Set a} → ⦃ _ : DoiMapti A ⦄ → DoiMapti $ X A
-    XDM = record {Term = DoiMapti.Term ∘ X.cl}
+    XDM = record {Term = TermS DOhU ⦃ do'uTerm ⦄ ∘ X.cl}
 
   DoiCl = Doi.Cl
   XDoi = Doi.X
