@@ -1018,7 +1018,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
       doiMapti = record {Term = f}
         where
         f : Cl → Set
-        f = {!!}
+        f (sC d s t) with t
+        ... | do'uC t d = ⊤
+        ... | nilC = ⊥
 
   DoiCl = Doi.Cl
 \end{code}
