@@ -1046,7 +1046,6 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     XDM : ∀ {a} → {A : Set a} → ⦃ _ : DoiMapti A ⦄ → DoiMapti $ X A
     XDM = record {Term = DoiMapti.Term ∘ X.cl}
 
-
   DoiCl = Doi.Cl
   XDoi = Doi.X
   xDoiCl = Doi.X.cl
