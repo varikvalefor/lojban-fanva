@@ -783,6 +783,9 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
   instance
     doiMaptiSelbri : DoiMapti Selbri
     doiMaptiDoiCl : DoiMapti DoiCl
+    doiMaptiXDoi : ∀ {a} → {A : Set a}
+                 → ⦃ _ : DoiMapti A ⦄
+                 → DoiMapti $ XDoi A
 \end{code}
 
 \chapter{zo'e je le fanmo se ctaipe pe lo bridi}
@@ -1038,10 +1041,14 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         term : DoiMapti.Term x
         cl : Cl
 
+    XDM : ∀ {a} → {A : Set a} → ⦃ _ : DoiMapti A ⦄ → DoiMapti $ X A
+    XDM = {!!}
+
 
   DoiCl = Doi.Cl
   XDoi = Doi.X
   xDoiCl = Doi.X.cl
+  doiMaptiXDoi = Doi.XDM
 
   instance
     doiMaptiDoiCl = Doi.doiMapti
