@@ -371,7 +371,7 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
   module Jbopoi
     where
 
-    record Jbopoi {a} (A : Set a) : Set _
+    record Jbopoi {a} (A : Set a) : Set (Level.suc a)
       where
       field
         Term : A → Set a
