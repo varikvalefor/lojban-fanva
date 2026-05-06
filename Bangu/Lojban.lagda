@@ -1141,7 +1141,9 @@ ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .var
       valsiBitmuSarcu = {!!}
 
       KeiTerm : Jufra' → Set
-      KeiTerm (BridiC x) = ?
+      KeiTerm (BridiC x) with 𝕃.last $ Bridi.terbri₂ x
+      ... | ⁇.nothing = {!!}
+      ... | ⁇.just x = {!!}
 
       instance
         cniTerm : Cnima'o.CniTerm Jufra'
