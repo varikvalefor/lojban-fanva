@@ -1030,11 +1030,14 @@ ni'o sa'u la'oi .\F{Selbri}.\ se ctaipe zo'e ja lo selbri co'e be bau le jbobau 
         GismuC : Gismu → Selbri'
         CmevlaC : Cmevla → Selbri'
         UIC : Cnima'o.Cni Selbri' → Selbri'
-        DoiC : Selbri' → {!!} → Selbri'
+        DoiC : (s : Selbri') → DoiMapti.Term s → DoiCl → Selbri'
 
       instance
         cniTerm : Cnima'o.CniTerm Selbri'
         cniTerm = {!!}
+
+        doiMapti : DoiMapti Selbri'
+        doiMapti = {!!}
 
   Selbri = Selbri.Selbri'
 \end{code}
