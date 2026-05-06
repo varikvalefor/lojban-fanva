@@ -780,6 +780,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
          → XDoi A
          → DoiCl
 
+  JufraKeiTerm : Jufra → Set
+
   instance
     doiMaptiSelbri : DoiMapti Selbri
     doiMaptiDoiCl : DoiMapti DoiCl
@@ -1062,7 +1064,10 @@ ni'o sa'u la'oi .\F{Selbri}.\ se ctaipe zo'e ja lo selbri co'e be bau le jbobau 
     mutual
       data Selbri' : Set
         where
-        NUC : NU → Jufra → {!!} → Maybe KEI → Selbri'
+        NUC : NU
+            → (j : Jufra)
+            → Maybe $ JufraKeiTerm j × KEI
+            → Selbri'
         GismuC : Gismu → Selbri'
         CmevlaC : Cmevla → Selbri'
         UIC : Cnima'o.Cni Selbri' → Selbri'
@@ -1135,11 +1140,15 @@ ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .var
       valsiBitmuSarcu : Jufra' → Bool
       valsiBitmuSarcu = {!!}
 
+      KeiTerm : Jufra → Set
+      KeiTerm = {!!}
+
       instance
         cniTerm : Cnima'o.CniTerm Jufra'
         cniTerm = {!!}
 
   Jufra = Jufra.Jufra'
+  JufraKeiTerm = Jufra.KeiTerm
 \end{code}
 
 \chapter{zo'e je la'oi .\D{T}.\ noi ke'a se ctaipe lo ro te gerna be le jbobau be la .varik.}
