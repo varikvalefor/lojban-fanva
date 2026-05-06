@@ -773,6 +773,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
   Jufra : Set
   Prenex : Set
   DoiCl : Set
+
+
 \end{code}
 
 \chapter{zo'e je le fanmo se ctaipe pe lo bridi}
@@ -1022,7 +1024,11 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         ... | do'uC t d = ⊤
         ... | nilC = ⊥
 
+    X : ∀ {a} → (A : Set a) → ⦃ M : DoiMapti A ⦄ → Set a
+    X A = Σ A $ λ n → DoiMapti.Term n × Cl
+
   DoiCl = Doi.Cl
+  XDoi = Doi.X
 \end{code}
 
 \chapter{zo'e je la'oi .\F{Selbri}.}
@@ -1037,7 +1043,7 @@ ni'o sa'u la'oi .\F{Selbri}.\ se ctaipe zo'e ja lo selbri co'e be bau le jbobau 
         GismuC : Gismu → Selbri'
         CmevlaC : Cmevla → Selbri'
         UIC : Cnima'o.Cni Selbri' → Selbri'
-        DoiC : (s : Selbri') → DoiMapti.Term s → DoiCl → Selbri'
+        DoiC : XDoi Selbri' → Selbri'
 
       instance
         cniTerm : Cnima'o.CniTerm Selbri'
