@@ -1142,7 +1142,7 @@ ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .var
 
       KeiTerm : Jufra' → Set
       KeiTerm (BridiC x) with 𝕃.last $ Bridi.terbri₂ x
-      ... | ⁇.nothing = {!!}
+      ... | ⁇.nothing = ⊤
       ... | ⁇.just x = {!!}
 
       instance
