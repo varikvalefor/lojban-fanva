@@ -1141,12 +1141,12 @@ ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .var
       valsiBitmuSarcu = {!!}
 
       KeiTermSumti : Sumti → Set
-      KeiTermSumti (Sumti.KOhAC x) = ?
-      KeiTermSumti (Sumti.LeSelbriC x s x₁) = ?
-      KeiTermSumti (Sumti.POIC x) = ?
-      KeiTermSumti (Sumti.JekC x x₁ x₂ x₃) = ?
-      KeiTermSumti (Sumti.UIC x) = ?
-      KeiTermSumti (Sumti.DoiC x) = ?
+      KeiTermSumti (Sumti.KOhAC x) = ⊤
+      KeiTermSumti (Sumti.LeSelbriC x s x₁) = {!!}
+      KeiTermSumti (Sumti.POIC x) = {!!}
+      KeiTermSumti (Sumti.JekC x x₁ x₂ x₃) = {!!}
+      KeiTermSumti (Sumti.UIC x) = {!!}
+      KeiTermSumti (Sumti.DoiC x) = {!!}
 
       KeiTerm : Jufra' → Set
       KeiTerm (BridiC x) with 𝕃.last $ Bridi.terbri₂ x
