@@ -1036,7 +1036,15 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T (POIC x) with f x | _≡_.inspect f x
           where f = 𝕃.last ∘ Poi.PoiCl.cl
         ... | ⁇.just x2 | _ = Σ.uncurry Poi.JePoiTerm x2
-        ... | ⁇.nothing | _≡_.[ d ] = ⊥-elim $ (λ ()) $ d
+        ... | ⁇.nothing | _≡_.[ d ] = ⊥-elim $ ∷-¬[] clx d
+          where
+          ∷-¬[] : ∀ {a} → {A : Set a}
+                → {x : A}
+                → (xs : List A)
+                → ¬_ $ 𝕃.last (x 𝕃.∷ xs) ≡ ⁇.nothing
+          ∷-¬[] 𝕃.[] ()
+          ∷-¬[] (x₁ 𝕃.∷ xs) = ∷-¬[] xs
+          clx = 𝕃.map Σ.proj₂ $ Poi.PoiCl.clx x
         T (JekC x x₁ x₂ x₃) = {!!}
         T (UIC x) = {!!}
         T (DoiC d) = {!!}
