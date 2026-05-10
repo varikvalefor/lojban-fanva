@@ -638,6 +638,10 @@ ni'o ro da poi ke'a ctaipe ko'a zo'u ga je da sinxa lo valsi be fi le jbobau be 
       where
         KUC : KU'
 
+    instance
+      jbopoi : Jbopoi KU'
+      jbopoi = {!!}
+
   KU = KU.KU'
 \end{code}
 
@@ -1069,7 +1073,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         f (UIC (Cnima'o.CniX x x₁ x₂)) = f x
         f (DoiC d) = {!!}
       selbriKuTerminable = record {
-        jbopoiT = {!!};
+        jbopoiT = KU.jbopoi;
         Term = SelbriKuTerm
         }
 
