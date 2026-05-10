@@ -773,6 +773,15 @@ ni'o ro da poi ke'a ctaipe la'oi .\F{NU}.\ zo'u ga je da sinxa lo su'o cmavo be 
   POI = POI.POI'
 \end{code}
 
+\begin{code}
+  module VUhO where
+    data VUhO : Set
+      where
+      vu'oC : VUhO
+
+  VUhO = VUhO.VUhO
+\end{code}
+
 \chapter{le se sitsku se ctaipe}
 ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa lo me zo zoi vlapoi pe la .lojban. gi sa'u nai ru'e ga je\ldots
 \begin{itemize}
@@ -991,6 +1000,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     SelbriKuTerm : Selbri → Set
     SelbriKuTerm = {!!}
 
+    VUhOTerm : Sumti' → Set
+
     instance
       cniTerm : Cnima'o.CniTerm Sumti'
       briTerm : Bri.BriTerm Sumti'
@@ -1007,6 +1018,11 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
                 → Maybe $ SelbriKuTerm s × KU
                 → Sumti'
       POIC : Poi.PoiCl Sumti' → Sumti'
+      Vu'oC : {!!}
+            → (s : Sumti')
+            → VUhOTerm s
+            → VUhO
+            → Sumti'
       JekC : (x : Sumti')
            → Jek.Term x
            → Jek
@@ -1014,6 +1030,8 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
            → Sumti'
       UIC : Cnima'o.Cni Sumti' → Sumti'
       DoiC : XDoi Sumti' → Sumti'
+
+    VUhOTerm = {!!}
 
     instance
       cniTerm = record {
@@ -1025,6 +1043,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T (POIC c) = {!!}
         T (LeSelbriC x k mk) = {!!}
         T (JekC x t j x₂) = {!!}
+        T (Vu'oC x x₁ x₂ x₃) = {!!}
         T (UIC (Cnima'o.CniX s t c)) = {!!}
         T (DoiC d) = {!!}
       briTerm = {!!}
@@ -1049,6 +1068,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
           ∷-¬[] 𝕃.[] ()
           ∷-¬[] (x₁ 𝕃.∷ xs) = ∷-¬[] xs
           clx = 𝕃.map Σ.proj₂ $ Poi.PoiCl.clx x
+        T (Vu'oC x x₁ x₂ x₃) = {!!}
         T (JekC x x₁ x₂ x₃) = {!!}
         T (UIC x) = {!!}
         T (DoiC d) = {!!}
@@ -1059,6 +1079,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         T (LeSelbriC x x₁ mk) = {!!}
         T (POIC x) = {!!}
         T (JekC x x₁ x₂ x₃) = T x₃
+        T (Vu'oC x x₁ x₂ x₃) = {!!}
         T (UIC (Cnima'o.CniX x x₁ x₂)) = T x × {!!}
         T (DoiC d) = {!!}
       doiMapti = record {Term = f}
@@ -1070,6 +1091,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
         f (LeSelbriC x s mk) = ⁇.Is-just mk ⊎ DoiMapti.Term s
         f (POIC x) = {!!}
         f (JekC s x x₁ s₁) = {!!}
+        f (Vu'oC x x₁ x₂ x₃) = {!!}
         f (UIC (Cnima'o.CniX x x₁ x₂)) = f x
         f (DoiC d) = {!!}
       selbriKuTerminable = record {
@@ -1095,6 +1117,7 @@ ni'o ro da poi ke'a ctaipe la'oi .\AgdaRecord{ZoiX}\. zo'u ga je sa'u da sinxa l
     DOhUTermd (Sumti.LeSelbriC x x₁ mk) = {!!}
     DOhUTermd (Sumti.POIC x) = {!!}
     DOhUTermd (Sumti.JekC x x₁ x₂ x₃) = {!!}
+    DOhUTermd (Sumti.Vu'oC x x₁ x₂ x₃) = {!!}
     DOhUTermd (Sumti.UIC (Cnima'o.CniX x x₁ x₂)) = {!!}
     DOhUTermd (Sumti.DoiC d) = DoiMapti.Term $ xDoiCl d
 
@@ -1233,6 +1256,7 @@ ni'o la'oi .\F{Jufra}.\ se ctaipe zo'e ja lo ro jufra be fi le jbobau be la .var
       KeiTermSumti (Sumti.LeSelbriC x s x₁) = {!!}
       KeiTermSumti (Sumti.POIC x) = {!!}
       KeiTermSumti (Sumti.JekC x x₁ x₂ x₃) = {!!}
+      KeiTermSumti (Sumti.Vu'oC x x₁ x₂ x₃) = {!!}
       KeiTermSumti (Sumti.UIC x) = {!!}
       KeiTermSumti (Sumti.DoiC x) with Doi.X.cl x
       ... | Doi.sC x₁ s x₂ = {!!}
